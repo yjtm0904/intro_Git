@@ -13,52 +13,65 @@
     手取り     = 売上 × 手取り率（決済手数料とプラットフォーム手数料を控除）
     + メンバーシップ（会員数 × 月額 × 手取り率）
 
-パラメータの既定値は仮置き。市場・集客調査のベンチマークで更新すること。
+パラメータは 01_research の調査値（2026-11-07時点）で較正した仮説値。
+公開後はDay30から、自分のダッシュボードの実測値（記事あたりPV・遷移率・購入率）で置き換えること。
+
+較正の根拠:
+- 手取り率: クレカ決済で1,000円→855円（事務手数料5%、プラットフォーム利用料10%）。キャリア決済などを考慮して0.84とした
+- 価格: 売れ筋の実用ノウハウ記事の平均は1,842円。入口980円と主力1,980円を組み合わせる前提で、平均単価を保守980円／標準1,480円／楽観1,680円とした
+- 遷移率（無料記事→有料記事ページ）5〜15%、購入率（有料記事ページ→購入）2〜8%（集客調査の仮説値）
+- 季節性: noteの流通額は毎年12〜2月に大きく伸びる。1か月目を2026年11月とし、2〜4か月目に係数をかけた
+- 公開ペース: 無料記事は週2〜3本（月約10本）、有料記事は月1〜2本（集客調査の90日計画）
 """
 import json
 import sys
 
+_SEASON = [1.0, 1.15, 1.2, 1.1, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]  # 11月始まり（12〜2月に上振れ）
+
 SCENARIOS = {
     "保守": {
         "months": 12,
-        "free_per_month": [8, 8, 6, 6, 6, 6, 4, 4, 4, 4, 4, 4],
+        "free_per_month": [8, 8, 8, 8, 6, 6, 6, 6, 6, 6, 6, 6],
         "paid_per_month": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        "free_pv_ramp": [15, 30, 45, 60],      # 公開0,1,2,3か月目以降の1本あたり月間PV
-        "paid_direct_pv_per_article": 20,       # SNS・note内から有料記事へ直接来るPV/月
-        "free_to_paid_ctr": 0.02,
+        "free_pv_ramp": [10, 25, 40, 60],       # 公開0,1,2,3か月目以降の、無料記事1本あたりの月間PV
+        "paid_direct_pv_per_article": 15,       # 検索・note内・SNSから有料記事に直接来るPV（1本あたり/月）
+        "free_to_paid_ctr": 0.05,
         "purchase_cvr": 0.02,
         "avg_price": 980,
-        "net_rate": 0.85,
-        "membership_start_month": 7,
+        "net_rate": 0.84,
+        "season": _SEASON,
+        "membership_start_month": 8,
         "membership_members_per_month": 1,
         "membership_price": 500,
     },
     "標準": {
         "months": 12,
-        "free_per_month": [10, 10, 8, 8, 8, 8, 6, 6, 6, 6, 6, 6],
-        "paid_per_month": [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
-        "free_pv_ramp": [30, 60, 100, 130],
-        "paid_direct_pv_per_article": 40,
-        "free_to_paid_ctr": 0.03,
-        "purchase_cvr": 0.03,
-        "avg_price": 1280,
-        "net_rate": 0.85,
-        "membership_start_month": 5,
+        "free_per_month": [10, 10, 10, 10, 8, 8, 8, 8, 8, 8, 8, 8],
+        "paid_per_month": [1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1],
+        "free_pv_ramp": [20, 50, 90, 130],
+        "paid_direct_pv_per_article": 30,
+        "free_to_paid_ctr": 0.08,
+        "purchase_cvr": 0.04,
+        "avg_price": 1480,
+        "net_rate": 0.84,
+        "season": _SEASON,
+        "membership_start_month": 6,
         "membership_members_per_month": 3,
-        "membership_price": 800,
+        "membership_price": 780,
     },
     "楽観": {
         "months": 12,
-        "free_per_month": [12, 12, 10, 10, 10, 10, 8, 8, 8, 8, 8, 8],
-        "paid_per_month": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-        "free_pv_ramp": [60, 120, 200, 260],
-        "paid_direct_pv_per_article": 80,
-        "free_to_paid_ctr": 0.04,
-        "purchase_cvr": 0.04,
-        "avg_price": 1480,
-        "net_rate": 0.85,
-        "membership_start_month": 4,
-        "membership_members_per_month": 6,
+        "free_per_month": [12, 12, 12, 12, 10, 10, 10, 10, 10, 10, 10, 10],
+        "paid_per_month": [2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1],
+        "free_pv_ramp": [30, 80, 140, 200],
+        "paid_direct_pv_per_article": 40,
+        "free_to_paid_ctr": 0.10,
+        "purchase_cvr": 0.05,
+        "avg_price": 1580,
+        "net_rate": 0.84,
+        "season": _SEASON,
+        "membership_start_month": 5,
+        "membership_members_per_month": 5,
         "membership_price": 980,
     },
 }
@@ -79,7 +92,13 @@ def simulate(p):
         for born, n in enumerate(free_cohorts):
             age = m - born
             free_pv += n * ramp[min(age, len(ramp) - 1)]
-        paid_pv = free_pv * p["free_to_paid_ctr"] + paid_total * p["paid_direct_pv_per_article"]
+        season = p.get("season", [1.0] * months)
+        s = season[m] if m < len(season) else 1.0
+        free_pv *= s
+        # 新規アカウントは有料記事への直接流入（検索順位・note内露出）が立ち上がるまで時間がかかる
+        acct = p.get("account_ramp", [0.2, 0.5, 1.0])
+        a = acct[min(m, len(acct) - 1)]
+        paid_pv = free_pv * p["free_to_paid_ctr"] + paid_total * p["paid_direct_pv_per_article"] * s * a
         sales = paid_pv * p["purchase_cvr"]
         gross = sales * p["avg_price"]
         if m + 1 >= p["membership_start_month"]:
