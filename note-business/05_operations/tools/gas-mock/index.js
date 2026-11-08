@@ -14,6 +14,12 @@
  * 対応範囲: SpreadsheetApp / Sheet / Range（A1表記・行列指定）, GmailApp, MailApp, DriveApp, Utilities,
  *           Logger, PropertiesService, Session, LockService, MimeType, UrlFetchApp/ScriptApp（記録のみ）
  * 未対応の機能を呼ぶとエラーになる（＝テストで気づける）。
+ *
+ * 2026-11-08 追加（ライターB・記事202/107のため）:
+ *   Sheet.copyTo / setName、Spreadsheet.deleteSheet、getAs の snapshot（PDF化した時点のシートの中身）、
+ *   UI の alert（ボタンと戻り値）・メニューの記録（env.ui）、SpreadsheetApp.create の記録（env.created）、
+ *   DriveApp の setTrashed（env.DriveApp.trashed）、書式設定メソッドの空実装。
+ *   ファイルIDと下書きIDが後から変わる不具合を修正（作成時点の番号で固定）。
  */
 'use strict';
 const fs = require('fs');
@@ -89,6 +95,15 @@ class Range {
   setNumberFormat() { return this; }
   setFontWeight() { return this; }
   setBackground() { return this; }
+  // 書式の設定は記録しない（見た目は実機確認の対象）。呼び出せるようにだけしておく
+  setFontSize() { return this; }
+  setFontColor() { return this; }
+  setFontFamily() { return this; }
+  setHorizontalAlignment() { return this; }
+  setVerticalAlignment() { return this; }
+  setWrap() { return this; }
+  setBorder() { return this; }
+  merge() { return this; }
 }
 
 class Sheet {
@@ -116,6 +131,17 @@ class Sheet {
   appendRow(row) { this.data.splice(this.getLastRow(), 0, row.slice()); return this; }
   clear() { this.data = []; return this; }
   getSheetId() { return this.name.length; }
+  setName(n) { this.name = n; return this; }
+  // 別のスプレッドシート（同じでもよい）へコピーする。GASと同じく「<元の名前>のコピー」という名前で末尾に追加
+  copyTo(spreadsheet) {
+    const s = new Sheet(`${this.name}のコピー`, this.data, spreadsheet);
+    spreadsheet.sheets.push(s);
+    return s;
+  }
+  setColumnWidth() { return this; }
+  setRowHeight() { return this; }
+  setFrozenRows() { return this; }
+  setHiddenGridlines() { return this; }
 }
 
 class Spreadsheet {
@@ -130,7 +156,18 @@ class Spreadsheet {
   getSheetByName(n) { return this.sheets.find((s) => s.name === n) || null; }
   insertSheet(n) { const s = new Sheet(n, [], this); this.sheets.push(s); return s; }
   getActiveSheet() { return this.sheets[0]; }
-  getAs(type) { return new Blob(`[PDF of ${this.name}]`, type, `${this.name}.pdf`); }
+  deleteSheet(sheet) {
+    const i = this.sheets.indexOf(sheet);
+    if (i < 0) throw new Error('deleteSheet: このスプレッドシートにないシートです');
+    if (this.sheets.length === 1) throw new Error('deleteSheet: 最後の1枚は削除できません');
+    this.sheets.splice(i, 1);
+  }
+  getAs(type) {
+    const b = new Blob(`[PDF of ${this.name}]`, type, `${this.name}.pdf`);
+    // テスト用：PDFにした時点のシートの中身を残す（PDFのレイアウトそのものは検証できない）
+    b.snapshot = this.sheets.map((sh) => ({ name: sh.name, data: sh.data.map((r) => r.slice()) }));
+    return b;
+  }
   getBlob() { return this.getAs('application/pdf'); }
 }
 
@@ -152,21 +189,56 @@ function createGasEnv(opts = {}) {
   const GmailApp = {
     sent: [], drafts: [],
     sendEmail(to, subject, body, options) { this.sent.push({ to, subject, body, options: options || {} }); },
-    createDraft(to, subject, body, options) { const d = { to, subject, body, options: options || {} }; this.drafts.push(d); return { getId: () => `draft-${this.drafts.length}` }; },
+    createDraft(to, subject, body, options) { const d = { to, subject, body, options: options || {} }; this.drafts.push(d); const id = `draft-${this.drafts.length}`; return { getId: () => id }; },
   };
   const DriveApp = {
-    files: [],
+    files: [], trashed: [],
     _folder(id) {
       return {
         getId: () => id,
-        createFile: (blob) => { const f = { folderId: id, name: blob.getName(), blob }; DriveApp.files.push(f); return { getId: () => `file-${DriveApp.files.length}`, getName: () => blob.getName(), getUrl: () => `https://drive.google.com/file/d/file-${DriveApp.files.length}` }; },
+        getName: () => `folder-${id}`,
+        createFile: (blob) => {
+          const f = { folderId: id, name: blob.getName(), blob }; DriveApp.files.push(f);
+          const fid = `file-${DriveApp.files.length}`; // 作成時点の番号で固定する
+          return { getId: () => fid, getName: () => blob.getName(), getUrl: () => `https://drive.google.com/file/d/${fid}` };
+        },
       };
     },
     getFolderById(id) { return this._folder(id); },
     getRootFolder() { return this._folder('root'); },
     createFile(blob) { return this._folder('root').createFile(blob); },
-    getFileById(id) { return { getId: () => id, getAs: (t) => new Blob(`[file ${id}]`, t, `${id}.pdf`), getBlob: () => new Blob(`[file ${id}]`, 'application/pdf', `${id}.pdf`) }; },
+    getFileById(id) {
+      return {
+        getId: () => id, getName: () => id, getUrl: () => `https://drive.google.com/file/d/${id}`,
+        getAs: (t) => new Blob(`[file ${id}]`, t, `${id}.pdf`), getBlob: () => new Blob(`[file ${id}]`, 'application/pdf', `${id}.pdf`),
+        setTrashed(flag) { if (flag) DriveApp.trashed.push(id); return this; },
+      };
+    },
   };
+  // UI（alert・メニュー）。alert の戻り値は ui.responses に積んだ順に返す（空なら YES／OK）
+  const ui = {
+    alerts: [], menus: [], responses: (opts.uiResponses || []).slice(),
+    Button: { OK: 'OK', CANCEL: 'CANCEL', YES: 'YES', NO: 'NO', CLOSE: 'CLOSE' },
+    ButtonSet: { OK: 'OK', OK_CANCEL: 'OK_CANCEL', YES_NO: 'YES_NO', YES_NO_CANCEL: 'YES_NO_CANCEL' },
+    alert(a, b, c) {
+      const one = arguments.length === 1;
+      const rec = one ? { title: '', prompt: String(a), buttons: 'OK' } : { title: String(a), prompt: String(b === undefined ? '' : b), buttons: c || 'OK' };
+      ui.alerts.push(rec);
+      log.push(one ? `[UI.alert] ${a}` : `[UI.alert] ${rec.title} | ${rec.prompt}`);
+      if (ui.responses.length) return ui.responses.shift();
+      return rec.buttons === 'YES_NO' || rec.buttons === 'YES_NO_CANCEL' ? 'YES' : 'OK';
+    },
+    createMenu(name) {
+      const menu = { name, items: [] };
+      const builder = {
+        addItem(label, fn) { menu.items.push({ label, fn }); return builder; },
+        addSeparator() { menu.items.push({ separator: true }); return builder; },
+        addToUi() { ui.menus.push(menu); },
+      };
+      return builder;
+    },
+  };
+  const created = [];
   const fetched = [];
   const ctx = {
     console,
@@ -174,8 +246,8 @@ function createGasEnv(opts = {}) {
       getActiveSpreadsheet: () => ss,
       getActive: () => ss,
       openById: (id) => { if (id === ss.id) return ss; if (others[id]) return others[id]; throw new Error(`openById: 存在しないID ${id}`); },
-      create: (name) => { const s = new Spreadsheet(`NEW_${Object.keys(others).length + 1}`, name, { 'シート1': [] }); others[s.id] = s; return s; },
-      getUi: () => ({ alert: (m) => log.push(`[UI.alert] ${m}`), createMenu: () => ({ addItem() { return this; }, addToUi() {} }) }),
+      create: (name) => { const s = new Spreadsheet(`NEW_${Object.keys(others).length + 1}`, name, { 'シート1': [] }); others[s.id] = s; created.push(s); return s; },
+      getUi: () => ui,
       flush: () => {},
     },
     GmailApp,
@@ -200,7 +272,7 @@ function createGasEnv(opts = {}) {
   }
   vm.createContext(ctx);
   return {
-    ctx, ss, GmailApp, DriveApp, log, props, fetched,
+    ctx, ss, GmailApp, DriveApp, log, props, fetched, ui, created,
     load(file) { vm.runInContext(fs.readFileSync(file, 'utf8'), ctx, { filename: file }); return this; },
     run(code) { return vm.runInContext(code, ctx); },
     sheet(name) { return ss.getSheetByName(name); },

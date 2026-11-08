@@ -30,3 +30,4 @@ env.sheet('請求一覧').getRange('E2').getValue();
 - SpreadsheetApp / Sheet / Range（A1表記・行列指定、getValues/setValues ほか）、GmailApp、MailApp、DriveApp、Utilities（formatDate・newBlob）、Logger、PropertiesService、Session、LockService、MimeType、UrlFetchApp/ScriptApp（呼び出しを記録するだけ）。
 - PDFの中身・レイアウト、権限ダイアログ、送信数の上限、実行時間の上限（6分）は検証できない。これらは実機確認の対象にする。
 - 未対応のメソッドを呼ぶとエラーになる。必要になったら `index.js` に追加する。
+- 2026-11-08追加：`Sheet.copyTo`・`setName`、`Spreadsheet.deleteSheet`、UIの `alert`（ボタンと戻り値。`env.ui.responses` に積んだ順に返す）とメニューの記録（`env.ui.menus`）、`SpreadsheetApp.create` の記録（`env.created`）、`DriveApp` の `setTrashed`（`env.DriveApp.trashed`）、`getAs` が返すBlobの `snapshot`（PDF化した時点のシートの中身）、書式設定メソッドの空実装。

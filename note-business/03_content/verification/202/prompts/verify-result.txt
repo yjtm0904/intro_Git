@@ -1,0 +1,35 @@
+# 記事202 改造の依頼文3本の検証結果
+# 実行日: 2026-11-08（JST）
+# 手順1: 依頼文（*.prompt.txt。Code.gs v1.0 の全文つき）を Claude に送り、出力を保存（2-cc・3-message は2回実行。1回目は run1/）
+#   コマンド: claude -p --tools "" --no-session-persistence --output-format json --system-prompt "You are Claude, a helpful assistant." < <依頼文>
+#   1-column（最新）: モデル claude-opus-5-5 / 出力 6591 字
+#   2-cc（最新）: モデル claude-opus-5-5 / 出力 13970 字
+#   3-message（最新）: モデル claude-opus-5-5 / 出力 14235 字
+# 手順2: 出力のコード（関数・定数）を Code.gs のコピーに当てはめ、gas-mock で、頼んだ動作になるか・テストモードと二重作成の防止が保たれるかを確認
+#   コマンド: TZ=Asia/Tokyo node --test verify-prompts.test.js（1回目: OUTPUT2=run1/2-cc.output.md OUTPUT3=run1/3-message.output.md を付ける）
+
+## 最新の出力
+ok 1 - 依頼文1（列）：請求明細の「注文番号」を請求書の明細に表示できる。合計・テストモード・二重作成の防止は変わらない
+# 出力で置き換えた関数・定数: LINE_KEYS, aggregateInvoices_, buildInvoiceSheet_
+ok 2 - 依頼文2（CC）：本番だけCCを付けてメモに残し、テストモードではCCを付けない。再実行で増えない
+# 出力で置き換えた関数・定数: aggregateInvoices_, deliverMail_, applyTestMode_, createInvoices, setupSheets
+ok 3 - 依頼文3（文面）：取引先ごとの「ひとこと」を本文に差し込み、空欄なら何も入れない。件名には使えない
+# 出力で置き換えた関数・定数: aggregateInvoices_, createInvoices, plan_, setupSheets
+# tests 3
+# pass 3
+# fail 0
+
+## 1回目の出力（2-cc・3-message）
+ok 1 - 依頼文2（CC）：本番だけCCを付けてメモに残し、テストモードではCCを付けない。再実行で増えない
+# 出力で置き換えた関数・定数: aggregateInvoices_, deliverMail_, applyTestMode_, createInvoices, setupSheets
+ok 2 - 依頼文3（文面）：取引先ごとの「ひとこと」を本文に差し込み、空欄なら何も入れない。件名には使えない
+# 出力で置き換えた関数・定数: aggregateInvoices_, plan_, setupSheets
+# tests 2
+# pass 2
+# fail 0
+
+## 観察（記事に書いてよい事実）
+- 5本の出力すべてで、頼んだ変更が動き、テストモード・下書きの既定・二重作成の防止は保たれた
+- 変える関数の数は出力ごとに違った（依頼文3は1回目3関数、2回目4関数）。AIの出力は毎回変わる
+- 5本とも、新しい列を「必須の列」として扱い、列がないと止まる作りにした（依頼文には書いていない判断）
+- 依頼文2の出力は2本とも、テストモードではCCを付けない処理を2か所（テストモードの関数とメール作成の関数）に入れた

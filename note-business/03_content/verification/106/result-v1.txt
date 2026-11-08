@@ -1,4 +1,4 @@
-置換表: replace-table-v1.csv（26語）／形の置き換え: なし／人の修正: 0件／順番: long
+置換表: replace-table-v1.csv（26語）／形の置き換え: なし／人の修正: 0件／消した列: なし／順番: long
 
 [doc1-invoice-email.txt] 残り 12か所
   - 語「山田」×1
