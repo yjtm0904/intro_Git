@@ -99,10 +99,18 @@ for i, (day, c, p, q) in enumerate(DETAILS, start=2):
     EXPECT[("請求明細", f"M{i}")] = vlookup_exact(c, MASTER, 4)                      # 例2（VLOOKUP版）
     EXPECT[("請求明細", f"N{i}")] = vlookup_approx(c, MASTER, 2)                     # 例7（近似一致）
     EXPECT[("請求明細", f"O{i}")] = ifna(vlookup_exact(c, MASTER, 2), "未登録")      # 例8（INDEX/MATCH版）
+    EXPECT[("請求明細", f"P{i}")] = ifna(vlookup_exact(c, MASTER, 2), "未登録")      # テンプレありの依頼Aに対するAIの出力
+    EXPECT[("請求明細", f"Q{i}")] = sum(1 for r in MASTER if r[0] == c)              # 確認：コードがマスタに何件あるか（COUNTIF）
+# 確認：探す値が空欄の行（空欄のままにする式と、しない式）
+EXPECT[("チェック", "B2")] = ""
+EXPECT[("チェック", "C2")] = "未登録"
+EXPECT[("チェック", "B3")] = "株式会社サンプル商事"   # 端の行（最初）
+EXPECT[("チェック", "B4")] = "株式会社サンプル企画"   # 端の行（最後）
 LOOKUP_MAILS = ["test-foods@example.com", "sample-kikaku@example.com", "unknown@example.com"]
 for i, mail in enumerate(LOOKUP_MAILS, start=2):
     hit = next((r[0] for r in MASTER if r[3] == mail), NA)
     EXPECT[("逆引き", f"B{i}")] = ifna(hit, "未登録")                                   # 例5（INDEX/MATCH版）
+    EXPECT[("逆引き", f"H{i}")] = ifna(hit, "未登録")                                   # テンプレありの依頼Bに対するAIの出力（Excel 2019以前向け）
 TWO = [("2026-10", "C-003"), ("2026-11", "C-004"), ("2026-12", "C-001")]
 for i, (mo, c) in enumerate(TWO, start=2):
     hit = next((r[2] for r in SENT if r[0] == mo and r[1] == c), NA)
@@ -136,7 +144,7 @@ def build():
         ws.append(list(r))
     ws = wb.create_sheet("請求明細")
     ws.append(["対象月", "取引日", "取引先コード", "取引先名", "商品コード", "品目", "数量", "単価", "税率", "金額", "",
-               "例1 VLOOKUP", "例2 メール", "例7 近似一致", "例8 INDEX/MATCH"])
+               "例1 VLOOKUP", "例2 メール", "例7 近似一致", "例8 INDEX/MATCH", "AIの出力（依頼A）", "マスタの件数"])
     for i, (day, c, p, q) in enumerate(DETAILS, start=2):
         ws.append(["2026-11", f"2026/11/{day:02d}", c,
                    f'=_xlfn.IFNA(VLOOKUP(C{i},取引先マスタ!$A$2:$D$11,2,FALSE),"未登録")', p,
@@ -145,20 +153,28 @@ def build():
                    f"=G{i}*H{i}", "",
                    f"=VLOOKUP(C{i},取引先マスタ!$A$2:$D$11,2,FALSE)", f"=VLOOKUP(C{i},取引先マスタ!$A$2:$D$11,4,FALSE)",
                    f"=VLOOKUP(C{i},取引先マスタ!$A$2:$D$11,2)",
-                   f'=_xlfn.IFNA(INDEX(取引先マスタ!$B$2:$B$11,MATCH(C{i},取引先マスタ!$A$2:$A$11,0)),"未登録")'])
+                   f'=_xlfn.IFNA(INDEX(取引先マスタ!$B$2:$B$11,MATCH(C{i},取引先マスタ!$A$2:$A$11,0)),"未登録")',
+                   f'=IFERROR(VLOOKUP(C{i},取引先マスタ!$A$2:$B$11,2,FALSE),"未登録")',
+                   f"=COUNTIF(取引先マスタ!$A$2:$A$11,C{i})"])
     ws = wb.create_sheet("送付記録")
     ws.append(["記録日時", "モード", "対象月", "取引先コード", "取引先名", "請求書番号", "合計（税込）", "宛先", "状態", "PDFファイル名", "PDFのURL", "メモ"])
     for mo, c, total in SENT:
         ws.append(["", "本番", mo, c, M[c][1], f"INV-{mo.replace('-', '')}-{c}", total, M[c][3], "下書き済み", "", "", ""])
     ws = wb.create_sheet("逆引き")
-    ws.append(["メール（例5）", "取引先コード", "", "対象月（例6）", "取引先コード", "合計（税込）", "件数"])
+    ws.append(["メール（例5）", "取引先コード", "", "対象月（例6）", "取引先コード", "合計（税込）", "件数", "AIの出力（依頼B）"])
     for i in range(2, 5):
         mail = LOOKUP_MAILS[i - 2]
         mo, c = TWO[i - 2]
         ws.append([mail, f'=_xlfn.IFNA(INDEX(取引先マスタ!$A$2:$A$11,MATCH(A{i},取引先マスタ!$D$2:$D$11,0)),"未登録")', "",
                    mo, c,
                    f'=_xlfn.IFNA(INDEX(送付記録!$G$2:$G$11,MATCH(1,INDEX((送付記録!$C$2:$C$11=D{i})*(送付記録!$D$2:$D$11=E{i}),0),0)),"未登録")',
-                   f"=SUMPRODUCT((送付記録!$C$2:$C$11=D{i})*(送付記録!$D$2:$D$11=E{i}))"])
+                   f"=SUMPRODUCT((送付記録!$C$2:$C$11=D{i})*(送付記録!$D$2:$D$11=E{i}))",
+                   f'=IFERROR(INDEX(取引先マスタ!$A$2:$A$11,MATCH(A{i},取引先マスタ!$D$2:$D$11,0)),"未登録")'])
+    ws = wb.create_sheet("チェック")
+    ws.append(["探す値", "空欄なら空欄のまま", "空欄の扱いなし"])
+    for i, key in enumerate([None, "C-001", "C-010"], start=2):
+        ws.append([key, f'=IF(A{i}="","",_xlfn.IFNA(VLOOKUP(A{i},取引先マスタ!$A$2:$D$11,2,FALSE),"未登録"))',
+                   f'=_xlfn.IFNA(VLOOKUP(A{i},取引先マスタ!$A$2:$D$11,2,FALSE),"未登録")'])
     ws = wb.create_sheet("XLOOKUP確認")
     ws.append(["例", "数式（D列と同じもの）", "", "結果", "期待する結果", "判定"])
     for i, (label, f, exp) in enumerate(XL, start=2):
