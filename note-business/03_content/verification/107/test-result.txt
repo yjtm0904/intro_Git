@@ -1,0 +1,20 @@
+# 記事107 最小コード（Code.gs v1.0・48行）ロジック検証の実行結果
+# 実行日時: 2026-11-08 21:26 JST / Node.js v22.23.4
+# コマンド: TZ=Asia/Tokyo node --test code.test.js（Googleのサービスは 05_operations/tools/gas-mock のモック。データは sample-master.csv・sample-details.csv・layout.csv）
+
+ok 1 - 1 C-001の請求書シートを作り、宛名・番号・税率ごとの合計・明細を入れる（前月の明細は入らない）
+ok 2 - 2 端数処理の3方式：手順書の期待値と一致する（C-001は8%の消費税207.36円の処理で差が出る）
+ok 3 - 3 端数処理を選んでいないと止まり、何も作らない
+ok 4 - 4 同じ取引先・同じ月のシートがあれば止まる（二重に作らない）
+ok 5 - 5 取引先マスタにないコード・明細のない月・16行以上の明細は止まる
+ok 6 - 6 対象月の列が日付に変わっていても読める
+ok 7 - 7 最小コードの範囲：50行以内、このファイルだけの権限（@OnlyCurrentDoc）、PDF化・メール送付をしない
+ok 8 - 8 記事の本文のコード・ひな形・データが、検証に使ったファイルと同じ
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 111.065759
