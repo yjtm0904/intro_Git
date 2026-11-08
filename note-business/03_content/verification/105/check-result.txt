@@ -185,11 +185,11 @@
 一致  逆引き!B3  期待='C-010'  LibreOffice='C-010'  数式==IFNA(INDEX($取引先マスタ.$A$2:$A$11;MATCH(A3;$取引先マスタ.$D$2:$D$11;0));"未登録")
 一致  逆引き!B4  期待='未登録'  LibreOffice='未登録'  数式==IFNA(INDEX($取引先マスタ.$A$2:$A$11;MATCH(A4;$取引先マスタ.$D$2:$D$11;0));"未登録")
 一致  逆引き!F2  期待=14850  LibreOffice=14850  数式==IFNA(INDEX($送付記録.$G$2:$G$11;MATCH(1;INDEX(($送付記録.$C$2:$C$11=D2)*($送付記録.$D$2:$D$11=E2);0);0));"未登録")
-一致  逆引き!G2  期待=1  LibreOffice=1  数式==COUNTIFS($送付記録.$C$2:$C$11;D2;$送付記録.$D$2:$D$11;E2)
+一致  逆引き!G2  期待=1  LibreOffice=1  数式==SUMPRODUCT(($送付記録.$C$2:$C$11=D2)*($送付記録.$D$2:$D$11=E2))
 一致  逆引き!F3  期待=37378  LibreOffice=37378  数式==IFNA(INDEX($送付記録.$G$2:$G$11;MATCH(1;INDEX(($送付記録.$C$2:$C$11=D3)*($送付記録.$D$2:$D$11=E3);0);0));"未登録")
-一致  逆引き!G3  期待=1  LibreOffice=1  数式==COUNTIFS($送付記録.$C$2:$C$11;D3;$送付記録.$D$2:$D$11;E3)
+一致  逆引き!G3  期待=1  LibreOffice=1  数式==SUMPRODUCT(($送付記録.$C$2:$C$11=D3)*($送付記録.$D$2:$D$11=E3))
 一致  逆引き!F4  期待='未登録'  LibreOffice='未登録'  数式==IFNA(INDEX($送付記録.$G$2:$G$11;MATCH(1;INDEX(($送付記録.$C$2:$C$11=D4)*($送付記録.$D$2:$D$11=E4);0);0));"未登録")
-一致  逆引き!G4  期待=0  LibreOffice=0  数式==COUNTIFS($送付記録.$C$2:$C$11;D4;$送付記録.$D$2:$D$11;E4)
+一致  逆引き!G4  期待=0  LibreOffice=0  数式==SUMPRODUCT(($送付記録.$C$2:$C$11=D4)*($送付記録.$D$2:$D$11=E4))
 XLOOKUP確認!D2  期待='株式会社見本デザイン'  LibreOffice='#NAME?'  LibreOffice 24.2 は未対応（#NAME?）→ ロジックの検算のみ。実機確認の対象
 XLOOKUP確認!D3  期待='sample-shoji@example.com'  LibreOffice='#NAME?'  LibreOffice 24.2 は未対応（#NAME?）→ ロジックの検算のみ。実機確認の対象
 XLOOKUP確認!D4  期待=864  LibreOffice='#NAME?'  LibreOffice 24.2 は未対応（#NAME?）→ ロジックの検算のみ。実機確認の対象
