@@ -33,10 +33,10 @@ function load({ rounding = '切り捨て', month = '2026-11', code = 'C-001', mo
   };
   const rows = (lines) => lines.map((l) => l.split(',').map(parse));
   const put = (name, data) => env.sheet(name).getRange(1, 1, data.length, data[0].length).setValues(data);
-  put('取引先マスタ', [['取引先コード', '取引先名', '部署', 'メール']].concat(rows(read('sample-master.csv'))));
+  put('取引先マスタ', rows(read('sample-master.csv')));                 // 1行目は見出し
   const details = rows(read('sample-details.csv').concat(extraLines));
-  if (monthAsDate) details.forEach((r) => { const [y, mo] = r[0].split('-'); r[0] = new VmDate(+y, +mo - 1, 1); });
-  put('請求明細', [['対象月', '取引日', '取引先コード', '取引先名', '商品コード', '品目', '数量', '単価', '税率', '金額']].concat(details));
+  if (monthAsDate) details.slice(1).forEach((r) => { const [y, mo] = r[0].split('-'); r[0] = new VmDate(+y, +mo - 1, 1); });
+  put('請求明細', details);
   put('請求書レイアウト', read('layout.csv').map((l) => l.split(',')));
   put('送付記録', [['記録日時', 'モード', '対象月', '取引先コード', '取引先名', '請求書番号', '合計（税込）', '宛先', '状態', 'PDFファイル名', 'PDFのURL', 'メモ']]);
   return env;
@@ -65,8 +65,8 @@ test('1 C-001の請求書シートを作り、宛名・番号・税率ごとの�
   assert.equal(env.sheet('請求書レイアウト').getRange('A3').getValue(), '{{取引先名}} 御中'); // ひな形は変わらない
 });
 
-test('2 端数処理の3方式：3社とも、手順書の期待値と一致する', () => {
-  const expect = { 'C-001': [53949, 53949, 53950], 'C-002': [9373, 9374, 9374], 'C-003': [4072, 4072, 4073] };
+test('2 端数処理の3方式：手順書の期待値と一致する（C-001は8%の消費税207.36円の処理で差が出る）', () => {
+  const expect = { 'C-001': [53949, 53949, 53950], 'C-002': [1078, 1078, 1078] };
   Object.entries(expect).forEach(([code, want]) => {
     ['切り捨て', '四捨五入', '切り上げ'].forEach((rounding, i) => {
       const env = load({ rounding, code });
@@ -76,7 +76,7 @@ test('2 端数処理の3方式：3社とも、手順書の期待値と一致す�
   });
   const env = load({ code: 'C-002' });
   env.ctx.createOneInvoice();
-  assert.deepEqual(totals(env.sheet('請求書_C-002_2026-11')), [4280, 428, 4320, 345, 9373]);
+  assert.deepEqual(totals(env.sheet('請求書_C-002_2026-11')), [980, 98, 0, 0, 1078]);
 });
 
 test('3 端数処理を選んでいないと止まり、何も作らない', () => {

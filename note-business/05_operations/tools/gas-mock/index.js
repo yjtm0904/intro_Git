@@ -16,7 +16,7 @@
  * 未対応の機能を呼ぶとエラーになる（＝テストで気づける）。
  *
  * 2026-11-08 追加（ライターB・記事202/107のため）:
- *   Sheet.copyTo / setName、Spreadsheet.deleteSheet、getAs の snapshot（PDF化した時点のシートの中身）、
+ *   Sheet.copyTo / setName、Spreadsheet.deleteSheet / setActiveSheet、getAs の snapshot（PDF化した時点のシートの中身）、
  *   UI の alert（ボタンと戻り値）・メニューの記録（env.ui）、SpreadsheetApp.create の記録（env.created）、
  *   DriveApp の setTrashed（env.DriveApp.trashed）、書式設定メソッドの空実装。
  *   ファイルIDと下書きIDが後から変わる不具合を修正（作成時点の番号で固定）。
@@ -155,7 +155,8 @@ class Spreadsheet {
   getSheets() { return this.sheets; }
   getSheetByName(n) { return this.sheets.find((s) => s.name === n) || null; }
   insertSheet(n) { const s = new Sheet(n, [], this); this.sheets.push(s); return s; }
-  getActiveSheet() { return this.sheets[0]; }
+  getActiveSheet() { return this.active || this.sheets[0]; }
+  setActiveSheet(sheet) { this.active = sheet; return sheet; }
   deleteSheet(sheet) {
     const i = this.sheets.indexOf(sheet);
     if (i < 0) throw new Error('deleteSheet: このスプレッドシートにないシートです');
