@@ -1,6 +1,7 @@
 # 週次レビュー（市場PDCA）テンプレート
 
 > 使い方: 毎週1回、オーナーがnoteの「ダッシュボード（アクセス状況）」と「売上管理」の数字を `kpi-tracker.csv` に記入し、Claudeに「週次レビューをして」と依頼する。Claudeはこのテンプレートを `05_operations/reviews/YYYY-MM-DD.md` として埋め、次週の施策と制作指示を出す。
+> 数字の集計と改善ルールの判定は、ツールで自動化している: `python3 -I note-business/05_operations/tools/kpi-report/report.py note-business/05_operations/kpi-tracker.csv`（§1と§4の材料が出る）
 
 ## 1. 今週の数字
 
