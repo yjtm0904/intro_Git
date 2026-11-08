@@ -33,6 +33,13 @@ ALLOW = {
 
 PAID_LINE = "ここから有料"
 AI_DISCLOSURE = re.compile(r"生成AI.{0,40}(検証|確認|編集)")
+# 未記入・確認待ちの印（R3）。公開前チェック（--publish）ではERROR
+PLACEHOLDER = re.compile(r"【(オーナー確認待ち|要記入|記入|実機確認後に記入)[^】]*】|［リンク[:：][^］]*］|\d{4}-\d{2}-XX")
+# 根拠が必要な時間の数字（審査の改善提案3b）
+TIME_CLAIM = re.compile(r"\d+\s*(秒|分|時間)(で|に|→|から|短縮|削減)")
+# コードブロック（文例・プロンプト）の中の強い表現（参考表示）
+STRONG_IN_CODE = re.compile(r"必ず|至急|期限厳守|法的措置|遅延損害金")
+PUBLISH = False  # --publish で True
 
 
 def lint(path):
@@ -53,8 +60,14 @@ def lint(path):
         if line.strip().startswith("```"):
             in_code = not in_code
             continue
+        if PLACEHOLDER.search(line):
+            (errors if PUBLISH else warns).append((no, "未記入", "確認待ち・未記入の印が残っている（公開前に解消する）", line))
         if in_code:
+            if STRONG_IN_CODE.search(line):
+                warns.append((no, "文例の表現", "文例・プロンプト内の強い表現（意図どおりか確認）", line))
             continue
+        if TIME_CLAIM.search(line):
+            warns.append((no, "数字の根拠", "時間の数字には検証条件か根拠が必要", line))
         if re.match(r"^\s*\|.*\|\s*$", line):
             errors.append((no, "書式", "表（テーブル）はnoteで再現できない。箇条書きに置き換える", line))
         if re.match(r"^####", line):
@@ -79,9 +92,14 @@ def lint(path):
 
 
 def main():
-    paths = sys.argv[1:]
+    global PUBLISH
+    args = sys.argv[1:]
+    if "--publish" in args:
+        PUBLISH = True
+        args.remove("--publish")
+    paths = args
     if not paths:
-        sys.exit("usage: lint.py <file.md> ...")
+        sys.exit("usage: lint.py [--publish] <file.md> ...")
     total_err = 0
     for p in paths:
         errors, warns = lint(p)

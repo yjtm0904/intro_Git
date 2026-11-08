@@ -23,6 +23,7 @@
 
 ## 2. 記事を1本公開する手順
 
+0. **公開前の確認を済ませる**: `note-business/03_content/verification/<ID>/owner-check.md` のチェック項目をすべて埋めて、Claudeに「<ID>の確認が終わった」と伝える。原稿中の `【オーナー確認待ち：…】` の印を、確認結果に差し替えた版を用意します（印が残った原稿は公開しない）。
 1. **原稿を開く**: GitHubで `note-business/03_content/articles/<ID>-....md` を開く（表示された状態で使う）。
    - 先頭の表（メタ情報）に、タイトル・価格・ハッシュタグ・追加するマガジンが書いてある。
 2. **見出し画像を用意する**: `note-business/03_content/images/<ID>.png` をダウンロードする。
