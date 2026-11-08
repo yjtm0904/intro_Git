@@ -67,11 +67,13 @@ def lint(path):
                         continue
                     warns.append((no, cat, f"NGワード候補「{pat}」— 文脈を確認", line))
     is_paid = meta.get("type") == "paid"
+    # 特定商取引法の表記など法定の表示ページは、AI活用の定型文・検証日の対象外（D-010）
+    is_legal_notice = meta.get("lint_profile") == "legal-notice" or "<!-- lint: legal-notice -->" in text
     if is_paid and PAID_LINE not in text:
         errors.append((0, "販売設計", "有料記事なのに有料ラインの印（ここから有料）がない", ""))
-    if not AI_DISCLOSURE.search(text):
+    if not is_legal_notice and not AI_DISCLOSURE.search(text):
         errors.append((0, "表示", "生成AIの活用と検証についての表記がない（法務§4-2）", ""))
-    if not re.search(r"検証日|確認日|最終確認", text):
+    if not is_legal_notice and not re.search(r"検証日|確認日|最終確認", text):
         warns.append((0, "正確性", "検証日・確認日の記載が見当たらない", ""))
     return errors, warns
 
