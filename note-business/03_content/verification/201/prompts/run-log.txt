@@ -1,0 +1,46 @@
+2026-11-08T18:48:24 customize.prompt.txt run1 成功 session=29774368-d352-44c1-8480-c53286fce4d5
+2026-11-08T18:48:24 ng-01.prompt.txt run1 成功 session=5f6b27ab-d6e3-4ed2-accf-178604c7ded1
+2026-11-08T18:48:24 ng-02.prompt.txt run1 成功 session=d9e9f318-1d73-4a9a-a362-25758685c763
+2026-11-08T18:48:24 ng-03.prompt.txt run1 成功 session=db9ade0a-a2de-40fe-91fc-ef450422a345
+2026-11-08T18:48:24 ng-04.prompt.txt run1 成功 session=6bc07a40-6634-42de-85e5-46381c248824
+2026-11-08T18:48:24 ng-05.prompt.txt run1 成功 session=113b28a4-9b20-41f4-aa3b-a3920613c63d
+2026-11-08T18:48:28 ng-06.prompt.txt run1 成功 session=71ad7e2f-9e91-4595-ad94-171525719640
+2026-11-08T18:48:30 ng-07.prompt.txt run1 成功 session=f7d3f277-4fbe-4f1d-87a3-e782f11ae637
+2026-11-08T18:48:30 ng-08.prompt.txt run1 エラー
+2026-11-08T18:48:30 ng-09.prompt.txt run1 エラー
+2026-11-08T18:48:30 ng-10.prompt.txt run1 エラー
+2026-11-08T18:48:30 ng-11.prompt.txt run1 エラー
+2026-11-08T18:48:58 ng-12.prompt.txt run1 成功 session=8e876a28-293b-46f7-8b58-0aabd57ef5b0
+2026-11-08T18:48:58 ng-13.prompt.txt run1 エラー
+2026-11-08T18:48:58 ng-14.prompt.txt run1 エラー
+2026-11-08T18:48:58 ng-15.prompt.txt run1 エラー
+2026-11-08T18:48:58 ng-16.prompt.txt run1 エラー
+2026-11-08T18:48:58 ng-17.prompt.txt run1 エラー
+2026-11-08T18:48:58 ng-18.prompt.txt run1 エラー
+2026-11-08T18:48:58 ng-19.prompt.txt run1 エラー
+2026-11-08T18:48:58 ng-20.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-01.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-02.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-03.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-04.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-05.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-06.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-07.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-08.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-09.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-10.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-11.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-12.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-13.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-14.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-15.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-16.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-17.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-18.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-19.prompt.txt run1 エラー
+2026-11-08T18:48:58 scene-20.prompt.txt run1 エラー
+2026-11-08T18:48:58 v1pre-01.prompt.txt run1 エラー
+2026-11-08T18:48:58 v1pre-02.prompt.txt run1 エラー
+2026-11-08T18:48:58 v1pre-03.prompt.txt run1 エラー
+2026-11-08T18:48:58 v1pre-04.prompt.txt run1 エラー
+2026-11-08T18:48:58 v1pre-05.prompt.txt run1 エラー

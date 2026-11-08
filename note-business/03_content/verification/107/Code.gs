@@ -1,6 +1,6 @@
 /**
  * @OnlyCurrentDoc
- * 1社分の請求書シートを作る（最小版。PDF化・メール送付はしない）事務の型紙 107 v1.0（2026-11-08）
+ * 1社分の請求書シートを作る（最小版。PDF化・メール送付はしない）事務の型紙 107 v1.1（2026-11-08）
  */
 const TARGET_MONTH = '2026-11'; // 対象月
 const TARGET_CODE = 'C-001';    // 取引先コード
@@ -19,7 +19,8 @@ function createOneInvoice() {
     .filter(r => monthOf(r[0]) === TARGET_MONTH && r[2] === TARGET_CODE);
   if (lines.length === 0 || lines.length > 15) throw new Error('明細が ' + lines.length + ' 行です（1〜15行で作れます）');
   const base = { 10: 0, 8: 0 };
-  lines.forEach(r => { base[rateOf(r[8])] += r[6] * r[7]; });               // 数量×単価を税率ごとに合計
+  lines.forEach(r => { const t = rateOf(r[8]); if (!(t in base)) throw new Error('税率は10%か8%にしてください（' + r[5] + '）');
+    base[t] += r[6] * r[7]; });                                              // 数量×単価を税率ごとに合計（10%・8%以外は止める）
   const tax10 = round(base[10] * 10 / 100), tax8 = round(base[8] * 8 / 100); // 端数処理は税率ごとに1回
   const f = { 取引先名: client[1], 部署: client[2], 請求書番号: 'INV-' + TARGET_MONTH.replace('-', '') + '-' + TARGET_CODE,
     発行日: new Date(), 支払期限: DUE_DATE, 対象月: TARGET_MONTH, '10%対象': base[10], '10%消費税': tax10,

@@ -101,6 +101,17 @@ test('5 取引先マスタにないコード・明細のない月・16行以上�
   assert.equal(env.ss.getSheets().length, 4);
 });
 
+test('9 税率が10%・8%以外（5%・空欄）の明細があると、品目名を示して止まり、シートを作らない（黙って合計から外さない）', () => {
+  [['5%', '消耗品（税率5%）'], ['', '印刷（税率が空欄）']].forEach(([rate, item]) => {
+    const env = load({ extraLines: ['2026-11,2026/11/20,C-001,,P-07,' + item + ',1,1234,' + rate + ','] });
+    assert.throws(() => env.ctx.createOneInvoice(), new RegExp('税率は10%か8%にしてください（' + item.replace(/[()（）%]/g, '.') + '）'));
+    assert.equal(env.ss.getSheets().length, 4, 'シートを作らない');
+  });
+  const ok = load({ extraLines: ['2026-11,2026/11/20,C-001,,P-07,消耗品,1,1234,10,'] }); // 「10」と入れた税率は10%として読む
+  ok.ctx.createOneInvoice();
+  assert.equal(cell(ok.sheet('請求書_C-001_2026-11'), 'F29'), 46500 + 1234);
+});
+
 test('6 対象月の列が日付に変わっていても読める', () => {
   const env = load({ monthAsDate: true });
   env.ctx.createOneInvoice();

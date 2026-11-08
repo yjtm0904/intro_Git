@@ -16,7 +16,7 @@ import sys
 
 WEEK = "月火水木金土日"
 ALLOWED = {(11, 27), (12, 2), (12, 3)}  # 依頼文の【条件】にある日付
-TOPIC = r"確定申告|還付|追徴|控除証明|控除を受け|税額|所得税|損|不利益|罰|法律|義務|マイナンバー|扶養親族|生命保険|所得"
+TOPIC = r"確定申告|還付|追徴|控除証明|控除を受け|税額|所得税|税金を|損|不利益|罰|法律|義務|マイナンバー|扶養|生命保険|地震保険|所得|必ず|至急|本日|明日"
 DATE_RE = re.compile(r"(?:(\d{4})年)?(\d{1,2})月(\d{1,2})日(?:[（(]([月火水木金土日])[）)])?")
 
 
@@ -24,10 +24,23 @@ def year_of(month):
     return 2026 if month >= 11 else 2027
 
 
+def normalize(text):
+    """独立実行の出力（マークダウン）を点検用にそろえる：**・>・「本文：」の見出しを外し、
+    「## 1. 〜」「## 文例1：〜」を「## 文例1 〜」に、「**件名：**」を「件名：」にする。"""
+    t = text.split("\n---\n", 1)[1] if text.startswith("# ") and "\n---\n" in text else text
+    t = re.sub(r"^> ?", "", t, flags=re.M)
+    t = t.replace("**", "")
+    t = re.sub(r"^本文[:：]\s*$", "", t, flags=re.M)
+    t = re.sub(r"^#{2,3}\s*(?:文例)?\s*(\d)[.．:：）)]?\s*[：:]?\s*", r"## 文例\1 ", t, flags=re.M)
+    t = re.sub(r"^件名[:：]\s*", "件名：", t, flags=re.M)
+    return t
+
+
 def sections(text):
+    text = normalize(text)
     parts = re.split(r"^## (文例\d.*)$", text, flags=re.M)
     for i in range(1, len(parts), 2):
-        body = parts[i + 1].split("\n---")[0]
+        body = re.split(r"\n---|\n#{1,3} ", parts[i + 1])[0]
         yield parts[i].strip(), body
 
 
