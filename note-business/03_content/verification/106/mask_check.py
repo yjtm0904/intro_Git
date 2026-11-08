@@ -27,11 +27,11 @@ WATCH_WORDS = [
 PATTERNS = {
     "メールアドレス": r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+",
     "電話番号": r"0\d{1,4}-\d{1,4}-\d{3,4}",
-    "郵便番号": r"〒?\d{3}-\d{4}",
-    "口座番号（7桁）": r"(?<!\d)\d{7}(?!\d)",
-    "金額（円・桁区切り）": r"\d{1,3}(?:,\d{3})+円|\d+万円",
+    "郵便番号": r"〒\s?\d{3}-\d{4}|(?<![\d-])\d{3}-\d{4}(?![\d-])",
+    "口座番号（普通・当座＋数字）": r"(?:普通|当座)[\s　]*\d{6,8}",
+    "金額（円・桁区切り）": r"\d{1,3}(?:,\d{3})+万?円|\d+万円",
     "金額（CSVの5桁以上）": r"(?<=,)\d{5,}(?=,|$)",
-    "URL": r"https?://\S+",
+    "URL": r"https?://[\w./?=&%:-]+",
     "半角カナ": r"[ｦ-ﾟ]{3,}",
     "住所（都道府県＋市区町村）": r"(?:東京都|北海道|大阪府|京都府|[^\s,、]{2,3}県)[^\s,、]{1,8}?[市区町村]",
 }
@@ -39,12 +39,12 @@ PATTERNS = {
 def mask_patterns(text):
     """手順2: 数字は桁と形だけ残す。連絡先は記号にする。"""
     text = re.sub(PATTERNS["メールアドレス"], "〔メールアドレス〕", text)
-    text = re.sub(PATTERNS["URL"].replace(r"\S+", r"[^\s）)」]+"), "〔社内URL〕", text)
+    text = re.sub(PATTERNS["URL"], "〔社内URL〕", text)
     text = re.sub(PATTERNS["電話番号"], lambda m: re.sub(r"\d", "X", m.group()), text)
     text = re.sub(PATTERNS["郵便番号"], lambda m: re.sub(r"\d", "X", m.group()), text)
     text = re.sub(PATTERNS["金額（円・桁区切り）"], lambda m: re.sub(r"\d", "X", m.group()), text)
     text = re.sub(PATTERNS["金額（CSVの5桁以上）"], lambda m: "X" * len(m.group()), text, flags=re.M)
-    text = re.sub(PATTERNS["口座番号（7桁）"], "XXXXXXX", text)
+    text = re.sub(PATTERNS["口座番号（普通・当座＋数字）"], lambda m: re.sub(r"\d", "X", m.group()), text)
     return text
 
 def load_table(path):
