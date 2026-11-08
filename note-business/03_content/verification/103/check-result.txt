@@ -1,0 +1,66 @@
+# 記事103 エラー7種の検算結果（LibreOffice 24.2.7.2・Python 3.13.18）
+# 実行: python3 -B check_errors.py ／ ブック: 103-check.xlsx（架空データ）
+
+一致  請求明細!J22  期待=162015  LibreOffice=162015  数式==SUM(J2:J21)
+一致  E1_NA!D4  期待='#N/A'  LibreOffice='#N/A'  数式==VLOOKUP(C4;$取引先マスタ.$A$2:$D$11;2;FALSE())
+一致  E1_NA!L4  期待=6  LibreOffice=6  数式==LEN(C4)
+一致  E1_NA!M4  期待=False  LibreOffice=0  数式==C4="C-003"
+一致  E1_NA!N4  期待='株式会社見本デザイン'  LibreOffice='株式会社見本デザイン'  数式==VLOOKUP(TRIM(C4);$取引先マスタ.$A$2:$D$11;2;FALSE())
+一致  E1_NA!D5  期待='株式会社サンプル商事'  LibreOffice='株式会社サンプル商事'  数式==IFNA(VLOOKUP(C5;$取引先マスタ.$A$2:$D$11;2;FALSE());"未登録")
+一致  E1_NA!O4  期待='株式会社見本デザイン'  LibreOffice='株式会社見本デザイン'  数式==VLOOKUP(TRIM(SUBSTITUTE(C4;CHAR(160);" "));$取引先マスタ.$A$2:$D$11;2;FALSE())
+一致  E2_VALUE!J7  期待='#VALUE!'  LibreOffice='#VALUE!'  数式==G7*H7
+一致  E2_VALUE!L7  期待=False  LibreOffice=0  数式==ISNUMBER(G7)
+一致  E2_VALUE!M7  期待=4320  LibreOffice=4320  数式==VALUE(SUBSTITUTE(G7;"個";""))*H7
+一致  E2_VALUE!J8  期待=3702  LibreOffice=3702  数式==G8*H8
+一致  E2_VALUE!N7  期待=4320  LibreOffice=4320  数式==SUBSTITUTE(G7;"個";"")*H7
+一致  E2_VALUE!N8  期待=3702  LibreOffice=3702  数式==SUBSTITUTE(G8;"個";"")*H8
+一致  E4_DIV0!D2  期待=1.0785454545454545  LibreOffice=1.0785454545  数式==C2/B2
+一致  E4_DIV0!E2  期待=1.0785454545454545  LibreOffice=1.0785454545  数式==IF(B2=0;"";C2/B2)
+一致  E4_DIV0!F2  期待=1.0785454545454545  LibreOffice=1.0785454545  数式==IF(N(B2)=0;"";C2/B2)
+一致  E4_DIV0!G2  期待=1.0785454545454545  LibreOffice=1.0785454545  数式==IF(OR(B2="";B2=0);"";C2/B2)
+一致  E4_DIV0!H2  期待=1.0785454545454545  LibreOffice=1.0785454545  数式==IFERROR(C2/B2;"")
+一致  E4_DIV0!D3  期待=1.5766355140186916  LibreOffice=1.576635514  数式==C3/B3
+一致  E4_DIV0!E3  期待=1.5766355140186916  LibreOffice=1.576635514  数式==IF(B3=0;"";C3/B3)
+一致  E4_DIV0!F3  期待=1.5766355140186916  LibreOffice=1.576635514  数式==IF(N(B3)=0;"";C3/B3)
+一致  E4_DIV0!G3  期待=1.5766355140186916  LibreOffice=1.576635514  数式==IF(OR(B3="";B3=0);"";C3/B3)
+一致  E4_DIV0!H3  期待=1.5766355140186916  LibreOffice=1.576635514  数式==IFERROR(C3/B3;"")
+一致  E4_DIV0!D4  期待=1.096  LibreOffice=1.096  数式==C4/B4
+一致  E4_DIV0!E4  期待=1.096  LibreOffice=1.096  数式==IF(B4=0;"";C4/B4)
+一致  E4_DIV0!F4  期待=1.096  LibreOffice=1.096  数式==IF(N(B4)=0;"";C4/B4)
+一致  E4_DIV0!G4  期待=1.096  LibreOffice=1.096  数式==IF(OR(B4="";B4=0);"";C4/B4)
+一致  E4_DIV0!H4  期待=1.096  LibreOffice=1.096  数式==IFERROR(C4/B4;"")
+一致  E4_DIV0!D5  期待='#DIV/0!'  LibreOffice='#DIV/0!'  数式==C5/B5
+一致  E4_DIV0!E5  期待=''  LibreOffice=''  数式==IF(B5=0;"";C5/B5)
+一致  E4_DIV0!F5  期待=''  LibreOffice=''  数式==IF(N(B5)=0;"";C5/B5)
+一致  E4_DIV0!G5  期待=''  LibreOffice=''  数式==IF(OR(B5="";B5=0);"";C5/B5)
+一致  E4_DIV0!H5  期待=''  LibreOffice=''  数式==IFERROR(C5/B5;"")
+一致  E4_DIV0!D6  期待='#DIV/0!'  LibreOffice='#DIV/0!'  数式==C6/B6
+一致  E4_DIV0!E6  期待=''  LibreOffice=''  数式==IF(B6=0;"";C6/B6)
+一致  E4_DIV0!F6  期待=''  LibreOffice=''  数式==IF(N(B6)=0;"";C6/B6)
+一致  E4_DIV0!G6  期待=''  LibreOffice=''  数式==IF(OR(B6="";B6=0);"";C6/B6)
+一致  E4_DIV0!H6  期待=''  LibreOffice=''  数式==IFERROR(C6/B6;"")
+一致  E5_NAME!D2  期待='#NAME?'  LibreOffice='#NAME?'  数式==_xlfn.xlookup(C2;$取引先マスタ.$A$2:$A$11;$取引先マスタ.$B$2:$B$11;"未登録")
+一致  E5_NAME!D3  期待='#NAME?'  LibreOffice='#NAME?'  数式==vlookupp(C3;$取引先マスタ.$A$2:$D$11;2;FALSE())
+一致  E5_NAME!L2  期待='株式会社サンプル商事'  LibreOffice='株式会社サンプル商事'  数式==IFNA(INDEX($取引先マスタ.$B$2:$B$11;MATCH(C2;$取引先マスタ.$A$2:$A$11;0));"未登録")
+一致  E5_NAME!L3  期待='サンプル工業株式会社'  LibreOffice='サンプル工業株式会社'  数式==VLOOKUP(C3;$取引先マスタ.$A$2:$D$11;2;FALSE())
+一致  E5_NAME!M2  期待='株式会社サンプル商事'  LibreOffice='株式会社サンプル商事'  数式==IFNA(VLOOKUP(C2;$取引先マスタ.$A$2:$B$11;2;FALSE());"未登録")
+一致  E7_SUM!M22  期待=18  LibreOffice=18  数式==COUNT(J2:J21)
+一致  E7_SUM!N22  期待=1960  LibreOffice=1960  数式==SUMPRODUCT(--ISTEXT(J2:J21);--TRIM(J2:J21))
+一致  E7_SUM!O22  期待=162015  LibreOffice=162015  数式={=SUM(--ASC(TRIM(SUBSTITUTE(J2:J21;CHAR(160);""))))}
+一致  E7_SUM!J22  期待=160055  LibreOffice=160055  数式==SUM(J2:J21)
+一致  E7_SUM!K22  期待=2  LibreOffice=2  数式==COUNTA(J2:J21)-COUNT(J2:J21)
+一致  E7_SUM!L22  期待=162015  LibreOffice=162015  数式==SUM(L2:L21)
+一致  E7_SUM!K6  期待=False  LibreOffice=0  数式==ISNUMBER(J6)
+一致  E7_SUM!K5  期待=True  LibreOffice=1  数式==ISNUMBER(J5)
+一致  E3_REF!I2  期待='#REF!'  LibreOffice='#REF!'  数式==G2*#REF!2
+一致  E3_REF!I3  期待='#REF!'  LibreOffice='#REF!'  数式==G3*#REF!3
+一致  E3_REF!I21  期待='#REF!'  LibreOffice='#REF!'  数式==G21*#REF!21
+一致  E3_REF!K2  期待=33000  LibreOffice=33000  数式==G2*VLOOKUP(E2;$商品マスタ.$A$2:$D$11;3;FALSE())
+一致  E3_REF!K3  期待=3300  LibreOffice=3300  数式==G3*VLOOKUP(E3;$商品マスタ.$A$2:$D$11;3;FALSE())
+一致  E3_REF!K21  期待=1884  LibreOffice=1884  数式==G21*VLOOKUP(E21;$商品マスタ.$A$2:$D$11;3;FALSE())
+
+E3_REF: 削除の前の J2 の数式 = =G2*H2 → H列を削除したあとは上の I列（#REF!）
+E6_SPILL: LibreOffice の F2 = '#NAME?'（UNIQUE 未対応）。Excel・スプレッドシートでの期待：F5 の文字を消すと F2〜F11 に C-001, C-002, C-003, C-004, C-005, C-006, C-007, C-008, C-009, C-010
+
+実計算での照合: 一致 57件 / 不一致 0件
+参考: 請求明細の金額の合計 = 162,015円、E7で文字になった2行を除いた合計 = 160,055円

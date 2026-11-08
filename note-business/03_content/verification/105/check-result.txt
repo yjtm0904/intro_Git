@@ -221,10 +221,13 @@
 一致  請求明細!O21  期待='株式会社サンプル企画'  LibreOffice='株式会社サンプル企画'  数式==IFNA(INDEX($取引先マスタ.$B$2:$B$11;MATCH(C21;$取引先マスタ.$A$2:$A$11;0));"未登録")
 一致  請求明細!P21  期待='株式会社サンプル企画'  LibreOffice='株式会社サンプル企画'  数式==IFERROR(VLOOKUP(C21;$取引先マスタ.$A$2:$B$11;2;FALSE());"未登録")
 一致  請求明細!Q21  期待=1  LibreOffice=1  数式==COUNTIF($取引先マスタ.$A$2:$A$11;C21)
-一致  チェック!B2  期待=''  LibreOffice=''  数式==IF(A2="";"";IFNA(VLOOKUP(A2;$取引先マスタ.$A$2:$D$11;2;FALSE());"未登録"))
-一致  チェック!C2  期待='未登録'  LibreOffice='未登録'  数式==IFNA(VLOOKUP(A2;$取引先マスタ.$A$2:$D$11;2;FALSE());"未登録")
-一致  チェック!B3  期待='株式会社サンプル商事'  LibreOffice='株式会社サンプル商事'  数式==IF(A3="";"";IFNA(VLOOKUP(A3;$取引先マスタ.$A$2:$D$11;2;FALSE());"未登録"))
-一致  チェック!B4  期待='株式会社サンプル企画'  LibreOffice='株式会社サンプル企画'  数式==IF(A4="";"";IFNA(VLOOKUP(A4;$取引先マスタ.$A$2:$D$11;2;FALSE());"未登録"))
+一致  チェック!D2  期待=''  LibreOffice=''  数式==IF(C2="";"";IFNA(VLOOKUP(C2;$取引先マスタ.$A$2:$D$11;2;FALSE());"未登録"))
+一致  チェック!E2  期待='未登録'  LibreOffice='未登録'  数式==IFNA(VLOOKUP(C2;$取引先マスタ.$A$2:$D$11;2;FALSE());"未登録")
+一致  チェック!F2  期待=''  LibreOffice=''  数式==IF(C2="";"";IFERROR(VLOOKUP(C2;$取引先マスタ.$A$2:$B$11;2;FALSE());"未登録"))
+一致  チェック!D3  期待='株式会社サンプル商事'  LibreOffice='株式会社サンプル商事'  数式==IF(C3="";"";IFNA(VLOOKUP(C3;$取引先マスタ.$A$2:$D$11;2;FALSE());"未登録"))
+一致  チェック!F3  期待='株式会社サンプル商事'  LibreOffice='株式会社サンプル商事'  数式==IF(C3="";"";IFERROR(VLOOKUP(C3;$取引先マスタ.$A$2:$B$11;2;FALSE());"未登録"))
+一致  チェック!D4  期待='株式会社サンプル企画'  LibreOffice='株式会社サンプル企画'  数式==IF(C4="";"";IFNA(VLOOKUP(C4;$取引先マスタ.$A$2:$D$11;2;FALSE());"未登録"))
+一致  チェック!F4  期待='株式会社サンプル企画'  LibreOffice='株式会社サンプル企画'  数式==IF(C4="";"";IFERROR(VLOOKUP(C4;$取引先マスタ.$A$2:$B$11;2;FALSE());"未登録"))
 一致  逆引き!B2  期待='C-005'  LibreOffice='C-005'  数式==IFNA(INDEX($取引先マスタ.$A$2:$A$11;MATCH(A2;$取引先マスタ.$D$2:$D$11;0));"未登録")
 一致  逆引き!H2  期待='C-005'  LibreOffice='C-005'  数式==IFERROR(INDEX($取引先マスタ.$A$2:$A$11;MATCH(A2;$取引先マスタ.$D$2:$D$11;0));"未登録")
 一致  逆引き!B3  期待='C-010'  LibreOffice='C-010'  数式==IFNA(INDEX($取引先マスタ.$A$2:$A$11;MATCH(A3;$取引先マスタ.$D$2:$D$11;0));"未登録")
@@ -244,5 +247,5 @@ XLOOKUP確認!D5  期待='未登録'  LibreOffice='#NAME?'  LibreOffice 24.2 は
 XLOOKUP確認!D6  期待='C-005'  LibreOffice='#NAME?'  LibreOffice 24.2 は未対応（#NAME?）→ ロジックの検算のみ。実機確認の対象
 XLOOKUP確認!D7  期待=14850  LibreOffice='#NAME?'  LibreOffice 24.2 は未対応（#NAME?）→ ロジックの検算のみ。実機確認の対象
 
-実計算での照合: 一致 236件 / 不一致 0件（XLOOKUPの6式は別扱い）
+実計算での照合: 一致 239件 / 不一致 0件（XLOOKUPの6式は別扱い）
 参考: 請求明細の金額（J列）の合計（#N/Aの行を除く）= 149,670円

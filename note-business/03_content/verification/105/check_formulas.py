@@ -101,11 +101,14 @@ for i, (day, c, p, q) in enumerate(DETAILS, start=2):
     EXPECT[("請求明細", f"O{i}")] = ifna(vlookup_exact(c, MASTER, 2), "未登録")      # 例8（INDEX/MATCH版）
     EXPECT[("請求明細", f"P{i}")] = ifna(vlookup_exact(c, MASTER, 2), "未登録")      # テンプレありの依頼Aに対するAIの出力
     EXPECT[("請求明細", f"Q{i}")] = sum(1 for r in MASTER if r[0] == c)              # 確認：コードがマスタに何件あるか（COUNTIF）
-# 確認：探す値が空欄の行（空欄のままにする式と、しない式）
-EXPECT[("チェック", "B2")] = ""
-EXPECT[("チェック", "C2")] = "未登録"
-EXPECT[("チェック", "B3")] = "株式会社サンプル商事"   # 端の行（最初）
-EXPECT[("チェック", "B4")] = "株式会社サンプル企画"   # 端の行（最後）
+# 確認：探す値（C列）が空欄の行（空欄のままにする式と、しない式）と、端の行。F列はテンプレありの依頼Aに対するAIの出力（空欄の扱い）
+EXPECT[("チェック", "D2")] = ""
+EXPECT[("チェック", "E2")] = "未登録"
+EXPECT[("チェック", "F2")] = ""
+EXPECT[("チェック", "D3")] = "株式会社サンプル商事"   # 端の行（最初）
+EXPECT[("チェック", "F3")] = "株式会社サンプル商事"
+EXPECT[("チェック", "D4")] = "株式会社サンプル企画"   # 端の行（最後）
+EXPECT[("チェック", "F4")] = "株式会社サンプル企画"
 LOOKUP_MAILS = ["test-foods@example.com", "sample-kikaku@example.com", "unknown@example.com"]
 for i, mail in enumerate(LOOKUP_MAILS, start=2):
     hit = next((r[0] for r in MASTER if r[3] == mail), NA)
@@ -171,10 +174,11 @@ def build():
                    f"=SUMPRODUCT((送付記録!$C$2:$C$11=D{i})*(送付記録!$D$2:$D$11=E{i}))",
                    f'=IFERROR(INDEX(取引先マスタ!$A$2:$A$11,MATCH(A{i},取引先マスタ!$D$2:$D$11,0)),"未登録")'])
     ws = wb.create_sheet("チェック")
-    ws.append(["探す値", "空欄なら空欄のまま", "空欄の扱いなし"])
-    for i, key in enumerate([None, "C-001", "C-010"], start=2):
-        ws.append([key, f'=IF(A{i}="","",_xlfn.IFNA(VLOOKUP(A{i},取引先マスタ!$A$2:$D$11,2,FALSE),"未登録"))',
-                   f'=_xlfn.IFNA(VLOOKUP(A{i},取引先マスタ!$A$2:$D$11,2,FALSE),"未登録")'])
+    ws.append(["確かめること", "", "探す値", "空欄なら空欄のまま", "空欄の扱いなし", "AIの出力（空欄の扱い）"])
+    for i, (label, key) in enumerate([("空欄", None), ("端の行（最初）", "C-001"), ("端の行（最後）", "C-010")], start=2):
+        ws.append([label, "", key, f'=IF(C{i}="","",_xlfn.IFNA(VLOOKUP(C{i},取引先マスタ!$A$2:$D$11,2,FALSE),"未登録"))',
+                   f'=_xlfn.IFNA(VLOOKUP(C{i},取引先マスタ!$A$2:$D$11,2,FALSE),"未登録")',
+                   f'=IF(C{i}="","",IFERROR(VLOOKUP(C{i},取引先マスタ!$A$2:$B$11,2,FALSE),"未登録"))'])
     ws = wb.create_sheet("XLOOKUP確認")
     ws.append(["例", "数式（D列と同じもの）", "", "結果", "期待する結果", "判定"])
     for i, (label, f, exp) in enumerate(XL, start=2):

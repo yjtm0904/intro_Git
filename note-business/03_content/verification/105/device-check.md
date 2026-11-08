@@ -2,7 +2,7 @@
 
 対象：記事 `03_content/articles/105-lookup-formulas-ask-ai.md`／確認用ブック `03_content/verification/105/105-check.xlsx`（架空データのみ）
 目的：この環境の LibreOffice 24.2 では計算できない XLOOKUP（6式）と、スプレッドシート用の式（FILTER など）を、Excel（Microsoft 365）とGoogleスプレッドシートで確かめる。
-VLOOKUP・INDEX/MATCH・IFNA・SUMPRODUCT・COUNTIF は、LibreOffice 24.2 で実際に計算し、Pythonの期待値と236件一致を確認済み（`check-result.txt`）。
+VLOOKUP・INDEX/MATCH・IFNA・SUMPRODUCT・COUNTIF は、LibreOffice 24.2 で実際に計算し、Pythonの期待値と239件一致を確認済み（`check-result.txt`）。
 
 ---
 

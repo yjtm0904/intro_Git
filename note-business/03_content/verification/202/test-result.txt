@@ -1,5 +1,5 @@
 # 記事202 GAS請求書パック ロジック検証の実行結果
-# 実行日時: 2026-11-08 15:53 JST / Node.js v22.23.4 / Python 3.13.18 / 対象: Code.gs v1.0（392行）
+# 実行日時: 2026-11-08 21:44 JST / Node.js v22.23.4 / Python 3.13.18 / 対象: Code.gs v1.0（392行）
 # コマンド1: TZ=Asia/Tokyo node --test code.test.js（Googleのサービスは 05_operations/tools/gas-mock のモック）
 
 ok 1 - 01 メニュー：開くと「請求書」メニューに3つの項目が出て、呼び出す関数がある
@@ -35,7 +35,7 @@ ok 26 - 26 実機確認用の3社（templates.md のデータ）：手順書の�
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 300.063929
+# duration_ms 318.981027
 
 # コマンド2: python3 -I -B crosscheck.py（テスト04が保存した dataset.json を Decimal で別に計算し、gas-output.json と照合）
 対象月 2026-11 の明細: 100行 / 取引先: 28社（マスタ 30社）
