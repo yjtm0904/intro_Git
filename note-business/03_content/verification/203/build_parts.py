@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """203 原稿のうち、場面の節・30場面の全リスト・送る時期の一覧を、検証済みのファイルから組み立てる。
 
-入力: scenes.md（送る時期・プロンプト・確認点）、outputs_v2.md（Claudeの出力＝完成例）、preamble_v2.md（共通の前置き）
+入力: scenes.md（送る時期・プロンプト・確認点）、prompts/outputs_independent.md（独立実行の出力＝完成例）、prompts/preamble.txt（共通の前置き）
 出力: 原稿のテンプレートの {{...}} を置き換えた本文（標準出力、または --write <テンプレート> <原稿>）
 完成例を手で写さないことで、原稿と検証ログの食い違いを防ぐ。
 """
@@ -20,12 +20,13 @@ EXAMPLE_RE = re.compile(r"例：(\d{1,2})月(\d{1,2})日（([月火水木金土�
 
 
 def preamble():
-    t = open(os.path.join(HERE, "preamble_v2.md"), encoding="utf-8").read()
-    return t.split("```", 2)[1].strip("\n")
+    # 記事に載せる前置き（第1ラウンドの修正後。独立実行で使ったもの）
+    return open(os.path.join(HERE, "prompts", "preamble.txt"), encoding="utf-8").read().strip("\n")
 
 
 def outputs():
-    return load_blocks(os.path.join(HERE, "outputs_v2.md"))
+    # 完成例は、執筆と別の独立実行の出力（prompts/assemble.py でまとめたもの）
+    return load_blocks(os.path.join(HERE, "prompts", "outputs_independent.md"))
 
 
 def example_date(timing):
