@@ -1,5 +1,5 @@
 /**
- * 請求書PDF・メール下書き作成スクリプト v1.0（2026-11-08）事務の型紙「GAS請求書パック」
+ * 請求書PDF・メール下書き作成スクリプト v1.1（2026-11-08）事務の型紙「GAS請求書パック」
  * 流れ：請求明細を取引先ごと・税率ごとに集計 → 請求書PDFをドライブに保存 → メールの下書き → 送付記録
  * 安全のための既定：テストモード ON・下書き。同じ月・同じ取引先の請求書は二度作らない。
  */
@@ -25,6 +25,7 @@ function loadSettings_() {
   const v = {};
   sheet_(SHEET.settings).getDataRange().getValues().slice(1).forEach(r => { if (r[0] !== '') v[String(r[0]).trim()] = r[1]; });
   const text = k => (v[k] === undefined || v[k] === null ? '' : String(v[k]).trim());
+  const ymd = d => Utilities.formatDate(d, Session.getScriptTimeZone(), 'yyyyMMdd');
   const test = text('テストモード').toUpperCase();
   const s = {
     month: toMonth_(v['対象月']), issueDate: text('発行日') ? toDate_(v['発行日']) : new Date(), dueDate: toDate_(v['支払期限']),
@@ -37,6 +38,7 @@ function loadSettings_() {
   if (!s.month) e.push('対象月：「2026-11」のように入れてください');
   if (!s.issueDate) e.push('発行日：日付を入れてください（空欄なら実行した日）');
   if (!s.dueDate) e.push('支払期限：日付を入れてください');
+  else if (s.issueDate && ymd(s.dueDate) < ymd(s.issueDate)) e.push('支払期限：発行日より前の日付です（月の書き換え忘れがないか確かめてください）');
   if (['切り捨て', '四捨五入', '切り上げ'].indexOf(s.rounding) < 0) e.push('端数処理：「切り捨て」「四捨五入」「切り上げ」のどれかを、社内のルールに合わせて入れてください');
   if (!s.issuer) e.push('発行者名：請求書に載せる自社名を入れてください');
   if (s.regNo && !/^T\d{13}$/.test(s.regNo)) e.push('登録番号：「T」と13桁の数字で入れてください');
@@ -247,7 +249,7 @@ function setupSheets() {
     ['備考', '', '請求書の下に載せる一文（空欄でよい）'],
     ['PDF保存フォルダID', '', 'ドライブでフォルダを開いたときのURLの「folders/」より後ろの文字'],
     ['件名', '【請求書】{{対象月}}分のご請求（{{発行者名}}）', '{{項目名}} の場所に値が入る'],
-    ['本文', '{{取引先名}}\n{{部署}} ご担当者様\n\nいつもお世話になっております。{{発行者名}}です。\n{{対象月}}分の請求書をお送りします。\n\n請求書番号：{{請求書番号}}\nご請求金額：{{合計}}円（税込）\nお支払期限：{{支払期限}}\n\nご確認のほど、よろしくお願いいたします。', 'PDFは自動で添付される'],
+    ['本文', '{{取引先名}} {{部署}}\nご担当者様\n\nいつもお世話になっております。{{発行者名}}です。\n{{対象月}}分の請求書をお送りします。\n\n請求書番号：{{請求書番号}}\nご請求金額：{{合計}}円（税込）\nお支払期限：{{支払期限}}\n\nご確認のほど、よろしくお願いいたします。', 'PDFは自動で添付される'],
     ['差出人名', '', 'メールの差出人に表示する名前（空欄ならGmailの設定のまま）'],
     ['送信方法', '下書き', '「下書き」か「送信」'],
     ['テストモード', 'ON', 'ONのあいだは、すべて「テスト用の宛先」に届く'],
@@ -267,7 +269,7 @@ function setupSheets() {
   };
   const grid = Array.from({ length: 36 }, () => ['', '', '', '', '', '']);
   Object.keys(cells).forEach(a => { grid[Number(a.slice(1)) - 1][a.charCodeAt(0) - 65] = cells[a]; });
-  const lay = make(SHEET.layout, grid, [110, 160, 50, 50, 80, 100]);
+  const lay = make(SHEET.layout, grid, [130, 160, 50, 50, 80, 120]);
   if (lay) {
     lay.setHiddenGridlines(true);
     lay.getRange('A1:F1').merge().setFontSize(16).setFontWeight('bold').setHorizontalAlignment('center');

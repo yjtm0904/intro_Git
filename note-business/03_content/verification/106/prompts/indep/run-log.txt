@@ -8,3 +8,13 @@
 2026-11-08T18:48:36 p2-v2.prompt.txt run2 成功 session=9de0010e-622e-41c3-80de-08e0f087f52f
 2026-11-08T18:48:36 p3-restore.prompt.txt run1 エラー
 2026-11-08T18:48:36 p3-restore.prompt.txt run2 エラー
+2026-11-08T23:50:43 p1-v1.prompt.txt run1 既存
+2026-11-08T23:50:43 p1-v1.prompt.txt run2 既存
+2026-11-08T23:50:43 p1-v2.prompt.txt run1 既存
+2026-11-08T23:50:43 p1-v2.prompt.txt run2 既存
+2026-11-08T23:50:43 p2-v1.prompt.txt run1 既存
+2026-11-08T23:51:09 p2-v1.prompt.txt run2 成功 session=78c4c2be-cbcd-4f3d-8b4b-845c66a23cc3
+2026-11-08T23:51:09 p2-v2.prompt.txt run1 成功 session=8ca4c77a-f738-486a-9613-5e79c29523f0
+2026-11-08T23:51:09 p2-v2.prompt.txt run2 既存
+2026-11-08T23:51:09 p3-restore.prompt.txt run1 成功 session=52d62e62-32e1-4cba-8769-365f3cce007a
+2026-11-08T23:51:09 p3-restore.prompt.txt run2 成功 session=110a9f5d-59b0-4f74-b4d5-f81ecab7fdf7

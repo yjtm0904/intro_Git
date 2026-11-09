@@ -5,6 +5,7 @@
 #   1-column（最新）: モデル claude-opus-5-5 / 出力 6591 字
 #   2-cc（最新）: モデル claude-opus-5-5 / 出力 13970 字
 #   3-message（最新）: モデル claude-opus-5-5 / 出力 14235 字
+# 注: 依頼文の実行は Code.gs v1.0 で行った。2026-11-08 の v1.1 の変更（支払期限の確認・既定の本文）は、出力が置き換える関数と重なる setupSheets の既定の本文だけで、置き換えると v1.0 の既定の本文に戻る（動作には影響しない）。当てはめの確認は v1.1 で再実行した
 # 手順2: 出力のコード（関数・定数）を Code.gs のコピーに当てはめ、gas-mock で、頼んだ動作になるか・テストモードと二重作成の防止が保たれるかを確認
 #   コマンド: TZ=Asia/Tokyo node --test verify-prompts.test.js（1回目: OUTPUT2=run1/2-cc.output.md OUTPUT3=run1/3-message.output.md を付ける）
 

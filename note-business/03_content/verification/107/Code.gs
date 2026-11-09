@@ -1,11 +1,11 @@
 /**
  * @OnlyCurrentDoc
- * 1社分の請求書シートを作る（最小版。PDF化・メール送付はしない）事務の型紙 107 v1.1（2026-11-08）
+ * 1社分の請求書シートを作る最小版（PDF化・メール送付はしない）v1.1 2026-11-08
  */
 const TARGET_MONTH = '2026-11'; // 対象月
 const TARGET_CODE = 'C-001';    // 取引先コード
 const DUE_DATE = '2026年12月31日'; // 支払期限
-const ROUNDING = '';            // 端数処理：「切り捨て」「四捨五入」「切り上げ」から、社内のルールで選んで入れる
+const ROUNDING = '';            // 端数処理：「切り捨て」「四捨五入」「切り上げ」から社内のルールで選ぶ
 
 function createOneInvoice() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -20,7 +20,7 @@ function createOneInvoice() {
   if (lines.length === 0 || lines.length > 15) throw new Error('明細が ' + lines.length + ' 行です（1〜15行で作れます）');
   const base = { 10: 0, 8: 0 };
   lines.forEach(r => { const t = rateOf(r[8]); if (!(t in base)) throw new Error('税率は10%か8%にしてください（' + r[5] + '）');
-    base[t] += r[6] * r[7]; });                                              // 数量×単価を税率ごとに合計（10%・8%以外は止める）
+    base[t] += r[6] * r[7]; });                                              // 税率ごとに合計（10%・8%以外は止める）
   const tax10 = round(base[10] * 10 / 100), tax8 = round(base[8] * 8 / 100); // 端数処理は税率ごとに1回
   const f = { 取引先名: client[1], 部署: client[2], 請求書番号: 'INV-' + TARGET_MONTH.replace('-', '') + '-' + TARGET_CODE,
     発行日: new Date(), 支払期限: DUE_DATE, 対象月: TARGET_MONTH, '10%対象': base[10], '10%消費税': tax10,
@@ -43,7 +43,7 @@ function createOneInvoice() {
 function monthOf(v) { // 「2026-11」が日付に変わっていても読む
   return v instanceof Date ? Utilities.formatDate(v, Session.getScriptTimeZone(), 'yyyy-MM') : String(v).trim();
 }
-function rateOf(v) { // 「10%」のセルは 0.1 と読まれるので 10 に直す
+function rateOf(v) { // 「10%」は0.1と読まれるので10に直す
   const n = Number(String(v).replace('%', ''));
   return n < 1 ? Math.round(n * 100) : n;
 }

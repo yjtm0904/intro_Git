@@ -473,3 +473,70 @@ test('26 実機確認用の3社（templates.md のデータ）：手順書の期
   assert.match(lastAlert(env).prompt, /記録があるため作らない：3件/);
   assert.equal(env.DriveApp.files.length, 3);
 });
+
+test('27 支払期限が発行日より前なら止める（月の書き換え忘れ）。同じ日ならよい', () => {
+  let env = setup({ settings: { 発行日: D(2026, 11, 30), 支払期限: D(2026, 10, 31) } });
+  env.ctx.createInvoices();
+  assert.match(lastAlert(env).prompt, /支払期限：発行日より前の日付です/);
+  assert.equal(env.created.length + env.DriveApp.files.length, 0);
+  env = setup({ settings: { 発行日: D(2026, 11, 30), 支払期限: D(2026, 11, 30) } });
+  env.ctx.previewInvoices();
+  assert.equal(lastAlert(env).title, '内容の確認（まだ何も作っていません）');
+});
+
+test('28 既定の本文：部署が空欄の取引先でも、行の先頭に空白が入らない', () => {
+  const env = setup();
+  env.ctx.createInvoices();
+  const noDept = env.GmailApp.drafts.find((d) => d.body.includes('株式会社見本デザイン'));      // C-003 は部署が空欄
+  assert.ok(noDept, 'C-003 の下書きがない');
+  assert.ok(!/^[ 　]/m.test(noDept.body), '行頭に空白がある');
+  assert.match(noDept.body, /株式会社見本デザイン\s*\nご担当者様\n/);
+  const withDept = env.GmailApp.drafts.find((d) => d.body.includes('株式会社サンプル商事'));
+  assert.match(withDept.body, /株式会社サンプル商事 経理部\nご担当者様\n/);
+});
+
+test('29 （任意）A4に指定する版の savePdf_ に置き換えても、PDF・下書き・送付記録は同じように作る。書き出しの失敗は「エラー」で止める', () => {
+  const base = fs.readFileSync(CODE, 'utf8');
+  const a4 = fs.readFileSync(path.join(__dirname, 'PdfA4.gs'), 'utf8');
+  const start = base.indexOf('/** 5 PDF化と保存');
+  const end = base.indexOf('\n}\n', start) + 3;
+  assert.ok(start > 0 && end > start, 'savePdf_ が見つからない');
+  const replaced = base.slice(0, start) + a4.trim() + '\n' + base.slice(end);       // 読者がコードの中で置き換えるのと同じ
+  const file = path.join(fs.mkdtempSync(path.join(require('os').tmpdir(), 'gas202a4-')), 'Code.gs');
+  fs.writeFileSync(file, replaced);
+  const env = createGasEnv({ now: '2026-11-30T10:00:00+09:00', sheets: { 'シート1': [] } });
+  env.load(file);
+  assert.ok(!/getAs\(MimeType\.PDF\)/.test(env.ctx.savePdf_.toString()), '置き換わっていない');
+  env.ctx.setupSheets();
+  put(env.sheet('取引先マスタ'), makeData().master);
+  put(env.sheet('請求明細'), makeData().details);
+  setSettings(env, { 対象月: '2026-11', 支払期限: D(2026, 12, 31), 端数処理: '切り捨て', 発行者名: '株式会社見本サービス', PDF保存フォルダID: 'FOLDER_TEST', テスト用の宛先: 'owner@example.com' });
+  env.ctx.createInvoices();
+  assert.equal(lastAlert(env).title, '終わりました', lastAlert(env).prompt);
+  assert.equal(env.fetched.length, 28);
+  const tmpId = env.created[0].getId();
+  env.fetched.forEach((f) => {
+    assert.ok(f.url.startsWith('https://docs.google.com/spreadsheets/d/' + tmpId + '/export?format=pdf&size=A4&portrait=true'), f.url);
+    assert.match(f.url, /&gid=\d+$/);
+    assert.equal(f.params.headers.Authorization, 'Bearer TEST_TOKEN');
+  });
+  assert.equal(env.DriveApp.files.length, 28);
+  assert.ok(env.DriveApp.files.every((x) => /^【テスト】INV-202611-C-\d{3}_.+\.pdf$/.test(x.name)));
+  assert.equal(env.GmailApp.drafts.length, 27);
+  assert.deepEqual(env.DriveApp.trashed, [tmpId]);
+  // 書き出しが失敗したとき（混み合っているときなど）：その取引先は「エラー」で止まり、再実行で作り直せる
+  const env2 = createGasEnv({ now: '2026-11-30T10:00:00+09:00', sheets: { 'シート1': [] } });
+  env2.load(file);
+  env2.ctx.setupSheets();
+  put(env2.sheet('取引先マスタ'), makeData().master);
+  put(env2.sheet('請求明細'), makeData().details);
+  setSettings(env2, { 対象月: '2026-11', 支払期限: D(2026, 12, 31), 端数処理: '切り捨て', 発行者名: '株式会社見本サービス', PDF保存フォルダID: 'FOLDER_TEST', テスト用の宛先: 'owner@example.com' });
+  const realFetch = env2.ctx.UrlFetchApp;
+  env2.ctx.UrlFetchApp = { fetch: () => ({ getResponseCode: () => 429, getBlob: () => null, getContentText: () => '' }) };
+  env2.ctx.createInvoices();
+  assert.match(lastAlert(env2).prompt, /C-001 のPDF作成で止まりました：PDFの書き出しに失敗しました（応答 429）/);
+  assert.deepEqual(logRows(env2).map((r) => r[8]), ['エラー']);
+  env2.ctx.UrlFetchApp = realFetch;
+  env2.ctx.createInvoices();
+  assert.equal(env2.DriveApp.files.length, 28);
+});

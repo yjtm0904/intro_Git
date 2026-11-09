@@ -7,7 +7,7 @@
 3. その場面の【条件】にない日付・数字が足されていないか／曜日のない日付がないか
 4. 法律・税・社会保険・医療の決まりや義務を書いていないか、「必ず」などの強い言い方がないか
 5. 【要確認】の有無、条件にない〔　〕の記号（参考）
-6. 101・102の文例と、20字以上同じ文が続いていないか（企画書：101・102と同じ文面を使わない）
+6. 101・102の記事の文例と、30字以上同じ文が続いていないか（企画書：101・102と同じ文面を使わない。定型の言い回しは除くため30字）
 
 使い方: python3 -I -B check_scenes.py outputs_v2.md [--summary]
 """
@@ -57,12 +57,13 @@ def dates_in(text):
 
 
 def reference_texts():
-    refs = []
-    p102 = os.path.join(HERE, "..", "102", "output_v2.md")
-    p101 = os.path.join(HERE, "..", "101", "output_create_v2.md")
+    refs = []  # (記事ID, 文例の全文)
+    # 101・102の記事に載せている文例（第1ラウンドの修正後は、独立実行の出力）と比べる
+    p102 = os.path.join(HERE, "..", "102", "prompts", "v2.run1.article.txt")
+    p101 = os.path.join(HERE, "..", "101", "prompts", "create_v2.run1.article.txt")
     for p in (p102, p101):
         if os.path.exists(p):
-            refs.append((os.path.basename(os.path.dirname(p)), open(p, encoding="utf-8").read()))
+            refs.append((p.split(os.sep)[-3], open(p, encoding="utf-8").read()))
     return refs
 
 
@@ -92,7 +93,7 @@ def check_one(no, out, scene, refs):
             issues.append(f"曜日の誤り「{s}」（正しくは{real}）")
         if (yy, mo, d) not in allowed:
             issues.append(f"条件にない日付「{s}」")
-    no_dates = DATE_RE.sub("", out)
+    no_dates = re.sub(r"^\s*\d+[.．）)]", "", DATE_RE.sub("", out), flags=re.M)  # 行頭の箇条書きの番号は数えない
     nums_in = set(re.findall(r"\d+(?:\.\d+)?", DATE_RE.sub("", prompt)))
     for x in sorted(set(re.findall(r"\d+(?:\.\d+)?", no_dates)) - nums_in):
         issues.append(f"条件にない数字「{x}」")
@@ -112,8 +113,9 @@ def check_one(no, out, scene, refs):
     flat = strip_for_overlap(out)
     for name, ref in refs:
         lc = longest_common(flat, strip_for_overlap(ref))
-        if len(lc) >= 20:
-            issues.append(f"{name}の文例と20字以上一致「{lc}」")
+        # 「（内線100）までお問い合わせください。」のような定型の言い回し（20〜22字）は数えず、30字以上の一致を見る
+        if len(lc) >= 30:
+            issues.append(f"{name}の文例と30字以上一致「{lc}」")
     return n, issues, notes
 
 

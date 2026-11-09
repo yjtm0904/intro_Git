@@ -23,6 +23,7 @@ CHECKS = {
     "条件にない連絡先": r"\d{2,4}-\d{2,4}-\d{3,4}|[\w.+-]+@[\w-]+\.[\w.]+",
     "根拠を示せない日数": r"\d+\s*[〜~～-]\s*\d+\s*(週間|日)|\d+\s*(週間|日)前|\d+営業日",
     "不安をあおる語": r"失礼|マナー違反|必ず|今すぐ",
+    "送る日に左右される言い方": r"本日|明日",
 }
 
 
@@ -58,8 +59,21 @@ def body_after_subject(lines):
     return subj, "\n".join(body)
 
 
+def normalize(text):
+    """独立実行の出力（マークダウン）を点検用にそろえる。実行情報の見出し部分を外し、**・```・> を外し、
+    「## 1. 〜」を「## 文例1 〜」に、「### メール署名用…」を【メール署名用】に、「### Webサイト…」を【Webサイト掲載用】にする。"""
+    t = text.split("\n---\n", 1)[1] if text.startswith("# ") and "\n---\n" in text else text
+    t = t.replace("**", "").replace("```", "")
+    t = re.sub(r"^> ?", "", t, flags=re.M)
+    t = re.sub(r"^###\s*メール署名.*$", "【メール署名用】", t, flags=re.M)
+    t = re.sub(r"^###\s*Web.*$", "【Webサイト掲載用】", t, flags=re.M)
+    t = re.sub(r"^##\s*(?:文面|文例)?\s*(\d)[.．:：）)]?\s*", r"## 文例\1 ", t, flags=re.M)
+    t = re.sub(r"^(件名|見出し|タイトル)\s*[:：]\s*", lambda m: ("見出し：" if m.group(1) != "件名" else "件名："), t, flags=re.M)
+    return t
+
+
 def check(path):
-    text = open(path, encoding="utf-8").read()
+    text = normalize(open(path, encoding="utf-8").read())
     print(f"\n==== {path}")
     parts = re.split(r"^## ((?:文面|文例)\d.*)$", text, flags=re.M)
     total = 0

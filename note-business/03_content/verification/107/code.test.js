@@ -66,7 +66,7 @@ test('1 C-001の請求書シートを作り、宛名・番号・税率ごとの�
 });
 
 test('2 端数処理の3方式：手順書の期待値と一致する（C-001は8%の消費税207.36円の処理で差が出る）', () => {
-  const expect = { 'C-001': [53949, 53949, 53950], 'C-002': [1078, 1078, 1078] };
+  const expect = { 'C-001': [53949, 53949, 53950] };
   Object.entries(expect).forEach(([code, want]) => {
     ['切り捨て', '四捨五入', '切り上げ'].forEach((rounding, i) => {
       const env = load({ rounding, code });
@@ -74,9 +74,7 @@ test('2 端数処理の3方式：手順書の期待値と一致する（C-001は
       assert.equal(cell(env.sheet('請求書_' + code + '_2026-11'), 'F33'), want[i], code + ' ' + rounding);
     });
   });
-  const env = load({ code: 'C-002' });
-  env.ctx.createOneInvoice();
-  assert.deepEqual(totals(env.sheet('請求書_C-002_2026-11')), [980, 98, 0, 0, 1078]);
+  assert.throws(() => load({ code: 'C-002' }).ctx.createOneInvoice(), /明細が 0 行です/); // マスタにあり、明細がない取引先
 });
 
 test('3 端数処理を選んでいないと止まり、何も作らない', () => {
@@ -101,17 +99,6 @@ test('5 取引先マスタにないコード・明細のない月・16行以上�
   assert.equal(env.ss.getSheets().length, 4);
 });
 
-test('9 税率が10%・8%以外（5%・空欄）の明細があると、品目名を示して止まり、シートを作らない（黙って合計から外さない）', () => {
-  [['5%', '消耗品（税率5%）'], ['', '印刷（税率が空欄）']].forEach(([rate, item]) => {
-    const env = load({ extraLines: ['2026-11,2026/11/20,C-001,,P-07,' + item + ',1,1234,' + rate + ','] });
-    assert.throws(() => env.ctx.createOneInvoice(), new RegExp('税率は10%か8%にしてください（' + item.replace(/[()（）%]/g, '.') + '）'));
-    assert.equal(env.ss.getSheets().length, 4, 'シートを作らない');
-  });
-  const ok = load({ extraLines: ['2026-11,2026/11/20,C-001,,P-07,消耗品,1,1234,10,'] }); // 「10」と入れた税率は10%として読む
-  ok.ctx.createOneInvoice();
-  assert.equal(cell(ok.sheet('請求書_C-001_2026-11'), 'F29'), 46500 + 1234);
-});
-
 test('6 対象月の列が日付に変わっていても読める', () => {
   const env = load({ monthAsDate: true });
   env.ctx.createOneInvoice();
@@ -131,4 +118,15 @@ test('8 記事の本文のコード・ひな形・データが、検証に使っ
   const blocks = [...md.matchAll(/```\n([\s\S]*?)\n```/g)].map((m) => m[1]);
   assert.ok(blocks.includes(CODE.trim()), 'コード');
   ['layout.csv', 'sample-master.csv', 'sample-details.csv'].forEach((f) => assert.ok(blocks.includes(read(f).join('\n')), f));
+});
+
+test('9 税率が10%・8%以外（5%・空欄）の明細があると、品目名を示して止まり、シートを作らない（黙って合計から外さない）', () => {
+  [['5%', '消耗品（税率5%）'], ['', '印刷（税率が空欄）']].forEach(([rate, item]) => {
+    const env = load({ extraLines: ['2026-11,2026/11/20,C-001,,P-07,' + item + ',1,1234,' + rate + ','] });
+    assert.throws(() => env.ctx.createOneInvoice(), new RegExp('税率は10%か8%にしてください（' + item.replace(/[()（）%]/g, '.') + '）'));
+    assert.equal(env.ss.getSheets().length, 4, 'シートを作らない');
+  });
+  const ok = load({ extraLines: ['2026-11,2026/11/20,C-001,,P-07,消耗品,1,1234,10,'] }); // 「10」と入れた税率は10%として読む
+  ok.ctx.createOneInvoice();
+  assert.equal(cell(ok.sheet('請求書_C-001_2026-11'), 'F29'), 46500 + 1234);
 });
