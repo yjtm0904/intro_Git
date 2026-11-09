@@ -540,3 +540,20 @@ test('29 （任意）A4に指定する版の savePdf_ に置き換えても、PD
   env2.ctx.createInvoices();
   assert.equal(env2.DriveApp.files.length, 28);
 });
+
+test('30 実機確認（任意）の30社データ（sample30-*.csv、対象月2026-12）：作成する件数と合計が手順書の期待値と一致する', () => {
+  const parse = (v) => {
+    let m;
+    if ((m = v.match(/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/))) return D(+m[1], +m[2], +m[3]);
+    if ((m = v.match(/^(\d+(?:\.\d+)?)%$/))) return Number(m[1]) / 100;
+    return /^\d+(\.\d+)?$/.test(v) ? Number(v) : v;
+  };
+  const csv = (f, keepFirst) => fs.readFileSync(path.join(__dirname, f), 'utf8').trim().split('\n').map((l) => l.split(',').map((v, j) => (keepFirst && j === 0 ? v : parse(v))));
+  const master = [['取引先コード', '取引先名', '部署', 'メール']].concat(csv('sample30-master.csv'));
+  const details = [['対象月', '取引日', '取引先コード', '取引先名', '商品コード', '品目', '数量', '単価', '税率', '金額']].concat(csv('sample30-details.csv', true));
+  const env = setup({ data: { master, details }, settings: { 対象月: '2026-12', 支払期限: D(2027, 1, 31) } });
+  env.ctx.previewInvoices();
+  assert.match(lastAlert(env).prompt, /作成する：28件（合計 3,654,641円）うちメール未登録（PDFだけ作る）1件/);
+  env.ctx.createInvoices();
+  assert.match(lastAlert(env).prompt, /下書き済み：27件\nメール未登録：1件/);
+});

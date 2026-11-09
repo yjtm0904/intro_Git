@@ -1,5 +1,5 @@
 # 記事202 GAS請求書パック ロジック検証の実行結果
-# 実行日時: 2026-11-09 08:56 JST / Node.js v22.23.4 / Python 3.13.18 / 対象: Code.gs v1.1（394行）・PdfA4.gs（任意の置き換え用）
+# 実行日時: 2026-11-09 14:53 JST / Node.js v22.23.4 / Python 3.13.18 / 対象: Code.gs v1.1（394行）・PdfA4.gs（任意の差し替え版）
 # コマンド1: TZ=Asia/Tokyo node --test code.test.js（Googleのサービスは 05_operations/tools/gas-mock のモック）
 
 ok 1 - 01 メニュー：開くと「請求書」メニューに3つの項目が出て、呼び出す関数がある
@@ -31,14 +31,15 @@ ok 26 - 26 実機確認用の3社（templates.md のデータ）：手順書の�
 ok 27 - 27 支払期限が発行日より前なら止める（月の書き換え忘れ）。同じ日ならよい
 ok 28 - 28 既定の本文：部署が空欄の取引先でも、行の先頭に空白が入らない
 ok 29 - 29 （任意）A4に指定する版の savePdf_ に置き換えても、PDF・下書き・送付記録は同じように作る。書き出しの失敗は「エラー」で止める
-# tests 29
+ok 30 - 30 実機確認（任意）の30社データ（sample30-*.csv、対象月2026-12）：作成する件数と合計が手順書の期待値と一致する
+# tests 30
 # suites 0
-# pass 29
+# pass 30
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 264.922115
+# duration_ms 300.773864
 
 # コマンド2: python3 -I -B crosscheck.py（テスト04が保存した dataset.json を Decimal で別に計算し、gas-output.json と照合）
 対象月 2026-11 の明細: 100行 / 取引先: 28社（マスタ 30社）
@@ -61,3 +62,5 @@ ok 2 - 範囲と配列の大きさが違うとエラーになる（GASと同じ�
 # tests 2
 # pass 2
 # fail 0
+
+# 完成イメージ: TZ=Asia/Tokyo node render_sample.js → 03_content/images/202-sample-invoice.png・sample-draft.txt（テストと同じデータの出力から作成）
