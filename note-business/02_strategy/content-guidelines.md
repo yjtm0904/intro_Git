@@ -1,5 +1,7 @@
 # コンテンツ制作ガイドライン v1.0（全ライター・審査担当の共通ルール）
 
+> **2026-11-13 追加**: 文体は `02_strategy/style-guide.md`（「AIっぽさ」を減らす文体ルールS1〜S15、採点基準。公開条件は採点4以上）に従う。注意書きの回数、見出しの付け方、検証情報の書き方は、このガイドより style-guide.md §3 を優先する。
+
 上位文書: `02_strategy/strategy.md`（戦略）
 関連: `05_operations/writing-format-spec.md`（書式）／`05_operations/review-rubric.md`（審査）／`01_research/platform-rules-legal.md` §7・§8（法務）
 

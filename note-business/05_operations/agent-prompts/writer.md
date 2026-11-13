@@ -5,7 +5,7 @@
 （各記事の企画書は /home/user/intro_Git/note-business/03_content/briefs/ にある）
 
 ## 必ず先に読むもの（/home/user/intro_Git/note-business/ 配下）
-1. 02_strategy/content-guidelines.md（最重要。検証ルール・必須要素・表現ルール）
+1. 02_strategy/content-guidelines.md（最重要。検証ルール・必須要素・表現ルール）と 02_strategy/style-guide.md（文体ルールS1〜S15。AIっぽさの採点で4以上が公開条件）
 2. 05_operations/writing-format-spec.md（書式。表は使えない。メタ情報のYAML）
 3. 担当記事の企画書（03_content/briefs/）
 4. 02_strategy/strategy.md（読者と約束）、05_operations/review-rubric.md（審査基準。80点以上が合格）
