@@ -90,3 +90,12 @@
 2026-11-09T00:05:12 v1pre-03.prompt.txt run1 成功 session=af98a077-ef81-4594-84d3-c1277ff0431f
 2026-11-09T00:05:12 v1pre-04.prompt.txt run1 成功 session=830d2894-4f76-4924-b11a-b9faa9a29e7f
 2026-11-09T00:05:12 v1pre-05.prompt.txt run1 成功 session=11dcefd9-5da3-4064-b53e-2b547cb559e7
+2026-11-13T12:38:09 custom-08.prompt.txt run1 成功 session=cc5ab25c-9675-4977-96e3-97cc78954ea3
+2026-11-13T12:38:11 ng-14.prompt.txt run1 成功 session=847e5f7d-6781-4b89-afaf-93a53f9d9b16
+2026-11-13T12:38:13 scene-19b.prompt.txt run1 成功 session=fa519716-fbef-44ba-83ee-a95ed11eead6
+2026-11-13T12:40:24 scene-19c.prompt.txt run1 成功 session=da8ce6da-4618-4f26-b5c1-bb5a660e1cc5
+2026-11-13T12:38:00 ng-18.prompt.txt run1 既存
+2026-11-13T12:45:31 ng-18.prompt.txt run2 エラー
+2026-11-13T12:45:54 ng-18.prompt.txt run1 既存
+2026-11-13T12:45:54 ng-18.prompt.txt run2 既存
+2026-11-13T12:46:00 ng-18.prompt.txt run3 成功 session=80ce4a8b-3ef8-45ab-bd15-4d87c6aff484
