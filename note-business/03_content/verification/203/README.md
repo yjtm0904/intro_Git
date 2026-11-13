@@ -44,3 +44,9 @@
 ## 4. オーナーの確認
 
 - `owner-check.md` にチェックボックスで列挙した
+
+## 5. 文体の編集（2026-11-13、style-guide S1〜S15）
+
+- 記録：`style/`（before.md、lint-before.txt・lint-after.txt、diff-before-after.txt、工程2の依頼文と結果）、`04_review/style-edit-paid.md`
+- 原稿は今までどおり `build_parts.py --write article_template.md <原稿>` で組み立てる。地の文は article_template.md、送る時期・確認点・場面の名前は scenes.md を直した（送る時期の「（例：…）」→「。例：…」、場面21〜23の名前のかっこを外した）
+- 完成例は、場面3・6・10・25の重なった敬語だけを直した（`build_parts.py` の `S15_EDITS`。`outputs(edited=False)` で出力そのものを返す）。`prompts/outputs_independent.md` は変えていない。直した4場面を check_scenes.py の点検に通した結果は `style/s15-edits-check.txt`（場面6は出力258字→232字で範囲内に。ほかの点検項目は0件のまま）

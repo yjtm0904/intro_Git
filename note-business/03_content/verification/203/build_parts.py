@@ -24,9 +24,28 @@ def preamble():
     return open(os.path.join(HERE, "prompts", "preamble.txt"), encoding="utf-8").read().strip("\n")
 
 
-def outputs():
-    # 完成例は、執筆と別の独立実行の出力（prompts/assemble.py でまとめたもの）
-    return load_blocks(os.path.join(HERE, "prompts", "outputs_independent.md"))
+# 文体の編集（2026-11-13、style-guide S15）：完成例のうち、重なった敬語だけを直す。
+# 出力そのものは prompts/outputs_independent.md に残し、直した箇所はここと style/ の記録に置く
+S15_EDITS = {
+    3: [("にございますので、分別の際にご参照いただければ幸いです。", "にありますので、分別の際にご参照ください。")],
+    6: [("切っていただけますと幸いです。", "切ってください。"),
+        ("鍵を閉めていただけますでしょうか。", "鍵を閉めてください。"),
+        ("トレイに入れていただけますようお願いいたします。", "トレイに入れてください。")],
+    10: [("別のメールにてお願いさせていただきます。", "別のメールにてお願いいたします。")],
+    25: [("各部署で次の準備をお願いできますでしょうか。", "各部署で次の準備をお願いいたします。")],
+}
+
+
+def outputs(edited=True):
+    # 完成例は、執筆と別の独立実行の出力（prompts/assemble.py でまとめたもの）。edited=True で S15_EDITS を当てる
+    outs = load_blocks(os.path.join(HERE, "prompts", "outputs_independent.md"))
+    if edited:
+        for no, pairs in S15_EDITS.items():
+            for old, new in pairs:
+                if outs[no].count(old) != 1:
+                    raise SystemExit(f"S15_EDITS: 場面{no}に「{old}」が1か所だけない")
+                outs[no] = outs[no].replace(old, new)
+    return outs
 
 
 def example_date(timing):
@@ -36,11 +55,12 @@ def example_date(timing):
 
 
 def scene_list(scenes):
-    lines = []
+    # 月ごとに見出しの行を置き、場面は1行に1つ（2026-11-13：1行に並べると80字を超えるため）
+    blocks = []
     for month in MONTHS:
-        items = [f"{no}{'★' if no in FREE else ''} {s['名前']}" for no, s in sorted(scenes.items()) if s["月"] == month]
-        lines.append(f"- {month}（{len(items)}場面）：" + "／".join(items))
-    return "\n".join(lines)
+        items = [f"- {no}{'★' if no in FREE else ''} {s['名前']}" for no, s in sorted(scenes.items()) if s["月"] == month]
+        blocks.append(f"{month}の{len(items)}場面\n" + "\n".join(items))
+    return "\n\n".join(blocks)
 
 
 def schedule(scenes, months=None):

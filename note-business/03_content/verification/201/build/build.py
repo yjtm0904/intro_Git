@@ -45,6 +45,19 @@ def scene_output(no):
     return t
 
 
+# 文体の編集（2026-11-13、style-guide S15）：出力例のうち、敬語の誤り1か所だけを直す。出力そのものは ../prompts/ に残す
+S15_EDITS = {18: [("確認していただいてください", "確認してもらってください")]}
+_scene_output_raw = scene_output
+
+
+def scene_output(no):
+    t = _scene_output_raw(no)
+    for old, new in S15_EDITS.get(no, []):
+        assert t.count(old) == 1, (no, old)
+        t = t.replace(old, new)
+    return t
+
+
 def ng_output(no):
     assert no != 18
     return read(f"ng-{no:02d}.run1.txt")
@@ -191,8 +204,8 @@ NG_PROBLEMS = {
          "空欄：見積りと納期を回答する日が〔○月○日（○）〕のまま"],
 }
 # 場面18：3回の独立実行（ng-18.run1〜3）で、比べられる文面が出なかった（check_ng_indep-result.md）
-NG18_TEXT = ("NG例：この場面だけは載せていません。前置きなしで「請求書の作業の引き継ぎメモを書いて」とだけ頼む検証を3回行いましたが、"
-             "比べられる文面が出ませんでした（AIがファイルを探そうとする返事や、エラーが返った）。")
+NG18_TEXT = ("NG例：この場面だけは載せていません。前置きなしで「請求書の作業の引き継ぎメモを書いて」とだけ3回頼みましたが、"
+             "比べられる文面は出ませんでした。返ってきたのは、AIがファイルを探そうとする返事やエラーです。")
 # 問題点の「」のうち、出力の引用ではなく、こちらの言葉で書いたもの
 QUOTE_OK = {"来週", "ポイント"}
 
@@ -203,7 +216,7 @@ CHECKS_EXTRA = {
 }
 # 出力例のあとに置く注記
 OUTPUT_NOTE = {
-    19: "検証では、【形式】を「お願いが任意に読めないようにする」とした版で、元の文にない強調の言葉が足されました。「強調の言葉は足さずに」と加えても同じでした（各1回）。そこで、必要なことを理由で伝えるように【形式】を書き換えています。",
+    19: "検証では、【形式】を「お願いが任意に読めないようにする」とした版で、元の文にない強調の言葉が足されました。「強調の言葉は足さずに」と加えても同じでした。どちらも1回ずつ試した結果です。そこで、必要なことを理由で伝えるように【形式】を書き換えています。",
     20: "検証の1回では、この文面の前に、AIの作業メモ（英語の指示の確認や下書き）が出ました。ここには最後の文面だけを載せています。メモが出たときは、最後の文面だけを使ってください。",
 }
 
@@ -248,7 +261,7 @@ def checks(no):
 def ng_part(no, label_suffix):
     if no == 18:
         return [NG18_TEXT, "", "送る前の確認点", ""] + [f"- {c}" for c in checks(no)]
-    parts = [f"NG例：前置きなしで{ng_label(no)}出力（{label_suffix}）です。", "", block(excerpt(no)), "", "問題点", ""]
+    parts = [f"NG例：前置きなしで{ng_label(no)}出力の{label_suffix}です。", "", block(excerpt(no)), "", "問題点", ""]
     parts += [f"- {p}" for p in problems(no)]
     parts += ["", "送る前の確認点", ""] + [f"- {c}" for c in checks(no)]
     return parts
@@ -257,9 +270,9 @@ def ng_part(no, label_suffix):
 def scene_section(no):
     s = S[no]
     if s.get("free"):
-        return f"### 場面{no} {s['name']}\n\nこの記事の前半（無料サンプル）に、依頼文・出力例・NG例を載せています。"
+        return f"### 場面{no} {s['name']}\n\n依頼文・出力例・NG例は、この記事の前半の無料サンプルに載せています。"
     parts = [f"### 場面{no} {s['name']}", "",
-             "依頼文（入力例を入れた状態）", "", block(scene_input(no)), "",
+             "依頼文", "", block(scene_input(no)), "",
              "出力例", "", block(scene_output(no)), ""]
     if no in OUTPUT_NOTE:
         parts += [OUTPUT_NOTE[no], ""]
@@ -269,12 +282,12 @@ def scene_section(no):
 
 def free_sample(no, with_preface):
     s = S[no]
-    intro = ("依頼文です。共通の前置き（有料部分にも全文あり）を先頭に入れているので、このままコピーして試せます。【 】の右側を書き換えて使います。"
+    intro = ("依頼文です。共通の前置きを先頭に入れているので、このままコピーして試せます。前置きは有料部分にも全文があります。【 】の右側を書き換えて使います。"
              if with_preface else "依頼文です。場面3と同じ共通の前置きを先に貼り、そのあとに次の部分を貼ります。")
     txt = (preface + "\n\n" + scene_input(no)) if with_preface else scene_input(no)
     parts = [f"## 無料サンプル：★場面{no} {s['name']}", "", intro, "", block(txt), "",
              "出力例です。", "", block(scene_output(no)), "",
-             "出力例はClaudeで生成。AIの出力は毎回少しずつ変わります。" + ("〔 〕を書き換えれば、文例としてもそのまま使えます。" if no == 3 else ""), ""]
+             ] + (["〔 〕を書き換えれば、文例としてもそのまま使えます。", ""] if no == 3 else [])
     parts += ng_part(no, "文面の部分" if no == 3 else "抜粋")
     return "\n".join(parts)
 
