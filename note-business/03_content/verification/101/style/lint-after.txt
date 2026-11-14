@@ -1,0 +1,36 @@
+# 工程1（style-lint）直した後：2026-11-13T22:39Z
+# python3 -I -B 05_operations/tools/style-lint/lint.py 03_content/articles/101-year-end-closure-email.md
+== 03_content/articles/101-year-end-closure-email.md
+   対象：L14〜247（除外：メタ情報 L1〜12、コードブロック 7か所、HTMLコメント 1か所、末尾の定型文 L249〜261）
+-- 行ごとの検出：warn 0 / info 4
+  L19   info output-varies: 文例はClaude（2026年11月時点）で作りました。書き方の指定なしで頼むと、2回と…
+  L121  info heading-paren: ## 文例4：休み中の自動返信（不在通知）
+  L143  info inline-check-date: Gmailの場合、パソコンでの設定の場所は、歯車のアイコン→「すべての設定を表示」→「全…
+  L241  info label-colon-line: 置き換えの例：「株式会社サンプル商事 営業部 見本一郎、緊急時は090-0000-000…
+   warn の内訳：なし
+   info の内訳：heading-paren 1、inline-check-date 1、label-colon-line 1、output-varies 1
+-- 計測値
+   本文の字数：2,859字（空白・見出しや箇条書きの記号・太字の記号・URLを除く）
+   丸かっこ：6個 ＝ 2.1 / 1,000字（除外：曜日 5・関数の引数 0。目安 S5：4以下）
+   見出しの丸かっこ：1（L121）（S10：2まで）
+   80字超の文：0（URLは数えない。S9）
+   「結論：」「まとめ：」のラベル見出し：0（S2：0）
+     参考：ほかの「〇〇：」見出し 4（L44、L71、L96、L121）
+   同じ文末が4文以上続く箇所：0（S14：3文まで）
+-- 点数の推定（style-guide §5 の機械の目安だけ）：5
+   warn 0件 → 5以下／丸かっこ 2.1/1,000字 → 5以下／80字超の文 0 → 5以下
+   人の目安（1文目が場面か、見出しは結論の文か、同じ注意は1回か、判断の足跡が前半にあるか、検証ログにない体験・数字がないか）は別に確かめる
+# 終了コード 0
+
+# compliance-lint（通常）
+
+== 03_content/articles/101-year-end-closure-email.md: ERROR 0 / WARN 0
+# 終了コード 0
+
+# 字数（メタ情報・HTMLコメント・空白を除く本文。6,000字以内）
+101-year-end-closure-email.md 本文（メタ情報・HTMLコメント除く）改行除く: 5806 / 空白除く: 5737
+before.md 本文（メタ情報・HTMLコメント除く）改行除く: 5835 / 空白除く: 5766
+
+# 曜日つきの日付（verification/101/check_article_dates.py）
+03_content/articles/101-year-end-closure-email.md: 曜日つきの日付 30件、誤り 0件
+03_content/verification/101/style/before.md: 曜日つきの日付 29件、誤り 0件

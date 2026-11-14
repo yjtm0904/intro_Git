@@ -1,0 +1,21 @@
+{
+  "brand": "事務の型紙",
+  "theme": {"bg": "#F6F1E6", "fg": "#1E2B45", "accent": "#B4381E", "muted": "#5B6477", "pillFg": "#FFFFFF"},
+  "images": [
+    {
+      "id": "brand-sample-free",
+      "label": "無料",
+      "kicker": "総務・社外文書｜プロンプト付き",
+      "title": "年末年始の休業案内を\nAIで下書きする",
+      "sub": "入れる5項目と、送る前の確認点"
+    },
+    {
+      "id": "brand-sample-paid",
+      "label": "有料",
+      "kicker": "経理・請求書｜テンプレ付き",
+      "title": "毎月の請求書づくりを\nスプレッドシートで\n仕組みにする",
+      "sub": "関数・GAS・手順書・エラー対処表の一式",
+      "theme": {"bg": "#1E2B45", "fg": "#F6F1E6", "accent": "#F0B341", "muted": "#B7C0CF", "pillFg": "#1E2B45"}
+    }
+  ]
+}

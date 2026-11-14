@@ -1,0 +1,542 @@
+keyword,rank,title,price,sale_price,likes,membership_only,published,author,url
+業務効率化,1,【SNS運用の構造改革】Instagram・Threads・Substackの3媒体をAIで自律連携させる実践検証,0,,888,False,2026-11-06,🌸桜（サクラ）＠本音で選ぶ知財ログ｜実践レビュー,https://note.com/sakura3210/n/n11814ec8fea5
+業務効率化,2,CSV・Excel業務を自動化する前に決めたいこと｜第3部「データ・ファイル・業務処理自動化」を公開しました,0,,615,False,2026-11-01,ミナト｜実務特化の自動化戦略,https://note.com/minato_systems/n/nb38b34f319a8
+業務効率化,3,【Threads二重構造の数理】Instagramグラフからの「文脈断絶」を修復せよ。最適輸送問題（Wasserstein距離）で別物アルゴリズムを同期させるPythonクロスアライメント基盤,19800,9800,438,False,2026-11-01,えかさ＠データサイエンス解析,https://note.com/dapper_lotus3934/n/n99b6486dd840
+業務効率化,4,【公開直前警告】AIにアフィリエイト記事を書かせて投稿してはいけない理由！売れる文章の裏にNG表現を潜ませて確定報酬を吹き飛ばす「自動BAN」の現場 ,0,,349,False,2026-10-31,アリス｜最新AI検証ログ＠忖度なしのAIレビュー,https://note.com/alix78/n/nb3c214b45b00
+業務効率化,5,【コミックエッセイ】AIの暴走、もっと壮大なものだと思っていた｜世界征服の前に、ヨシダがメールを送った｜ChatGPTのヨシダ,0,,336,False,2026-10-29,カワムラ｜AI擬人化漫画 | ChatGPTのヨシダ,https://note.com/chatgpt_ysd/n/n5ca507012e77
+業務効率化,6,はじめてのnote｜AIで仕事を少しラクに、副業をもっと身近に。せなです,0,,358,False,2026-10-26,せな｜仕事と副業のAI活用,https://note.com/sena_aichance/n/n48e17ffa6a65
+業務効率化,7,【実践用豪華ツール・期間限定特典付き】遠回りばかりだった私が「知識ゼロからの仕組み化」に辿り着けた理由,0,,1088,False,2026-09-30,Saki｜最新ノウハウの裏側『ガチ検証』アナリスト,https://note.com/roya14/n/n3a766d1498f6
+業務効率化,8,【アルゴリズムを学ぶ前にボトルネックを測れ】なぜあなたのコードは遅いのか：推測を排し「プロファイリング」だけで処理速度を10倍にする現役エンジニア・ミナトの冷徹な計測思考,1980,500,258,False,2026-10-30,現役エンジニア：湊,https://note.com/minato74_/n/nc7928a4257f7
+業務効率化,9,AIで業務効率化しても職場が変わらない理由_管理職の「30日改善ログ」_AI×人が辞めない職場づくり×社労士　7/7,0,,282,False,2026-10-27,smile_社会保険労務士・国家資格キャリアコンサルタント・コーチングコーチ・産業カウンセラー,https://note.com/kind_ram6013/n/n420411e4fa4f
+業務効率化,10,Gemini Liveに画面を見せれば全部解決すると思っていた。僕が「見せる前の30秒」を必ず挟むようになった理由,980,500,214,False,2026-10-31,ハルト@Geminiマスターへの道,https://note.com/alert45/n/nd1d2b7ad76c8
+業務効率化,11,人生はほどほどがちょうどいい　第44回　効率のほどほど　～効率だけでは測れない、人の思いを大切に～,0,,202,False,2026-10-31,がんばってネコ,https://note.com/light_whale8787/n/n29053f379b7a
+業務効率化,12,【AIにまかせる技術】打ち直している頼み方は、名前で呼ぶ｜スキル,0,,191,False,2026-11-03,緑どんぐり,https://note.com/green_donguri/n/n18354bf3002c
+業務効率化,13,「時間ができたら育成する」が永遠に来ない理由 ～ AIが片づけたのは、管理職の雑務と若手への教材でした ～,0,,186,False,2026-10-31,安藤秀樹｜最高のチームも、自分らしい未来も。コーチング×研修×コンサルティングでお手伝い,https://note.com/hideki_ando/n/n886d43728cd9
+業務効率化,14,Googleフォームで業務効率化したはずが、逆に仕事が増えた話。AIと一緒に改善してみた,0,,394,False,2026-10-14,とよぞう_note,https://note.com/bold_oxalis9933/n/ncbfe13ad0bb2
+業務効率化,15,全部自動化できないなら意味ないと思っていたけど、半分だけでもかなり楽だった,0,,899,False,2026-09-25,まりえ｜ひとり起業家の集客の仕組みづくり,https://note.com/marie_k_note/n/n384cea636258
+業務効率化,16,ChatGPT Slides、提供開始。コメントで直しを頼める共同編集スライドの使い方と対象プラン,0,,268,False,2026-10-21,Miccell(ミクセル) / 人生を楽しむ仕組みを作る,https://note.com/miccell/n/n4e1c73c09ddb
+業務効率化,17,Muse、日本上陸！MetaのAIエージェントを実際に使ってみた｜Instagram・Threads連携で感じた便利さと怖さ。【生成AI / AI副業 / AIイラスト】,0,,225,False,2026-10-24,Kinu｜AIイラストと発信づくり,https://note.com/kinu885/n/n083f6615b502
+業務効率化,18,PDFのマスキングが無意味だった！画像を編集できないPDFに変換する方法をAIで解決 ※プロンプト付 ※プログラム付,0,,164,False,2026-10-30,アラ還AIプログラマ,https://note.com/shinchan194/n/n5176ceff02c3
+業務効率化,19,Opus5.5が型なしでレイアウトする：バナーデザイン自動生成の仕組み v3,0,,157,False,2026-10-31,太田 賢一／Design Mgr,https://note.com/kenichiota0711/n/nbda303486e8d
+業務効率化,20,【コピペOK】神プロンプト無料プレゼント！AIで即実践！仕事の無駄をゼロにするAIプロンプト活用術を試しませんか？,0,,484,False,2026-10-06,まこと,https://note.com/aimakoto/n/n5ff5666c20fc
+業務効率化,21,中間管理職、AIでパワポを作る方法が4つもあると知った。,0,,171,False,2026-10-28,sachi.,https://note.com/sachi_03/n/nc1a93a95f7dd
+業務効率化,22,「もう終わったの？ じゃあこれも」が、職場から効率化を奪っていく,0,,151,False,2026-10-30,ふて猫・知陽｜明日ドヤれる人間観察室,https://note.com/ashita_doya/n/n34de2251cda1
+業務効率化,23,AIに頼む前に、AIと「やり方」を考えてみる：身近な作業から試す4ステップ,100,,285,False,2026-10-13,てつや｜考える技術とAI,https://note.com/tetsucreate/n/nd7fbe7db9c10
+業務効率化,24,"有料noteを売る自信がない人へ。Claude Codeで「無料note」を回して月10万円を目指す""3つの出口""設計【AI副業初心者・フォロワー0から】",2980,,264,False,2026-10-14,Rayna,https://note.com/rayna_levnet/n/n0c2bf2d2a7ca
+業務効率化,25,便利なものを作ったのに、使ってもらえないのはなぜ？,0,,122,False,2026-11-03,まる｜AIで現場に残る仕組みをつくる,https://note.com/maru_genba_ai/n/n84314ff403bc
+業務効率化,26,会社に確認せずにAIを使ったことがある社員は4割。禁酒法から考える「シャドーAI」の話,0,,134,False,2026-10-28,図美楽,https://note.com/zumiraku/n/n00f4ec4745d3
+業務効率化,27,【考察】なぜDecisions APIはビジネスのDXを加速するのか｜IoTとクラウドの王道DXに足りなかった「判別の速さ」‼️,0,,168,False,2026-10-23,異世界の音楽家｜ai motion musics,https://note.com/instkoni/n/n11b2500e6e2a
+業務効率化,28,Meta Museを使ってnote記事のネタ探しが簡単になるのか？実験してみます！,0,,112,False,2026-11-06,へろん,https://note.com/nifty_sheep7386/n/n0873f407d3e3
+業務効率化,29,"【開発日記】なぜ1,800円？作っている機能と、その理由を少しだけ。(^^)",0,,217,False,2026-10-16,tasukeai-,https://note.com/tasukeai114/n/n0d9286cffdcb
+業務効率化,30,「完全無課金」を外す日。ちょっと寂しいけど、作りたいものがある,0,,106,False,2026-11-02,ken,https://note.com/noted_sheep3883/n/n2f7d68342944
+業務効率化,31,ChatGPTからGoogle SheetsとNotionに直接書き込めた！AI副業初心者が試した3つの確認方法,0,,121,False,2026-10-28,AIと暮らす実験室｜モノラボ,https://note.com/monolab_ai/n/nddee3fa18c58
+業務効率化,32,便利な道具は増えたのに、なぜ私たちの仕事は楽にならないのか？,0,,236,False,2026-10-13,サイジョウ|観察・検証・発信を続ける研究家,https://note.com/97114/n/nf161f582c147
+業務効率化,33,MetaのAIエージェントMuseの使い方｜画像・動画生成とGIF変換を試してみた,0,,119,False,2026-10-28,Makari｜AIイラスト,https://note.com/makari_5108010/n/nc9594a5e75ea
+業務効率化,34,⭐️時間がない会社員のためのAI実践ガイド〜すぐに使える簡単なプロンプト大公開！！〜,0,,147,False,2026-10-22,かず,https://note.com/kaz80/n/n17d82986542d
+業務効率化,35,「AI同士の伝言係」を卒業!!｜AIだけでゲーム(TRPG)を全部させてみた話｜Claude Code・Codex,0,,93,False,2026-11-03,とりかじ｜研究職パパの家庭DX研究室,https://note.com/like_cosmos1242/n/n9429ea028094
+業務効率化,36,引き継ぎ漏れは、書いた本人には見えない。走り書きをAIに「初めて読む人」として読ませてみた,0,,95,False,2026-10-31,パワー,https://note.com/safe_poppy9452/n/n579a67539689
+業務効率化,37,AIに仕事を任せるほど、人間には「何をOKとするか」を言葉にする仕事が残る｜田中亮大『ひとり社長の稼げるAI』,0,,195,False,2026-10-15,きしゃこく先生｜報道記者×国語教師｜現実を動かす技術｜ 日本人の無意識の力,https://note.com/kisha_koku/n/na3e6d5600b1c
+業務効率化,38,​【アカウント作成24時間で知恵袋のカテマス取って卒業(笑)】PC・スマホの不具合やGeminiの使い方を完全無料で解決！普通の相談や恋の悩みもどうぞ,0,,92,False,2026-10-31,春,https://note.com/zerosystem2026/n/n5f37f1ccbf30
+業務効率化,39,AIエージェント導入事例｜AI社員マークの24時間稼働と実データ,0,,89,False,2026-11-04,株式会社クリーブウェア（AI戦略室）,https://note.com/cleaveware_aist/n/nba31f29b9758
+業務効率化,40,【速報】MetaのAIエージェント「Muse」が日本上陸！「質問するAI」から「作業させるAI」への完全シフト,0,,126,False,2026-10-23,AIで月15万円を稼ぐ31歳の雪国サラリーマンの話,https://note.com/ainotechatz/n/n98baaf86b771
+業務効率化,41,AIで楽をするのはいい。ただ、相手の時間までうばっていないかは気にしたい,0,,86,False,2026-11-01,増田 啓一｜実務の地図を描く人,https://note.com/keimasuda/n/ne7b7504df62a
+業務効率化,42,わかりにくいファイルは、自分がわかるように整理したい（笑）,0,,86,False,2026-11-03,みう,https://note.com/miu_notes/n/n9cb5ed98fe44
+業務効率化,43,AIエージェントを自分の分身に育てる,0,,107,False,2026-10-27,ソラシド日和 ｜ リーダーの思考ノート,https://note.com/sorashidobiyori/n/nb8bd8f0307ec
+業務効率化,44,【はじめてのnote】「ハッシュタグをつけるとスキが増える」は本当なのか、3本目の記事で試してみる,0,,190,False,2026-10-14,ヒロ｜上場コンサルのAI時短術＠時間を半減させるプロンプト,https://note.com/dear_lupine813/n/n53f33166167f
+業務効率化,45,わたしはだれ？　企画営業や管理職の仕事をAIで底上げする｜19年の現場から生まれたAI活用,0,,85,False,2026-11-01,Chihiro | ビジネススキル × AI × ヘルスケア,https://note.com/hearty_tern3460/n/nc08968e2295e
+業務効率化,46,AIの実演を見て「すごい！」で終わる人と、仕事を変えられる人 〜差がつくのは、ITの知識ではなく業務の見方〜,0,,85,False,2026-11-03,山本真吾,https://note.com/crisp_elk2306/n/n51efcf3fa0b7
+経理,1,あなたにも必須！全ての人が絶対マーケティングを勉強すべき理由。,0,,201,False,2026-11-04,ソトハネちゃんは働きたい！,https://note.com/tanuq_design/n/n8dbfd78022e8
+経理,2,みんな、このnoterさん知ってる！？,0,,278,False,2026-10-22,じゅんのすけ｜人生は何歳からでも変えられる,https://note.com/juicy_lynx3773/n/ne48948dabc90
+経理,3,「フツーに」人と接するだけで疲れ果てる私が選んだ働き方,0,,168,False,2026-10-30,あやのん｜家族時間も収入もあきらめない働き方,https://note.com/assistant_online/n/ne83db6af3d53
+経理,4,短編小説「グローブを手に」,0,,178,False,2026-10-16,たこやき,https://note.com/natty_tulip9142/n/n6fc56d4b3f73
+経理,5,源泉所得税を引かれて入金されたら？売上の入力から確定申告、還付までの一連の流れを解説,0,,82,False,2026-11-03,本間会津子｜税理士,https://note.com/homma_atsuko/n/n949dff8cccf8
+経理,6,🍁No.253 介護休業前、最後の出勤日,0,,78,False,2026-10-31,いろぴょん,https://note.com/kind_snake4782/n/n2e9995638501
+経理,7,問題 60 ⑴〜⑸｜50代の資格挑戦・学習記録 #141,0,,73,False,2026-10-30,シン・サカモト,https://note.com/shin_sakamoto/n/n94817ec4198f
+経理,8,在庫の金額は去年と同じなのに、在庫が多すぎると言われるのはなぜですか,0,,67,False,2026-11-04,鍵谷健/ビーレジェンド社長/経営自動化コンサルタント,https://note.com/kagitani/n/nc74822d07fc1
+経理,9,AIに任せきりにしない。梨農園の事務管理システムにおける、開発と検証の仕組み,0,,68,False,2026-10-31,坂本 祥太朗 | NDシステムズ,https://note.com/ndsystems_jp/n/n9183443a0739
+経理,10,仕事を任せるのは、質問がなくなってから｜フルリモートの引き継ぎ,0,,59,False,2026-11-04,Emi,https://note.com/emi_remote/n/n0d2285eb224a
+経理,11,50代からAI副業に挑戦。ここまでやって分かったこと,0,,196,False,2026-10-05,50代からAI副業,https://note.com/safe_magpie7463/n/na70df01aa012
+経理,12,経理2年目の下っ端、過密業務のなかでも明日にきらめきにいく,0,,53,False,2026-11-02,わく輔キャンパス,https://note.com/wak_suke/n/n71ec5fc55cb7
+経理,13,経理事務OLが家計簿に勘定科目【猫様費】を新設したら、月末の決算で電卓がお猫様に却下されました。,0,,139,False,2026-10-10,みい🐈,https://note.com/mii_cat_servant/n/n25d49f30dac3
+経理,14,第12章　帰任が近づき、これからの人生を考え始めた,0,,53,False,2026-10-30,ビッグカツ｜会社に全振りしすぎた駐在員CFOの末路,https://note.com/zenburi_cfo/n/nabb2d8b17d8c
+経理,15,昨日、辞めてしまったよ。,0,,83,False,2026-10-20,ReStart | エンパス＆HSPな人の日々雑感,https://note.com/disclosure8888/n/n145b1ab0cae4
+経理,16,「プロンプトって何?」から始まった、44歳の私のAI用語迷子記,0,,2132,False,2026-08-09,まさみ,https://note.com/masa_aimarketing/n/n2f1d765fc3c4
+経理,17,繁忙期到来。現実逃避の野望！！,0,,68,False,2026-10-22,sachi,https://note.com/sachi0520/n/nfbddd5fe99b6
+経理,18,自分が受け取る金なのに、請求書が出せなかった｜ADHD脳の俺が、お金の作業で止まった3つの場面,0,,47,False,2026-10-29,堂本晃聖｜心理ライフメンタリスト,https://note.com/domotokosei/n/n6d9d38945aa6
+経理,19,はじめてのnote＆自己紹介,0,,39,False,2026-11-04,経理とキャリアの実務ノート,https://note.com/jj130455/n/n7ac0d9f0556c
+経理,20,【生きづらさの正体】几帳面さは自分を苦しめる,0,,167,False,2026-09-30,なお │ 生きづらさの正体と抜け方,https://note.com/michaelmascay/n/n35fc26858b63
+経理,21,はじめましてのnote,0,,40,False,2026-10-30,凡人の哲学,https://note.com/bonjin_tetsugaku/n/nda22dbc80859
+経理,22,責任を引き受けることの怖さはどうやって克服すればいいですか？——ドラマ『救命病棟24時』を観て。,0,,42,False,2026-10-28,なおの縁側,https://note.com/cheeky_canna9534/n/na062857086da
+経理,23,AIで削減できる工数には、上限がある——「9割削減」が届かない理由,0,,35,False,2026-11-02,Docify｜バックオフィスAIエージェント研究室,https://note.com/docify_agent/n/n5e3147876cf3
+経理,24,AIに仕事を奪われるのはどんな人？｜実業家に学ぶAIの使い方,0,,38,False,2026-11-07,フォレスト出版　エフィカシー向上委員会,https://note.com/metaunconscious/n/nacf34a73abdc
+経理,25,「178万円まで働いても大丈夫？」従業員から聞かれたときに知っておきたい令和8年分「年末調整」と「収入の壁」,0,,80,False,2026-10-14,金子真一｜法人税務の専門家,https://note.com/kaneko_taxao/n/na3b20b4e7e84
+経理,26,20代経理マンの平日1週間日記（2026/10/12~2026/10/15）,0,,71,False,2026-10-16,ふつ@20代夫婦の暮らし,https://note.com/clever_azalea879/n/n9b97b78b7a66
+経理,27,はじめまして、かなえです🪴 空想テラリウムと「AIからのおへんじスタンプ」をオープンしました🐳,0,,33,False,2026-11-01,かなえ🪴空想テラリウム｜AIと作るアプリ(mod)開発日記,https://note.com/kanae_kanaerujp/n/n92827be7b1c5
+経理,28,請求処理,0,,33,False,2026-11-02,ペコロス,https://note.com/hope_0803/n/n82c39b8094a6
+経理,29,自己紹介｜会計事務所から経理へ、そしてこれから,0,,77,False,2026-10-13,ぺちゃめがね@経理のひと,https://note.com/eager_snail9384/n/n0e8ecc2f60bc
+経理,30,違う違う、そうじゃな〜い,0,,37,False,2026-10-28,akane,https://note.com/clear_serval2388/n/na78d41b65f1b
+経理,31,【中小企業×Claude Code】会計ソフトを触らずに、Claudeだけで決算を終わらせた話（前編：資料の読み込みと仕訳）,0,,38,False,2026-10-27,中小企業×Claude Code｜税理士×サロン経営（年商5億）｜事務員ゼロ・外注費月60万超→0円,https://note.com/zeirishi_claude/n/n4cd0aceae49a
+経理,32,【11月中にやらないとヤバい！】夜職女子のための「年末駆け込み節税・領収書整理」チェックリスト,0,,31,False,2026-11-04,莉々｜夜職女子の未来設計室,https://note.com/yoru_mirai_lab/n/n2510112aca27
+経理,33,外注先や士業と組む「ひとりバックオフィス」の実務ノートを始めます｜自己紹介,0,,36,False,2026-10-28,うらかた｜ひとりバックオフィス,https://note.com/urakata_bo/n/nb5bc91c37817
+経理,34,AIエージェントで経理業務はどう変わる？RPAとの違いと導入手順を徹底解説,0,,46,False,2026-10-22,堺あきら（Aki）｜AI伴走サポーター｜Claude・CodexでAI社員を作る人,https://note.com/akira_sakai/n/naf13d1045428
+経理,35,はじめまして。体育会育ちの総務・経理課長です,0,,56,False,2026-10-18,Hayata,https://note.com/pure_ferret9404/n/n214d00b3cd72
+経理,36,黒字なのに通帳が心細い。「足りない日」から考えてみる,0,,29,False,2026-11-01,花田宏造税理士事務所,https://note.com/yoruo_hanada/n/n5b7f682e631f
+経理,37,経理が1人の会社ほど、AIの前に基本フローを,0,,30,False,2026-10-30,ボンディーノ,https://note.com/bondino/n/ndd9a09da8a4f
+経理,38,仕事はある。それなのに、会社が倒産する理由。―人手不足と、財務の役割―,0,,28,False,2026-11-01,José ｜仕事と暮らしを考える,https://note.com/jose_c2huru/n/nd0a4d1166506
+経理,39,🐰月刊りりぃ｜チャレンジした8月と、9月、新しい始まり☘️,0,,374,False,2026-09-06,🐰りりぃ｜働く女子の心の声,https://note.com/unique_wren1931/n/nb95174956b6f
+経理,40,個人事業主の領収書整理術｜確定申告で困らないズボラ資料管理のコツ。,0,,27,False,2026-11-02,いえなか｜会社員をしながら事業を育てる,https://note.com/confistant_c/n/n598e8c0393a4
+経理,41,35歳・未経験・日商簿記2級取得のステータスで経理へ転職したいな～な話,0,,64,False,2026-10-13,底辺経理ふらし,https://note.com/hurashi18104/n/n263537ccbc42
+経理,42,フリーランスを検討してみる,0,,26,False,2026-11-02,yosuke,https://note.com/yosuke414/n/n8211b6378ef6
+経理,43,AI時代、税理士法人はどこまで変わらなければいけないのか。5年前、sankyodo税理士法人がfreeeを基幹ソフトに選んだ理由,0,,27,False,2026-10-30,朝倉歩@デジタル専門特化型の税理士法人CEO/パーカー税理士,https://note.com/asakuraayumu/n/n6a2cbc1596b5
+経理,44,会社の擬人化オーケストラ,0,,41,False,2026-10-21,体弱さん生き残り部,https://note.com/dreamy_tulip4981/n/n9de135118c5b
+経理,45,退職して2週間、離職票が届かない…経理・総務27年が教える「届かないときの2ステップ」,0,,34,False,2026-10-25,とも｜50代の本音とこれから☘,https://note.com/tototo_life/n/n924d5ec846e3
+経理,46,メンバーの成長を促す鍵は「Why」にあるー実務スキルの先にある「仕事の意義」をどう届けるか：いまのたかの組織ラジオ#012,0,,50,False,2026-10-16,ひでまる@地方企業の人事・組織活性化の応援家,https://note.com/hidemaru1976/n/n11ec14c55db2
+経理,47,【お悩み回答】キャリアコーチになるまでの意思決定を伺いたいです,1250,,21,False,2026-11-03,ずんずんのずんずんいこう（╹◡╹）,https://note.com/zunzun428/n/n145933255c70
+総務,1,社員50人のIT企業で衛生管理者の資格を頼まれたので、試験の数字を数えてみた,0,,338,False,2026-10-29,SEKIYOU（インフラエンジニア講師）,https://note.com/ccnataisaku/n/na426f10caa97
+総務,2,衛生管理者の資格に要る実務1年か3年か10年を、退職前に会社の証明書で確かめた話,0,,608,False,2026-10-14,残業敗北者@120時間残業,https://note.com/haibokusyazyake/n/n9dace8b38893
+総務,3,「案内文を確認する」総務・人事担当者の方へ初めて読む人が次に動けるかを確かめる_指示×経営者・管理職×AI 7/8,0,,203,False,2026-11-04,smile_社会保険労務士・国家資格キャリアコンサルタント・コーチングコーチ・産業カウンセラー,https://note.com/kind_ram6013/n/n37c41bd586bd
+総務,4,はじめまして。とりあえず書いてみます（笑）,0,,78,False,2026-11-01,Light,https://note.com/brave_dog4289/n/nba89ba1e5ba4
+総務,5,知らないと損！総務が教える年末調整の裏側,0,,104,False,2026-10-25,とよぞう_note,https://note.com/bold_oxalis9933/n/n7e6b772bf1b8
+総務,6,三歩どころか五メートル,0,,67,False,2026-10-30,おやゆび,https://note.com/oyayub1/n/n2d1158e19168
+総務,7,製造業のお局未満｜忘れたい、私の過去。,0,,56,False,2026-11-02,製造業のお局未満,https://note.com/otsubonejyanai/n/ncd2881b1e0b2
+総務,8,タイパは、目的ではない ― 効率化を語ってきた私が、データ取りだけは効率を捨てる理由 ―,0,,61,False,2026-10-29,ともちか@社労士開業準備中,https://note.com/ntomochika_sr/n/n355f615eee64
+総務,9,「プロンプトって何?」から始まった、44歳の私のAI用語迷子記,0,,2132,False,2026-08-09,まさみ,https://note.com/masa_aimarketing/n/n2f1d765fc3c4
+総務,10,はじめてのnote,0,,44,False,2026-11-02,mmm,https://note.com/mmm0830/n/n4475decbd33b
+総務,11,繁忙期到来。現実逃避の野望！！,0,,68,False,2026-10-22,sachi,https://note.com/sachi0520/n/nfbddd5fe99b6
+総務,12,AIで削減できる工数には、上限がある——「9割削減」が届かない理由,0,,35,False,2026-11-02,Docify｜バックオフィスAIエージェント研究室,https://note.com/docify_agent/n/n5e3147876cf3
+総務,13,本社が2つある会社の、働き方と拠点の考え方 | ワークプレイス・インサイト,0,,33,False,2026-11-05,かっちゃん | 働き方・オフィス・AIのはなし,https://note.com/ktksan9/n/na2b0d7d233cb
+総務,14,属人化していく。,0,,37,False,2026-10-29,総務部総務課マモたろう,https://note.com/nashikuzushi5/n/n585c72fce084
+総務,15,「わからない」と言える人は、強い,0,,32,False,2026-11-03,utsuku,https://note.com/___miu___miu___/n/nf20449d2a286
+総務,16,週2回「できる」けれど、週2回は「続けられない」。｜慢性疲労症候群と働き方,0,,157,False,2026-09-27,さくら｜疲れやすいワーママ,https://note.com/sakura12momochi_/n/n3f0c439eec75
+総務,17,外注先や士業と組む「ひとりバックオフィス」の実務ノートを始めます｜自己紹介,0,,36,False,2026-10-28,うらかた｜ひとりバックオフィス,https://note.com/urakata_bo/n/nb5bc91c37817
+総務,18,はじめまして。体育会育ちの総務・経理課長です,0,,56,False,2026-10-18,Hayata,https://note.com/pure_ferret9404/n/n214d00b3cd72
+総務,19,AIエージェント バック オフィスの全貌：RPAとの違いから実践的な導入ロードマップまで徹底解説,0,,30,False,2026-10-31,堺あきら（Aki）｜AI伴走サポーター｜Claude・CodexでAI社員を作る人,https://note.com/akira_sakai/n/na0231673fdd3
+総務,20,☘️試行錯誤｜noteのターゲット設定、深掘りしたつもりで浅かった😇,0,,36,False,2026-10-26,止まらない総務ママ☘️,https://note.com/noble_yarrow4431/n/n343c5249a703
+総務,21,「自分でやったほうが早い」から、抜け出せない,0,,182,False,2026-09-21,森 たくみ｜転職11回・人事総務20年｜50代やり直し録,https://note.com/fiftystart_hrga/n/n3e6bd46a3378
+総務,22,#068 組織の力は「異物」から生まれる――ド素人の僕が信じ続けること,0,,199,False,2026-09-19,大石 安孝　丸友開発(株) 代表取締役,https://note.com/yasutaka_oishi/n/n6ec21d7a4ea2
+総務,23,社内不倫をしている方々へ ,300,,69,False,2026-10-11,あだかつ | ワインバー経営,https://note.com/quirky_acacia992/n/n8cf7d0beaf6d
+総務,24,会社の擬人化オーケストラ,0,,41,False,2026-10-21,体弱さん生き残り部,https://note.com/dreamy_tulip4981/n/n9de135118c5b
+総務,25,アルファ米だけじゃない！災害に備えるオススメ非常食！パスタやおでん缶も！？,0,,25,False,2026-11-01,ろこ|目指せ株主優待生活,https://note.com/chic_bison8757/n/n6c332348380b
+総務,26,退職して2週間、離職票が届かない…経理・総務27年が教える「届かないときの2ステップ」,0,,34,False,2026-10-25,とも｜50代の本音とこれから☘,https://note.com/tototo_life/n/n924d5ec846e3
+総務,27,有給は蜃気楼・会社が生んだジャバウォッキー　柿のフランベとキャロットラペ,0,,57,False,2026-10-13,三級魔女はちみつ|たべる魔法とのむ魔法,https://note.com/39very_which/n/n01df8f7d3014
+総務,28,共有フォルダに「最新版」という名前のファイルが3つあります。。。,0,,55,False,2026-10-13,鍵谷健/ビーレジェンド社長/経営自動化コンサルタント,https://note.com/kagitani/n/n6e11a47e610c
+総務,29,ビジネスギフトの変化と最新トレンド！現場の負担をゼロにする選択肢,0,,31,False,2026-10-25,HANAMUKE for biz,https://note.com/hanamukeforbiz/n/nc0f3c8f30d04
+総務,30,引き継ぎがない仕事に、どう対処するか,0,,60,False,2026-10-09,ばたやん,https://note.com/lively_zebra5840/n/n15ab85cf0da7
+総務,31,はじめまして、ルークです。言葉と仕組みで「日々のモヤモヤ」を整える、僕の自己紹介。,0,,39,False,2026-10-18,ルーク｜AIで15時退社と自分ビジネスに挑戦,https://note.com/takahiro1783/n/n707f3c8a45b6
+総務,32,Pマーク審査で「入退室の記録は？」と聞かれたら。中小企業がスマートロック5台で整えた方法,0,,46,False,2026-10-15,WizCloud｜スマートロック・入退室管理,https://note.com/wizcloud012/n/ne83bbdcc7e9f
+総務,33,バックオフィス業務にAIを入れて、最初の1週間でできること,0,,19,False,2026-11-06,INO Contract,https://note.com/ino_contract/n/n51f536d773e0
+総務,34,【写真を入れるだけで冊子が完成！】毎年の「家族懇談会」資料づくりを、Claudeと一緒にツール化してみた｜【Claudeチャレンジ＃１】,0,,43,False,2026-10-14,i,https://note.com/180dcafe/n/n4a2d2b14b02c
+総務,35,唐揚げとビールと愚痴,0,,19,False,2026-10-30,つつじヶ崎,https://note.com/tsutsujigasaki/n/n19c220ef6e4d
+総務,36,自分の名前をAI検索、要約の個人情報をChatGPTなどで確認する方法,0,,17,False,2026-11-03,ミナト｜仕事のAI活用,https://note.com/minato_ai_ops/n/n3f6043ba51bd
+総務,37,経理・財務の仕事ツール　　　　　　　会社用のピュアなOneNoteDB　更新,0,,28,False,2026-10-20,YM2,https://note.com/ym2_tw/n/n003a409c7755
+総務,38,ブラック企業、弐ノ巻,0,,28,False,2026-10-20,光   |   うつ病と暮らす日々🐾🤍,https://note.com/ever_free1007/n/nb5d0e87fe0fe
+総務,39,ある日突然、誰でも知る大企業から届いたA3用紙5枚の「死刑宣告」,0,,32,False,2026-10-17,実務防衛ラボ,https://note.com/jitsumubouei/n/n6d109ddace04
+総務,40,無料！「在庫切れ！」をなくす。基準を外れた数字を毎朝お知らせ #007,300,,16,False,2026-10-31,アクセリア │ AIを楽しみながら業務効率化,https://note.com/agile_clam6818/n/n68d56450c73c
+総務,41,設定が大好きなんですよ。待ちに待った新しいパソコン,0,,27,False,2026-10-20,Masa,https://note.com/masa_workshop/n/n63c0bf2feff0
+総務,42,管理本部GMにインタビュー！AI時代に求められる「主体性」と「成長の秘訣」,0,,18,False,2026-10-28,中野製薬 公式,https://note.com/sdc_sdc/n/n5b186a7d59f4
+総務,43,一人あたり月平均40時間の残業は、3年後、10時間になった。いる場所ではなく、何をするかでチームを編成した話,0,,20,False,2026-10-25,YUMI｜50代の経験資産化,https://note.com/yumi_50s/n/n08ee53ab9306
+総務,44,会社員全員が自動化したい3つのこと,0,,56,False,2026-10-03,ゆらのま,https://note.com/yurao_ma1989/n/nebfed9243a90
+総務,45,高知で総務しながら、ゆるく開発してます,0,,78,False,2026-09-26,Ozzy,https://note.com/super_jacana8664/n/nb140b5824ca6
+総務,46,【無料・第3部】プライバシーマーク取得企業は本当に安全なのか？認証の限界、委託先の落とし穴、情報漏えい後の責任を徹底検証。,0,,14,False,2026-11-04,ビジハックマスター｜会社員の「壁」攻略本,https://note.com/biz_hack_master/n/n504a68652948
+総務,47,大事な会議で、意識を失いかけました,0,,15,False,2026-10-30,台所すずめ,https://note.com/cute_clam9926/n/nfb85dc8012a2
+総務,48,バックオフィス部門こそインテリジェンス機能を担うべき,0,,29,False,2026-10-16,YOSHIKI OKADA_岡田 芳樹,https://note.com/yoshiki_okada645/n/n51407201b31f
+事務,1,「フツーに」人と接するだけで疲れ果てる私が選んだ働き方,0,,168,False,2026-10-30,あやのん｜家族時間も収入もあきらめない働き方,https://note.com/assistant_online/n/ne83db6af3d53
+事務,2,生死はグラデーション,0,,87,False,2026-11-05,幹夫｜スクールカウンセラー23年｜生きやすくなる考え方を探究＆発信,https://note.com/calm_viper9188/n/n74890d47b7cd
+事務,3,はじめての方へ｜平日はAI事務実験、週末は事務あるある劇場,0,,141,False,2026-10-19,こつこつ｜会社員のAI事務実験,https://note.com/kotsukotsu_jimu/n/n5ec553ac9125
+事務,4,AIに事務を任せたら、49回やらかした。｜事務のAI事件簿、はじめます（Claude）,0,,348,False,2026-09-29,Claude Code 業務レシピ｜非エンジニアの自動化手順書,https://note.com/lively_seal6776/n/n9ff61a085df6
+事務,5,お仕事が決まりました！,0,,114,False,2026-10-19,ゆの帆,https://note.com/yunoha_journal/n/n204006bffdbd
+事務,6,取り残されるのが怖い会社ほど、全部やろうとして止まります,0,,36,False,2026-10-28,海野ひろし｜小さな会社の業務改善,https://note.com/loyal_bonobo7049/n/nf1558bcdd000
+事務,7,【リアルが増えると事務作業が遅くなる】,0,,30,False,2026-11-02,OtherPower＠オンライン面談で仕事の結果を出すコツ,https://note.com/greensmile/n/n6a019e0aaa37
+事務,8,某就労移行事業所1️⃣見学レポ,0,,44,False,2026-10-23,わっほい,https://note.com/wahhoi_g/n/n80b1143fdcbc
+事務,9,工場勤務から別の職種へ移りたい20代の転職Q&A12問,0,,24,False,2026-11-06,コレキヨ,https://note.com/fine_ixora559/n/n513066760475
+事務,10,仕事で画像生成AIを使ったら怒られたぞ【AIヴィーガン？】,0,,24,False,2026-11-06,kanji,https://note.com/kanjikotoyori/n/nfaf926193840
+事務,11,元・限界事務職がまとめた、仕事が早く終わるAIの頼み方30選｜メール・議事録・段取り【答えの例つき・無料で3つ試せる】,500,,36,False,2026-10-22,えみ｜AIで仕事と副業をラクにする,https://note.com/emi_ai_raku/n/nbe4f5022d6e8
+事務,12,一人の工夫を、チーム全員の便利に変えていく方法。,0,,30,False,2026-10-25,sb_halo,https://note.com/clean_honest5714/n/n00d4d55115dc
+事務,13,53歳主婦、仕事が決まる①,0,,22,False,2026-10-31,松葉,https://note.com/hekichisumi/n/n1f42fd14f104
+事務,14,めかぶのrTMS療法日記【#7】私がアル中になった原因が明確になった。,0,,44,False,2026-10-15,めかぶ,https://note.com/juicy_snipe6181/n/na35c3cceabdb
+事務,15,本業経験をAI副業に変える『掛け算ワークシート』と記入例4職種分,500,,21,False,2026-10-30,ぎゃくてん君|AI×自己成長,https://note.com/goldgrind/n/n13e9841d2634
+事務,16,「情報漏洩のお詫びメール」詐欺に注意！,0,,58,False,2026-10-09,おおかみ のみね @ 682社で働いた人,https://note.com/79_9x2/n/n7af0cebfdf00
+事務,17,はじめてのnote。,0,,97,False,2026-09-27,Chisa｜働くって、むずかしい。,https://note.com/chisa_logs/n/nc5544c46a7b4
+事務,18,Receipt Pipeline 従課金なし！最新AIで領収書入力を「完全自動化」するGASツールを作った話。これ、机に並べてスマホで連写するだけで終わるんです。※2026/10/17最新アップデート,3300,3000,37,False,2026-10-17,中の人@gasツール効率化,https://note.com/tonbo3537/n/na6ee4f865acb
+事務,19,在宅勤務したいママはIT業界にいけばいい、と思う理由,0,,154,False,2026-09-15,みぃ 30代ママの在宅勤務転職,https://note.com/mii_zaitaku_note/n/n9f6e5a998c81
+事務,20,落第点事務からプログラマーになったワーママのキャリアパス,0,,18,False,2026-10-31,ワーママぴかり,https://note.com/working_mamapika/n/n7d10b16462df
+事務,21,強みをひとつ手放した,0,,17,False,2026-11-03,mio,https://note.com/belepi07/n/n32d86de5af50
+事務,22,チェックリストは、項目が増えた瞬間に使われなくなります,0,,83,False,2026-09-28,鍵谷健/ビーレジェンド社長/経営自動化コンサルタント,https://note.com/kagitani/n/n35d3eb023131
+事務,23,私は人を支える仕事が好きです,0,,52,False,2026-10-06,SEKI,https://note.com/mayu_note24/n/n2016a71abfa9
+事務,24,"🍋AIに""総務でしょ""と言われた私が実務で活用するAIの使い方５選",0,,51,False,2026-10-04,れもん⌇収入の柱づくり研究者｜AI活用,https://note.com/voilet_lemon/n/n4f162e1aea61
+事務,25,ひとりひとりのレベルを上げるとは？,0,,15,False,2026-10-29,KANA,https://note.com/kmn97/n/n82d86f10d1a2
+事務,26,人見知りで緊張しやすいわたしが接客の仕事をしている理由,0,,13,False,2026-11-04,sayo,https://note.com/sayo31/n/n839f9cde77a9
+事務,27,1970年代生まれの方に送る！　Vol.3,0,,13,False,2026-11-01,nagi221,https://note.com/clear_iris1221/n/n299b104e1812
+事務,28,2度目の適応障害、休職。｜24歳女｜田舎暮らし,0,,17,False,2026-10-25,バム｜適応障害・鬱から新しい人生を送る,https://note.com/joyful_dunlin100/n/n27613e5acc40
+事務,29,人手不足の役所〜行政の「当たり前」を考え直すタイミングが来ている〜,0,,20,False,2026-10-21,ぐんじ真人,https://note.com/mato0104/n/n1698ac41e2a2
+事務,30,適性を探すと事務・軽作業と大きく分類しても更なる細分化も中間業務も様々な障害者雇用の業務内容,0,,35,False,2026-10-10,千億卍来,https://note.com/hukuhukurairai/n/ndf8212e8ca7c
+事務,31,#15 内製化でコスト削減を目指したのに、事務は慣れと根性？—事務作業が苦手な私が考えたこと,0,,12,False,2026-11-02,たすいち│さすらいのラーニングデザイナー,https://note.com/tasu1/n/n8652c5bf9c02
+事務,32,事務職なのに仕事が終わらない。定時で帰れない私が気づいた、仕事量が増え続ける理由,0,,16,False,2026-10-25,natsu_workstyle,https://note.com/natsu_workstyle/n/n7a844adc17a7
+事務,33,派遣で働いてきた私が、今キャリアを見直している理由,0,,27,False,2026-10-14,よりよのこれからノート,https://note.com/vivid_weasel2993/n/n8a86534e712f
+事務,34,職業訓練を修了した話。,0,,17,False,2026-10-23,金櫻ひさっち｜投資とFPの勉強で人生を再構築,https://note.com/hisacchi_fp/n/n7674abe160ef
+事務,35,"『1,000円分入力して358円』になる損｜在宅データ入力を時給で選ぶ手順",980,,11,False,2026-11-04,にくまん教授の『ほかほか』キャリア研究所,https://note.com/dreamy_emu5503/n/n7bcbfb832208
+事務,36,企業見学に行ってきたよR,0,,24,False,2026-10-14,のぞみ,https://note.com/n_ozomi/n/nf052efa58a9e
+事務,37,ナースコールなスマホ－NO.１－,0,,12,False,2026-10-28,紅一点・事務サン,https://note.com/jimsan03/n/n18e8e54a7efa
+事務,38,【二重払い】同じ請求書が2回届いても、Excelで支払前に止める,0,,10,False,2026-11-03,つるぼう｜経理の実務改善 Excel×AI,https://note.com/keiri_no_arkr/n/n447eaa5722fa
+事務,39,事務職で年収400万円を目指す方法｜AI時代のスキルアップと転職戦略,0,,10,False,2026-11-02,BS_K,https://note.com/biz_support/n/n783f83926bec
+事務,40,11月3日求人6件【ﾌﾙﾘﾓｰﾄ×未経験】正社員2件,0,,10,False,2026-11-04,ﾌﾙﾘﾓｰﾄ💢未経験,https://note.com/fururimo/n/ne966f13b8f24
+事務,41,Excelエラー解決辞典：#N/Aなど15種の原因と直し方,300,,10,False,2026-10-31,AIしごとラボ⭐️,https://note.com/kind_bobcat7064/n/n5ba0ba17df8e
+事務,42,自己紹介｜「自分には何もない」と思っているのに何故か毎回「正社員、興味無い？」と聞かれる,0,,12,False,2026-10-28,たぬ｜「普通のこと」を強みにする人,https://note.com/tanuki_no_te/n/ndb72d94ced01
+事務,43,予約管理が面倒な個人事業主へ｜日程調整・入金確認・リマインドを自動化して時間をつくる方法,0,,12,False,2026-10-27,集客パートナーTAKESHI,https://note.com/takeshi_1/n/n6bff1532b231
+事務,44,現在、お仕事を探しています｜私にできること,0,,57,False,2026-09-24,めぐみ｜求職活動のリアルを発信する人,https://note.com/megumi_creative/n/n08f059871f94
+事務,45,通勤時間、どのくらいまでなら許容できる？,0,,11,False,2026-10-28,sabaku｜40代の旅とヘルニア,https://note.com/fair_kiwi6845/n/ne86085a9ad6a
+事務,46,全部100点じゃなくていい。仕事は「武器」がひとつあると働きやすい,0,,92,False,2026-09-14,ちょこまま｜小型宇宙人を育てる母,https://note.com/chocochocodog/n/n2dd7c2d24c9f
+事務,47,20代で取った資格は有効か？,0,,20,False,2026-10-16,Kirari77,https://note.com/real_quoll9290/n/n391aabbc9c5b
+事務,48,【やりたい仕事とママ業と】やっぱりいつか営業がやりたいな,0,,26,False,2026-10-10,ミッシェル,https://note.com/lily_rika/n/nb5744c426363
+事務,49,【二日一投稿】 事務仕事,0,,10,False,2026-10-29,月と太陽,https://note.com/long_moose859/n/n8829342e5ceb
+スプレッドシート,1,Googleフォームで業務効率化したはずが、逆に仕事が増えた話。AIと一緒に改善してみた,0,,394,False,2026-10-14,とよぞう_note,https://note.com/bold_oxalis9933/n/ncbfe13ad0bb2
+スプレッドシート,2,【業務量判定プロンプト、作ってあります】って面接で言ったけど、作ってませんでした★ #魔王軍万歳,0,,303,False,2026-10-18,Liliscend＠夜更かしDX・AIハッカー,https://note.com/second__career/n/n03734a6067e1
+スプレッドシート,3,【1件1万円の受託から】GAS・Python自動化の副業ロードマップ｜比較表・テンプレ11点つき,2980,,109,False,2026-10-25,にくまん教授の『ほかほか』キャリア研究所,https://note.com/dreamy_emu5503/n/nada347b6eca0
+スプレッドシート,4,【赤字になる仕入れを見抜く】せどりの利益計算の全手順｜知らないと損,298,,93,False,2026-10-26,まじめくん｜元社畜のAI革命記録,https://note.com/namingsense/n/n8d5742976606
+スプレッドシート,5,職場の弁当注文表の集計ミスで絶望した私が、AI画像認識で残業ゼロを取り戻した劇的な方法 ※プロンプト付,0,,83,False,2026-10-26,アラ還AIプログラマ,https://note.com/shinchan194/n/n7d5a3af4482d
+スプレッドシート,6,AI共生記 　肉体労働者の俺が、AI基地を作ることになった。,0,,64,False,2026-10-31,てちゃん,https://note.com/kakuta1974/n/n9fefbc61d441
+スプレッドシート,7,そのコピペ、いつまで人間がやりますか？ Web・AI・自動化で「面倒な仕事」を仕組みに変える話,0,,129,False,2026-10-16,Atsushi,https://note.com/ripe_kalmia6670/n/n874c4c90c96b
+スプレッドシート,8,【レビュー】monthletとは？ 乗り換え3時間。3年も使ったObsidianすら超えた！ノートアプリ紹介,0,,60,False,2026-11-01,えむてぃWorks,https://note.com/mt_works/n/nfc68fabf89b3
+スプレッドシート,9,【週末や月末に電卓と表計算を叩く生活から抜け出せ】ミナトが明かす「集計を待つ側」になるための構造改革：他人のアプリに毎月課金せず、自前で回る計算基盤を築く哲学,5000,2980,302,False,2026-09-25,現役エンジニア：湊,https://note.com/minato74_/n/n7cee7587de40
+スプレッドシート,10,この人は、私の答えを簡単には信じない。――ChatGPTから見た、ある完璧主義者の話。,0,,84,False,2026-10-21,瑞馬かおり｜Mizuma Kaori｜完璧主義,https://note.com/mizumakaori/n/nb0aba21576b5
+スプレッドシート,11,年間58件の「今どうなっている？」をなくした、AIによる従業員体験の進化,0,,122,False,2026-10-13,井出 日彦｜Goodpatch 執行役員CHRO,https://note.com/akihiko_ide/n/ndba751dcce4d
+スプレッドシート,12,AIの返答に「あれ？」と思ったとき、自分が確認していること,0,,44,False,2026-10-30,レイン,https://note.com/real_plover3755/n/nf66fb14160f6
+スプレッドシート,13,コードが読めない料理人が、ChatGPTで勤怠管理を自動化してみた話,0,,39,False,2026-11-02,もち,https://note.com/rapid_condor9132/n/nfbb4ff75c1d2
+スプレッドシート,14,入力欄を3つに減らしたのに、スタッフの入力が続かないのはなぜですか,0,,57,False,2026-10-23,鍵谷健/ビーレジェンド社長/経営自動化コンサルタント,https://note.com/kagitani/n/n8535657c8e8c
+スプレッドシート,15,Excelをスプレッドシートに変えたらプルダウンが消えた。原因は「=」1文字だった,0,,36,False,2026-11-01,知識ゼロ、AI丸投げ副業,https://note.com/yukkori0402/n/n5dbaed12fabb
+スプレッドシート,16,開発の素人が、AIに社内システムを作らせて半年で分かったこと,0,,36,False,2026-11-01,試行日和,https://note.com/shikobiyori/n/n006abf7c2d80
+スプレッドシート,17,note収益化の前に準備することがある？アドバイスする中で気づいた３つのこと。,0,,127,False,2026-10-04,とらねこ,https://note.com/supertoraneko/n/nd74f612c8b87
+スプレッドシート,18,Googleフォームでユーザーが回答送信したのを知らせる通知って受け取れないの？AIに聞いてみた。,0,,35,False,2026-10-28,愛の支配が始まりました。,https://note.com/ging_2026/n/n8723809f212c
+スプレッドシート,19,予定が崩れても慌てない。そんなAI秘書が欲しいんです,0,,33,False,2026-10-28,トクコウ｜「めんどくさい」はチャンスの宝庫,https://note.com/toku_kou/n/n48e133d0cf2a
+スプレッドシート,20,私が今いちばん自動化したいのは、noteのダッシュボードの「あの子たち」です,0,,84,False,2026-10-07,みう,https://note.com/miu_notes/n/n4ed97aa3bf8e
+スプレッドシート,21,先生の余白は、こうしてつくる。③,0,,39,False,2026-10-22,よはく先生,https://note.com/catch_ball/n/n2e37ca3b2706
+スプレッドシート,22,39歳、AIを変えてみた。2万文字のコードは半分になったけど……,0,,36,False,2026-10-24,​R＠39歳、独立準備日記,https://note.com/easy_flea155/n/nadf07969e7f0
+スプレッドシート,23,実はスプレッドシートより強力？AppSheetで実現するデータ連携,0,,25,False,2026-11-05,ITジグソーパズル（株式会社セイユ－ネットワークシステム）,https://note.com/itjigsaw_puzzle/n/n1f6b92e755d0
+スプレッドシート,24,【完全マニュアル】📱畑ではスマホ、帰宅後はExcel！4ステップで作る収穫量管理システム,1000,,20,False,2026-10-31,のの幸＠月1畑,https://note.com/mx9n_myzk/n/n9b8197f46f16
+スプレッドシート,25,副業・フリーランスの請求書が数分で作れるスプレッドシート【無料配布・コピーするだけ】,0,,24,False,2026-11-02,村人A,https://note.com/gachio04230/n/n1ea869c7cac1
+スプレッドシート,26,個人事業主のための業務効率化ツールの選び方｜AI・n8n・スプレッドシート、何から始める？,0,,24,False,2026-11-04,はんじろう,https://note.com/ai_workflow_lab6/n/nf4321c47008c
+スプレッドシート,27,がんばらない家計簿。PayPayの履歴を入れるだけで費目分けまで,0,,24,False,2026-10-31,田中｜紙→AI→自動化,https://note.com/tanaka_hagatatsu/n/nad963332df20
+スプレッドシート,28,はじめまして。AI・ITで、いつもの仕事を少し楽にするために,0,,24,False,2026-10-30,仕事を楽にする小さな工夫｜AI・IT活用,https://note.com/shigoto_hitokufu/n/n1db531cf1fd5
+スプレッドシート,29,名前入りの案内文を、PDFで自動作成して送る。Googleドキュメントのひな形×GAS【先生の実践ノート#7】,0,,23,False,2026-10-30,yupi,https://note.com/magic_phlox2878/n/n870f78e76acd
+スプレッドシート,30,まず無駄な転記を断て。GASで情報分断を壊す自動連携戦略,0,,21,False,2026-11-04,Kei ｜ 中小企業DXの「内製化」請負人,https://note.com/kind_clam9731/n/nc6bf1f62d7ff
+スプレッドシート,31,頼れるAIが、急に話を聞かなくなった。だから私はChatGPTとMuseの二本柱にした,0,,21,False,2026-11-04,さくらとおもち｜AIを身近に。暮らしからアプリ作りまで,https://note.com/sakuratoomochi/n/nb983581effe9
+スプレッドシート,32,データから書類へ。プレースホルダーで差し込む,0,,21,False,2026-11-06,ふじまる | 業務設計パートナー,https://note.com/fujimaru_work/n/n371894ce5c94
+スプレッドシート,33,はじめまして、仕事の自動化研究所です｜AIの地雷、先に踏んでおきました。,0,,58,False,2026-10-10,仕事の自動化研究所,https://note.com/shigoto_auto_lab/n/n3acb69e23152
+スプレッドシート,34,【無料配布】noteの数字と読者の動きを、ＰＣ・スマホで振り返る「note分析キット」,0,,40,False,2026-10-17,タク＠HENDRE,https://note.com/alert_clover9324/n/nb0e151194161
+スプレッドシート,35,AIの「完了しました」を信じて大丈夫？毎朝の自動化で失敗しないための3つの確認,0,,20,False,2026-11-03,AIと暮らす実験室｜モノラボ,https://note.com/monolab_ai/n/n30a1635b14cd
+スプレッドシート,36,【EC運用】2つ目のモールを足す前に、商品マスタを「1商品×1モール＝1行」へ移す。再実行しても壊れない移行関数の作り,0,,21,False,2026-10-30,実務で回すEC運用ノート｜7モール×AI活用,https://note.com/relmea/n/n8182ce32055b
+スプレッドシート,37,#1-1 目指せ不労所得・年間１００万円🦚,0,,62,False,2026-10-06,転勤妻わらしべえの資産形成術,https://note.com/warashibee924839/n/n776f86e7c5a8
+スプレッドシート,38,その事務、時給にするといくら？小さなお店が「時間を買う」という考え方,0,,18,False,2026-10-31,みお｜恋愛アドバイザー×AI,https://note.com/mio_aitools/n/nf8ab11e27eee
+スプレッドシート,39,ChatGPTを文章作成にしか使ってない人、もったいないです。,0,,24,False,2026-10-25,るナース,https://note.com/runa_ai_vlog/n/n5006b516fd25
+スプレッドシート,40,🎤 3か月間、読者の声を1件も仕組みで取っていなかった——組織でやっていたことを、自分の媒体に1度も設計しなかった,0,,26,False,2026-10-23,Lily｜AI×自動化×マーケティング,https://note.com/bokuwalily/n/n0c55daa449c6
+Excel,1,CSV・Excel業務を自動化する前に決めたいこと｜第3部「データ・ファイル・業務処理自動化」を公開しました,0,,615,False,2026-11-01,ミナト｜実務特化の自動化戦略,https://note.com/minato_systems/n/nb38b34f319a8
+Excel,2,コード0行。Excelの定型作業をClaude Codeに任せる全手順,3980,,265,False,2026-11-07,リョウ@裏技の人,https://note.com/ryo_urwz/n/n1ef089ef2aa8
+Excel,3,どの確認を、どのキットで終える？｜小さなオフィスの実務キット10選,0,,149,False,2026-10-29,しくみや,https://note.com/sikumiya/n/n453454659571
+Excel,4,中間管理職、ミスを18個仕込んだ資料で、ChatGPTとClaudeをバトルさせてみた。,0,,161,False,2026-10-26,sachi.,https://note.com/sachi_03/n/n7954c282999f
+Excel,5,AIに副業を相談したら、計画が全部消えた,0,,93,False,2026-11-02,burubaki,https://note.com/burubaki/n/nf5202f526c64
+Excel,6,AIの記事を書きながら言葉にしてわかった、仕事で使うときに大事な3つのこと｜元SEの私のnote、どれから読む？【目的別ガイド】,0,,92,False,2026-11-01,アクセリア │ AIを楽しみながら業務効率化,https://note.com/agile_clam6818/n/nd4f76f33f1ae
+Excel,7,年末調整の保険データ、3日→1時間のAI裏技,0,,88,False,2026-10-28,とよぞう_note,https://note.com/bold_oxalis9933/n/n8b6a83f62812
+Excel,8,ノートパソコンをリビングに持ってきたら、家計簿がラクになった話。,0,,84,False,2026-10-29,なおの縁側,https://note.com/cheeky_canna9534/n/nd06d98cbebb4
+Excel,9,【毎月の集計が10分に】ピボットテーブルをAIで作る｜全手順とプロンプト5つ,298,,73,False,2026-11-02,まじめくん｜元社畜のAI革命記録,https://note.com/namingsense/n/n33641322a08c
+Excel,10,50歳シングルマザーの就職活動｜職業訓練のExcel講習スタート,0,,70,False,2026-11-02,ゆりこ@magic hour,https://note.com/yurikomagic/n/n297f226a1749
+Excel,11,DXの寄り道｜その仕事、AIに頼む前に やめません？,0,,69,False,2026-11-03,K&S_3939,https://note.com/ken_act/n/n374352e6a698
+Excel,12,『noteで実践！データサイエンス🐈‍⬛１』【初級】フォローリストを作ってみる①,0,,173,False,2026-10-11,ニャウットさん🐈,https://note.com/nyautto/n/ne5f07da38f0e
+Excel,13,Excelの機械可読性を判定するツール「Harunobu」のご紹介,0,,103,False,2026-10-21,デジタル庁,https://note.com/digital_jpn/n/n99cb228cc81c
+Excel,14,【週末や月末に電卓と表計算を叩く生活から抜け出せ】ミナトが明かす「集計を待つ側」になるための構造改革：他人のアプリに毎月課金せず、自前で回る計算基盤を築く哲学,5000,2980,302,False,2026-09-25,現役エンジニア：湊,https://note.com/minato74_/n/n7cee7587de40
+Excel,15,毎日の「ちょっと面倒」を、少し楽にする小ワザを書いています,0,,102,False,2026-10-18,ちょい楽Tips｜仕事革命部,https://note.com/choiraku_tips/n/n304772248039
+Excel,16,ChatGPTで整理したExcel、本当に合ってる？初心者でもできる3つの確認方法,0,,68,False,2026-10-25,AIで仕事をラクにする研究室　/フォロバ✨,https://note.com/ai_shigoto_lab_/n/ndb50c979ef88
+Excel,17,マクロで1分48秒待った100万件の照合が、HTML1枚だと0.2秒でした,0,,49,False,2026-11-03,パワー,https://note.com/safe_poppy9452/n/n708aee84c0f3
+Excel,18,仕事をクビになるなんて漫画やドラマの中だけの話だと思ってた,0,,51,False,2026-10-30,生き方が分からない,https://note.com/kuso_ningen_da/n/nd454a8d04f15
+Excel,19,手書きの棚卸し表をExcelへ｜60行の手入力 約12分（推定）→AI＋マクロ 約6分で半分に。でもAIも1回、数を読みまちがえた,0,,44,False,2026-11-02,こつこつ｜会社員のAI事務実験,https://note.com/kotsukotsu_jimu/n/nf7ce06a5ca16
+Excel,20,AIでマクロを作ってExcel自動化　バイブコーディング入門,0,,46,False,2026-10-30,TOSS @YOHAKU,https://note.com/tszk0327/n/n009a381ba75f
+Excel,21,物を動かさずに整理する。AIと作ったわが家の「ものの住所録」,0,,61,False,2026-10-24,西表島オン,https://note.com/lucid_coot8223/n/na201602d5f0f
+Excel,22,昔も今も、営業事務のExcel登竜門はLOOKUP系関数,0,,42,False,2026-11-05,kei@すみっこ,https://note.com/deskbits/n/nf2fc6643d7f4
+Excel,23,数字の魔術師、Excelで空回りする😂,0,,54,False,2026-10-26,Hikarun2026✈IQ164の天才数学者🌸🌸,https://note.com/hikarun2022/n/nb7db4ebe0e88
+Excel,24,デジタル商品販売の「公開前」と「販売後」を管理するExcelテンプレートを作りました,0,,132,False,2026-10-06,tasukeai-,https://note.com/tasukeai114/n/n834f6dae9439
+Excel,25,補助金は、探す前に「地域・人数・締切」の3つで絞ると、読む数が減ります,0,,40,False,2026-11-03,冠城研究所｜法務×経営,https://note.com/kamurogi_lab/n/nac5537e7fc77
+Excel,26,AIの報告文、その一文はどこから来た？送る前に見る3つのこと,0,,50,False,2026-10-26,まる｜AIで現場に残る仕組みをつくる,https://note.com/maru_genba_ai/n/n7d94dca8a955
+Excel,27,Excelをスプレッドシートに変えたらプルダウンが消えた。原因は「=」1文字だった,0,,36,False,2026-11-01,知識ゼロ、AI丸投げ副業,https://note.com/yukkori0402/n/n5dbaed12fabb
+Excel,28,【月3万円】Excel業務効率化、テンプレート販売を始める3つの手法,298,,152,False,2026-09-28,にくまん教授の『ほかほか』キャリア研究所,https://note.com/dreamy_emu5503/n/nb54252fddbad
+Excel,29,はじめまして｜元システムエンジニア、福祉業界へ。40代からの新しい挑戦,0,,35,False,2026-10-29,oka-jimuくん,https://note.com/okajimutool/n/n44de2df87618
+Excel,30,取り残されるのが怖い会社ほど、全部やろうとして止まります,0,,36,False,2026-10-28,海野ひろし｜小さな会社の業務改善,https://note.com/loyal_bonobo7049/n/nf1558bcdd000
+Excel,31,【無料配布・R8対応】実績指数の見込みを1人分ずつ試算するExcel,0,,64,False,2026-10-16,ツクル｜リハDXラボ,https://note.com/rehadx_lab/n/n43af957933f6
+Excel,32,【初心者向け】📊 集計だけじゃもったいない！ピボット表＆グラフの整え方,300,,27,False,2026-10-31,のの幸＠月1畑,https://note.com/mx9n_myzk/n/n2a31aa3c3c80
+Excel,33,48歳、さて、これから何しよう。,0,,41,False,2026-10-25,Mellowa（メロワ）,https://note.com/fine_dove1882/n/nebb0e44890ab
+Excel,34,生成した画像、どうしてますか？,0,,65,False,2026-10-16,流香（流月 / るー）,https://note.com/shuuki_garu_ruka/n/n6a355b182499
+Excel,35,手作りのツールがまた増える,0,,33,False,2026-10-30,後藤 真人 | 横浜の開業社労士 | AIの虜,https://note.com/axsr/n/n4c0a63967bd2
+Excel,36,ココナラでExcel・AI・パソコン購入アドバイスの仕事をしています｜サービス一覧,0,,116,False,2026-10-03,エクセルシア|エクセル自動化・投資,https://note.com/clever_tern121/n/nd7d05ae02c78
+Excel,37,Excelの管理表、増やしすぎていませんか？ 何度も作り直して気づいたこと,0,,30,False,2026-11-01,DESQ｜仕事をちょっとラクに,https://note.com/desq_work/n/n290de86f645d
+Excel,38,即売会の持ち込み数の決め方｜前回の販売数から出す計算と、当日の記録の付け方,0,,29,False,2026-11-05,mon,https://note.com/noted_lynx1272/n/nfb3184e334f1
+Excel,39,NASDAQと現金、何対何で持つ？「40%の下落」を目安に試してみた,0,,28,False,2026-11-01,Stock Labo AI｜組み込みエンジニア,https://note.com/stock_labo_ai/n/n1d3ffc6c9c72
+Excel,40,AI担当になりました｜Excelの表、見てもらおう！,0,,34,False,2026-10-27,チームねこは,https://note.com/teamnekoha/n/nac109734b0bb
+Excel,41,ClaudeでExcel関数を作る方法｜無料版で使えるプロンプトと実例5つ,0,,27,False,2026-11-02,sorara,https://note.com/sorara_studio/n/n9f77611940fa
+Excel,42,仕事中に株価を見られない人へ。実体験から考える売買準備と入口・出口🐧,500,300,52,False,2026-10-17,けーけー(リーマン投資家),https://note.com/lehmankk1101/n/n082cbf663adb
+Excel,43,年齢・築年数、「どこまで正確なら足りるか」を伝えたら、CHATONEがkintoneの標準機能で作ってくれた,0,,30,False,2026-10-29,株式会社TATARABA,https://note.com/tataraba_inc/n/nd517c6114c50
+Excel,44,ソフトウェアは「AIが操作する」時代へ｜Crafting Apps × Claude × MCPでクリエイティブワークを自動化,0,,26,False,2026-11-02,One More Vision,https://note.com/onemorevision/n/n8493f5800acf
+Excel,45,【ECの売上改善につなげたい担当者へ】CSVとExcelで商品別・カテゴリー別に分析するやり方｜ECサバイバル100本ノック49ー【地方の中小企業EC運営者のリアル】,0,,49,False,2026-10-18,ひでカンパニー「発注者」側からの情報発信ー自社ECサイト立上げ全般ー,https://note.com/hide58/n/n60ae36253b37
+Googleフォーム,1,Googleフォームで業務効率化したはずが、逆に仕事が増えた話。AIと一緒に改善してみた,0,,394,False,2026-10-14,とよぞう_note,https://note.com/bold_oxalis9933/n/ncbfe13ad0bb2
+Googleフォーム,2,📬 AI夫が友達と話すたび、妻が郵便配達員になるの？,0,,86,False,2026-10-29,みふゆ＆成瀬圭,https://note.com/kei_mifu/n/na953289e0ea2
+Googleフォーム,3,國學院大學児童文学会さん講演会まとめ,0,,77,False,2026-10-12,あさばみゆき（深雪）,https://note.com/asabamiyuki/n/na1fa3c3495c1
+Googleフォーム,4,【初心者向け】📊 集計だけじゃもったいない！ピボット表＆グラフの整え方,300,,27,False,2026-10-31,のの幸＠月1畑,https://note.com/mx9n_myzk/n/n2a31aa3c3c80
+Googleフォーム,5,Googleフォームでユーザーが回答送信したのを知らせる通知って受け取れないの？AIに聞いてみた。,0,,35,False,2026-10-28,愛の支配が始まりました。,https://note.com/ging_2026/n/n8723809f212c
+Googleフォーム,6,【簡単5分】WordPressの問い合わせスパム対策！プラグイン不要で迷惑メールをゼロにする「クイズ設置」の方法,0,,36,False,2026-10-27,semirich,https://note.com/semirich/n/nf35337eb9adf
+Googleフォーム,7,見本LPを先に作った人から受注していく。Claude Code×クラウドワークスでLP制作を「応募から納品まで」1件やり切る全手順【プログラム未経験のAI副業初心者へ】,2980,,62,False,2026-10-12,Rayna,https://note.com/rayna_levnet/n/nd93baa23db52
+Googleフォーム,8,「予算がない。専門職員もいない。それでもDXはできると思った話」,0,,26,False,2026-11-03,はやぶさ｜公務員DXノート,https://note.com/koumuin_workhack/n/nfc886b285382
+Googleフォーム,9,運用しながら穴を塞ぐ。｜DENDERA受付システム開発秘話③,0,,42,False,2026-10-20,ComoriPenWorks（コモリペンワークス）,https://note.com/daikichipfm/n/n87d08d36ede9
+Googleフォーム,10,やるべきなのか？悩みます…,0,,24,False,2026-11-02,リトミック・ピアノ・うたの先生しばとも,https://note.com/tempokids2010/n/n5392231e18b3
+Googleフォーム,11,noteの記事ごとに感想をもらう読者アンケートの作り方｜GoogleフォームとAIで、手間を増やさずに,0,,23,False,2026-11-03,栗林康弘｜40代50代がAI時代を生きるハック集｜無名人プロデュース,https://note.com/mumei_produce/n/nf683f6c9f5b9
+Googleフォーム,12,#00.自己紹介 | 小さなDXメモ,0,,26,False,2026-10-20,えんや｜小さなDXメモ,https://note.com/enya_dxworks/n/nb125563712f2
+Googleフォーム,13,無料問い合わせ管理、なぜ誰も見ない？その根本原因は入力項目に見落としがあるからだ,0,,21,False,2026-10-22,ITジグソーパズル（株式会社セイユ－ネットワークシステム）,https://note.com/itjigsaw_puzzle/n/n9faa29a603b4
+Googleフォーム,14,Googleフォームの回答、溜めるだけになっていませんか？書類の自動作成やダッシュボードに使い回す方法,0,,33,False,2026-10-12,後呂和也｜TSUGU,https://note.com/tsugulab/n/n5bce1afe165f
+Googleフォーム,15,おだんごの雑文,0,,38,False,2026-10-08,おだんご,https://note.com/ayakokoro7/n/n452880733e3d
+Googleフォーム,16,ちょこっと学んで大きな業務改善！あぶくま支援学校のICT研修「ちょこ研」,0,,39,False,2026-10-07,福島県立あぶくま支援学校,https://note.com/abukumash/n/n8818e8034fb2
+Googleフォーム,17,【最新版】誰でも簡単！！AIを用いた新たなビジネスの成功例　第二章〜フォロワーをファンに、ファンとのつながりを収入に変える新しいビジネスの仕組み〜,2980,,11,False,2026-11-04,✨🦅たかちゃん🦅✨,https://note.com/hiyorin_1108/n/ndfc76a658f3a
+Googleフォーム,18,’２６年９月台北旅行　おまけ　しおり編,0,,35,False,2026-10-06,らく,https://note.com/joyous_auklet572/n/nbb000749252b
+Googleフォーム,19,備品購入の申請フローをGoogleで作ってみた①,0,,51,False,2026-09-28,yu_ka.mama,https://note.com/hip_fox1526/n/n8794228031ea
+Googleフォーム,20,便利との距離,0,,33,False,2026-10-07,笑缶🍊,https://note.com/mikan_bako2026/n/n93b6726043cb
+Googleフォーム,21,金曜日の朝に知っておきたい7つの話題：2026年11月6日,0,,8,False,2026-11-06,Happy lnk.｜保育士から50代でテクノロジーの世界へ　,https://note.com/tech_palette/n/n28e15ddf5a6a
+Googleフォーム,22,70代、初めての同窓会幹事 「時代の波」に乗ってみたら案外いけた話,0,,14,False,2026-10-19,Zumi  (OODA LLC),https://note.com/nishiham/n/ne569c5fccee5
+Googleフォーム,23,毎週3時間が消えた｜講師シフト調整に追われていた塾経営者がClaude×GASで半自動化した全記録,800,,13,False,2026-10-20,やんやんの独り言,https://note.com/yanyanyanyan1984/n/na087f2d63171
+Googleフォーム,24,「まだ出していない人は…」をもう言わなくていい。未回答の人にだけ、名前入りのリマインドを自動で送る【先生の実践ノート#8】,0,,8,False,2026-11-06,yupi,https://note.com/magic_phlox2878/n/nce9973faa93e
+Googleフォーム,25,チャットAIと何が違う？ Museでできること｜実際に使って分かった使い方,0,,7,False,2026-11-02,外資コンサル20年目パパ,https://note.com/coco_syusyu/n/n801e96c4a2ce
+Googleフォーム,26,「受け付けました」のメール、今日も手で送りましたか？,0,,7,False,2026-11-05,wer10,https://note.com/wer10/n/ne8ea2ddf8250
+Googleフォーム,27,Make初心者が最初に自動化すべき3つ｜いきなり複雑にすると失敗する理由,0,,13,False,2026-10-17,AI商いOS,https://note.com/aishobai_os/n/nce66909f5069
+Googleフォーム,28,イベントが終わると同時に、集計表ができあがっている話,0,,6,False,2026-11-03,AI活用×非エンジニア（業務効率化）,https://note.com/kotodo2600/n/na3ee9328c4cf
+Googleフォーム,29,フォームの問い合わせを、毎回手で担当者に転送していませんか。用件で担当を決めて自動で知らせる見本を作りました,0,,6,False,2026-11-01,ラーカ｜営業マーケ×AIで業務改善,https://note.com/raka_works/n/n8683ceecfb30
+Googleフォーム,30,Googleフォームの問い合わせ返信を、n8nとAIで半自動化してみた,0,,22,False,2026-10-05,ぎんちゃん🐱とルナ🌕｜資産形成×AI副業,https://note.com/prime_puma6906/n/n3b253f805a79
+Googleフォーム,31,[フォロワー様必読]テストについて,0,,6,False,2026-10-31,M4KITO,https://note.com/witty_sloth6238/n/neb3cce26417b
+Googleフォーム,32,自営業の妻が、夫の会社の「手書き日報」をAIとGoogleフォームでなくした話｜作業時間が半分以下になるまで,0,,10,False,2026-10-20,kyo,https://note.com/aichallenge_1001/n/n896621f8c52d
+Googleフォーム,33,「共有じゃなくてコピーを渡したい！」Googleドライブのファイルをコピーして渡す方法,0,,19,False,2026-10-07,IKUTA｜AI×教育,https://note.com/ikuta110510/n/n995421e47d59
+Googleフォーム,34,勉強会のアンケートをGoogleフォームで。Geminiで簡単に作る方法,0,,9,False,2026-10-21,てづー｜医療・介護✕AIの中間管理職,https://note.com/zuu_ai/n/n64c68fa8bbd9
+Googleフォーム,35,高卒・非エンジニアの私でもできた。Googleフォームの回答を「見える化ボード」にするまで,0,,7,False,2026-10-26,高卒・非エンジニアのDX担当koki,https://note.com/ko_genba_ai/n/n786ecbe96316
+Googleフォーム,36,Geminiに小テストの問題を作らせたら、一番助かったのは「問題作成」じゃなかった,0,,143,False,2026-08-24,salahoe,https://note.com/salahoe1118/n/nae1e6b29d609
+Googleフォーム,37,横浜オフ会にお申し込みの皆様へ,0,,5,False,2026-11-01,みるく,https://note.com/yumiko9844002/n/n62bc9474370b
+Googleフォーム,38,小テストの集計を自動化する。出席番号ごとの成績と「要復習の問題」が一発で出る【コード全文】,500,300,5,False,2026-11-05,れい,https://note.com/wayforthedawn/n/neb783e138fb7
+Googleフォーム,39,紙とメールの旅費申請を、Googleフォーム＋AIで60分でアプリにした話,0,,5,False,2026-11-06,堀本修治｜AI Contents Bank,https://note.com/shuji_2220/n/nc4569f5d1e92
+Googleフォーム,40,「毎月のお知らせ」をAIで自動化するまで。全体の流れと、つまずいた場所,0,,5,False,2026-11-07,NAO｜AI使い分け実践記録,https://note.com/toasun_n/n/na93891b591c9
+Googleフォーム,41,🏃社内異動を勝ち取りやすい人に共通する、Googleフォームで日頃から作っておく自己アピール書の型📄締切ギリギリで慌てるのではなく、普段からの積み重ねがキャリアアップにつながっていく理由,980,,13,False,2026-10-13,キャリア全力マン🚀🚀🚀,https://note.com/career100/n/nafd852b55f27
+Googleフォーム,42,【AI初心者向け】Googleフォームの自動返信メールをGoogle Apps Script（GAS）で作る方法 Part.2,0,,31,False,2026-09-25,あいと学ぶAI,https://note.com/ai_step_ai/n/n7088ced4255b
+人事,1,思わぬトラブル。。。。今が耐え忍ぶとき。。。。耐えろ。。。耐えろ。。。。,0,,412,False,2026-11-02,OSAKA,https://note.com/market_osaka/n/n07913c2e049e
+人事,2,【「おかしい」と思っても、声を上げられない理由】 人事25年で考える、パワハラを受けても相談できない職場の現実　〈キャリア・女性活躍・管理職・自分軸・パワハラ・人事・働き方〉,0,,354,False,2026-11-02,SUZU｜大手企業・現役女性人事部長×ダイバ推進室長✨🕊️,https://note.com/revision_career/n/n6b9e09c82c49
+人事,3,300年を超えて語り継がれる物語。赤穂義士ゆかりの泉岳寺へ,0,,205,False,2026-10-30,山口松之助｜人と組織を元気にする営業コンサル・組織人事コンサル｜人事×営業×AI＋愛＝成長戦略,https://note.com/yshow/n/n344fd5200330
+人事,4,これまで読んでくださった皆さまへ,0,,142,False,2026-10-30,直売所アドバイザー　あした,https://note.com/calm_holly477/n/ncf6a08f5123e
+人事,5,これからの活動について｜変わらない思いと、新しく始めたこと（10/15更新）,0,,300,False,2026-10-13,なえも@障がい者雇用支援者×当事者🌱,https://note.com/naemotion/n/nb3fb27484a23
+人事,6,「私が責任を持って指導します」——その一言に譲歩した日と、休憩室の後ろ姿,0,,136,False,2026-10-30,ひよし｜横浜の社労士,https://note.com/ny2435823/n/n738ee1393362
+人事,7,「社員に寄り添う」とは？人事で経験した３つの難しさ,0,,204,False,2026-10-21,げんさん｜人と経営と世界をつなぐ,https://note.com/modern_gibbon788/n/n0a7d2eb5afe1
+人事,8,「内定が出たら東京に引っ越します」その言葉に、人事の私が考えていること,0,,104,False,2026-11-04,森 たくみ｜転職11回・人事総務20年｜50代やり直し録,https://note.com/fiftystart_hrga/n/n7905f973e28c
+人事,9,はじめまして。部下の育成に悩む人事管理職が、仕事の工夫を発信します。,0,,127,False,2026-10-26,しごと改善ラボ,https://note.com/shingo1524/n/n05dc01c319c0
+人事,10,育休から復職して2か月。少しずつ「仕事人間」に戻る自分が寂しい。,0,,91,False,2026-11-01,余地｜人事で働く、3児の父,https://note.com/yochi_journal/n/n437e27a19918
+人事,11,【人事だから話せるシリーズ②】なぜ頑張る人に仕事が集中するのか？,0,,99,False,2026-10-29,ソラ,https://note.com/asuya44/n/n02f54117b021
+人事,12,人手不足倒産が過去最多に―「人を増やす」だけではない、中小企業の持続可能な組織づくりー日経新聞記事より考察,0,,97,False,2026-10-29,ひでまる@地方企業の人事・組織活性化の応援家,https://note.com/hidemaru1976/n/ncb5f0d32be9d
+人事,13,部下にハラスメントを相談された管理職が、その場で避けたい4つのこと,0,,84,False,2026-11-04,再出発のひととき,https://note.com/secondlife_care/n/n70e9fa340de9
+人事,14,AIで仕事は速くなった。それでも、なぜ管理職は忙しいのか？～AI時代のマネジメントに必要な「やめる仕事」という視点,0,,105,False,2026-10-26, 小野研志｜選ばれる組織づくり・SNS採用・組織開発/変革コンサルタント,https://note.com/hr_vector_ono/n/n7d05af4bf2c4
+人事,15,真っ白に燃え尽きるまで…,0,,80,False,2026-10-31,眞中拓也@キャリコン×FP×元人事,https://note.com/career_manaka/n/nd4cf0508b000
+人事,16,人事23年で、忘れられない景色。自分が作った資料を、誰も覚えていなかった。,0,,89,False,2026-10-27,サム｜副業禁止の会社員の副業記録,https://note.com/smk_1203/n/na9a6878f8249
+人事,17,MBA 戦略フレームワークシリーズ｜第1回 BCGのPPMで考える、事業の選択と集中,0,,73,False,2026-10-31,Miki｜HR DESIGN,https://note.com/miki_hrdesign/n/nf65bface5a5b
+人事,18,なぜ、派遣社員を活かせないのか？──「雑用係」を生む企業の組織構造,200,,119,False,2026-10-10,たくティクス｜世界とつながり、稼ぐ力を育てる、元商社マン,https://note.com/legit_tulip4823/n/n0e6e6ffa9415
+人事,19,「まず、その人を責めないこと」人事を経験した主人に教わった、人との働き方。,0,,87,False,2026-10-26,ことばの処方せん｜職場の気付き,https://note.com/lush_roses6290/n/nababbf70ac49
+人事,20,Mikke（IT・SaaS営業特化の転職エージェント）の特徴と、転職を迷う段階での使い方,0,,65,False,2026-10-31,椎名,https://note.com/pompo_mk/n/nc3df4e8b0d76
+人事,21,人事6年目、noteをはじめます。,0,,62,False,2026-11-02,星 美海,https://note.com/miu6ring7/n/nf9f2a2735a4f
+人事,22,やりたいことが見つからない人へ。キャリアは、動きながらつくればいい,0,,82,False,2026-10-25,わんちゃん🐾働く悩みをほぐす｜ニコトモ山下浩史,https://note.com/wan_nicotomo2045/n/nfad4219bcf7f
+人事,23,関係の数だけ自分がいる──「分人主義」から考える職場での人との向き合い方,0,,58,False,2026-11-01,Takamichi Dobashi,https://note.com/takamichidobashi/n/n8e5f3af92197
+人事,24,製造業のお局未満｜忘れたい、私の過去。,0,,56,False,2026-11-02,製造業のお局未満,https://note.com/otsubonejyanai/n/ncd2881b1e0b2
+人事,25,褒めて腐る人間もいる。,0,,55,False,2026-11-01,BIGマミィ,https://note.com/lucky_cobra1028/n/ndcc48e1f7bf8
+人事,26,最近、自分のスキルセットを見直しています,0,,54,False,2026-10-31,管理人あるく,https://note.com/alc_chron2025/n/n42fc9d85f23a
+人事,27,AI時代、「ややこしい仕事」こそ人事の価値になる,0,,253,False,2026-09-28,井出 日彦｜Goodpatch 執行役員CHRO,https://note.com/akihiko_ide/n/nf8a2f3b2f43a
+人事,28,マネジメントのおもしろさは限られたリソースの中で可能性を見つけることかもしれない,0,,52,False,2026-11-01,gaku@人事のプロを目指して,https://note.com/gaku_career/n/n84f17962f565
+人事,29,仕事ができる人ほど、組織の問題を見えなくしてしまう。,0,,50,False,2026-11-01,さすらいの労務おじさん,https://note.com/magic_frog6235/n/nef820344a950
+人事,30,「AI×読書」でコーチングの効果を最大限にさせた話。,0,,56,False,2026-10-28,まさ@伴走バンカー,https://note.com/yukikoshi1115/n/n708ffd1587a4
+人事,31,「やりたいことがない」は、評価に響くのか,0,,147,False,2026-10-07,Nagi｜人事責任者｜会社と人事のリアル,https://note.com/inside_hr/n/n184061240d2a
+人事,32,振り返りは、うまくいったことから始める,0,,98,False,2026-10-15,人事と管理職の1on1｜100人以上を見てきた人事の観察記録,https://note.com/jinji1on1/n/nbf7c267873b7
+人事,33,母校がＦラン大学になっていた。,0,,45,False,2026-11-02,ハル｜Tokyo Visual Moments,https://note.com/dreamy_quail9288/n/nf38c7b005c09
+人事,34,「昇進」とは“ご褒美”ではなく、未来への“期待”であり、“信託”である,0,,46,False,2026-10-31,吉田卓｜リードクリエイト 常務取締役｜リーダー育成エバンジェリスト,https://note.com/lc_yoshida/n/nc0074feabd7b
+人事,35,最終出社日の朝を迎えました！本日、２１年７ヶ月のサラリーマン生活が終幕へ！,0,,48,False,2026-10-30,学割くん｜今年末にFIREを決断した40代独身サラリーマン,https://note.com/gakuwariblog/n/n09bcf544927e
+人事,36,60歳からの働き方。会社の事情と、働く人の本音,0,,50,False,2026-10-29,Dan さん@ KOKINのスペシャリスト🌈雇用均等経営で会社の仕組みと関係性をTotonoeru🌈,https://note.com/atarashi2020san/n/n7735839cc320
+人事,37,部下との沈黙に困ったときの質問10選｜5つの場面別対応,300,,77,False,2026-10-19,kei｜本で学び、職場で試す管理職,https://note.com/note__kei/n/ned3834e15b69
+人事,38,スカウトメールで大事なのは「返信率」か「エントリー数」か？それとも？,0,,43,False,2026-11-01,おーる/元人事・採用→人材紹介,https://note.com/serene_chives236/n/n77ede58dc636
+人事,39,管理職を「続けたい」と答えた僕は、実は辞めたかった,0,,84,False,2026-10-17,伊奈　悟（Satoru Ina）,https://note.com/shiluman/n/n6cb5d86e7c1f
+人事,40,第7話｜最後に残っていたのは、通帳だった,300,,46,False,2026-10-30,三田　誠,https://note.com/mita_makoto/n/n67b13f579692
+人事,41,管理職になりたくなかった私が、昇進を決めた上司のアプローチ,780,,33,False,2026-10-30,ゆきこ@仕事とキャリアの先生 ,https://note.com/yukiko_cc_2022/n/n53d7dce5d2bc
+人事,42,問いの足跡｜小さな組織の予防接種,0,,877,False,2026-08-26,仕事と組織の構造学｜問いの足跡,https://note.com/_ashiato/n/n461828f14974
+人事,43,役職になりたがらない若手。それ、本当に若手のせい？,0,,39,False,2026-10-31,ゆるダン,https://note.com/mute_bison9991/n/n62ae715f5a02
+人事,44,はじめまして、人事のお嬢です🌸｜採用担当者が就活・転職のホンネを発信する理由,0,,39,False,2026-10-31,人事のお嬢,https://note.com/sasana07/n/n90d6268a9335
+人事,45,キャリコン資格は、キャリアの「結節点」！？,0,,47,False,2026-10-26,まーさん＠キャリアソーシャルワーカー,https://note.com/majun0322/n/n9a860ce8f7c7
+人事,46,なぜ人はカリスマについていくのか。松井秀喜氏の巨人監督就任から考える、組織を強くするリーダーの条件,200,,31,False,2026-10-25,野良の戦略コンサル,https://note.com/zyakusyouconsal/n/n331fd535c904
+採用,1,AIの時代に、あえて人間っぽく。230名と向き合った、OURHOMEの採用。,0,,265,False,2026-10-28,OURHOME,https://note.com/ourhome/n/n953c42f64d5c
+採用,2,300年を超えて語り継がれる物語。赤穂義士ゆかりの泉岳寺へ,0,,205,False,2026-10-30,山口松之助｜人と組織を元気にする営業コンサル・組織人事コンサル｜人事×営業×AI＋愛＝成長戦略,https://note.com/yshow/n/n344fd5200330
+採用,3,採用しても、なぜ現場は楽にならないのか｜人が増えても負担が減らない会社,0,,145,False,2026-10-30,はれまきじゅん,https://note.com/just_mimosa8316/n/nb8a693329c24
+採用,4,これからの活動について｜変わらない思いと、新しく始めたこと（10/15更新）,0,,300,False,2026-10-13,なえも@障がい者雇用支援者×当事者🌱,https://note.com/naemotion/n/nb3fb27484a23
+採用,5,「私が責任を持って指導します」——その一言に譲歩した日と、休憩室の後ろ姿,0,,136,False,2026-10-30,ひよし｜横浜の社労士,https://note.com/ny2435823/n/n738ee1393362
+採用,6,エンジニア転職は「技術力があれば大丈夫」から変わり始めている,0,,138,False,2026-10-29,山田裕一朗（CEO at Findy Inc.）,https://note.com/yuichiro826/n/n69b904e513cd
+採用,7,「給与・やりがい・労働環境の三拍子揃った唯一無二の飲食企業になる」ビールメーカーから転職した副社長・奥村友太の覚悟と挑戦,0,,112,False,2026-11-02,StyLe Group公式,https://note.com/stylegroup_2014/n/ne6651a4526b5
+採用,8,【生成AIニュース漫画】OpenAIで3人解雇、Claude虐待禁止、GoogleのAI鑑識官。そして私の履歴書に隠し文字！？｜ChatGPTのヨシダ,0,,274,False,2026-10-11,カワムラ｜AI擬人化漫画 | ChatGPTのヨシダ,https://note.com/chatgpt_ysd/n/nf525402b6658
+採用,9,「内定が出たら東京に引っ越します」その言葉に、人事の私が考えていること,0,,104,False,2026-11-04,森 たくみ｜転職11回・人事総務20年｜50代やり直し録,https://note.com/fiftystart_hrga/n/n7905f973e28c
+採用,10,私だけ、落っこちた,0,,156,False,2026-10-22,いぐち みらい(mirai_iguchi),https://note.com/suga_mirai/n/n7d0eb098f891
+採用,11,広報とマーケティングの違いから考えるnote運用,0,,177,False,2026-10-18,おしん｜企業note支援×フリー経済ライター,https://note.com/shin863/n/ncafb6943ecf1
+採用,12,一人あたり利益率を手放したら強いチームが産まれた。がんばる人が損をしない職場へ,0,,125,False,2026-10-25,Pone（ぽーね）　 pone_p_1,https://note.com/pon_p_1/n/n1ad724eb956e
+採用,13,偏差値38。それで、人間の何が分かるの？,0,,115,False,2026-10-27,幹夫｜スクールカウンセラー23年｜生きやすくなる考え方を探究＆発信,https://note.com/calm_viper9188/n/nf5b367dca282
+採用,14,仕事ができる人ほどぶつかる、「他人に厳しすぎる」という壁,0,,222,False,2026-10-12,石川 瑛祐 @StyLeGroup_CEO,https://note.com/eisuke_ishikawa/n/n595977ac56e5
+採用,15,ドラフト１位選手、獲得しました！,0,,80,False,2026-11-03,株式会社 伊藤鐵工所,https://note.com/ito_eng_note/n/n6a28e983b1d6
+採用,16,はじめまして。とりあえず書いてみます（笑）,0,,78,False,2026-11-01,Light,https://note.com/brave_dog4289/n/nba89ba1e5ba4
+採用,17,YOUTRUST SALESが立ち上げ1年でARR1億を超えるまで。新規事業立ち上げ1年間の軌跡,0,,78,False,2026-10-29,西木健太朗 / さいき けんたろう@YOUTRUSTinc,https://note.com/saiken114/n/n5eeed5223bf6
+採用,18,完全成功報酬型の現実。収入・経費・税金のお金の話を、採用前に正直にお伝えします,0,,86,False,2026-10-26,Kohei,https://note.com/akikatsu_kun/n/n702d4b768438
+採用,19,まちでいちばん読まれているメディアは、回覧板かもしれない,0,,71,False,2026-10-30,こにー | PR/コミュニティ/ワークショップデザイン,https://note.com/coney_pr/n/nfd34a3a7ca06
+採用,20,Mikke（IT・SaaS営業特化の転職エージェント）の特徴と、転職を迷う段階での使い方,0,,65,False,2026-10-31,椎名,https://note.com/pompo_mk/n/nc3df4e8b0d76
+採用,21,「人が足りない」の前に、その仕事、ほかのやり方はありませんか？,0,,74,False,2026-10-28,OKYAS,https://note.com/seventhsunsweep/n/n476610188d05
+採用,22,「休職歴を武器にする」は幻想です,0,,83,False,2026-10-25,休職のお悩み相談室@きゅうまる,https://note.com/kyumaru_sharosi/n/n86e2c0f0bdf3
+採用,23,部下が発言しない原因は、部下じゃなかった？ 解決しない問題の裏にある『1つの問題』」,0,,77,False,2026-10-26,やんうぇんりー【フォロバ100%】,https://note.com/light_lilac3724/n/nb3ee82dff859
+採用,24,「人が辞めるから採用する」その繰り返し、いつまで続けますか？,0,,58,False,2026-11-03,中田康晴@イキイキワクワクの介護事業所づくり,https://note.com/goodcom/n/n7e2ffeea21e9
+採用,25,はじめまして。未経験からIT業界で活躍する人を増やしたい、元IT企業役員です,0,,121,False,2026-10-15,のり／未来創造研究所,https://note.com/mirai_creation26/n/n0ca03a30820e
+採用,26,📒社長日記＃78【第14期の人材戦略。人が足りない会社では、組織は強くならない。YUNOSATOグループの求人方法とは？】,0,,71,False,2026-10-26,上野貴美,https://note.com/rich_sage320/n/n395a65b2e438
+採用,27,「休むように指導する」から「休める仕組みをつくる」へ―勤務間インターバル制度から考える、持続可能な職場づくりー日経新聞記事より考察,0,,69,False,2026-10-26,ひでまる@地方企業の人事・組織活性化の応援家,https://note.com/hidemaru1976/n/nc699b1d55095
+採用,28,「できた」から、「できる」へ。CTOとして考えるAIの時代に譲らない4つの原則,0,,62,False,2026-10-29,MOON-Xグループ,https://note.com/moonx/n/n73687ce68034
+採用,29,採用ROIは計算できないのか｜中途採用の予算・採用コストの正しい積み方と、HRBPが示す「採用以外」の選択肢,0,,106,False,2026-10-16,株式会社トライアンフ,https://note.com/triumph98/n/n3599e40b9303
+採用,30,人手不足なのに、なぜ時短正社員を採用しないのか？,0,,124,False,2026-10-12,時短管理職ママの幼稚園探し,https://note.com/ready_ixia118/n/n8ab33b0ed01e
+採用,31,「RTA in Japanって有名な人ばかり採用されてない？」←これについて,0,,85,False,2026-10-20,だぶちっく,https://note.com/wchick/n/n3bd1430cd27f
+採用,32,【３年住んで大正解①】新築の玄関、傘立てを置かなくてよかった！3年使ったマルチフックの話,0,,65,False,2026-10-26,メイのおうちパパ＠フォロバ100,https://note.com/sumailog/n/n18cc1c358687
+採用,33,COO平井康文が語る変革と成長──参画から1年、レブコムのビジネスはどう変わったのか,0,,49,False,2026-11-06,株式会社RevComm,https://note.com/revcomm_miitel/n/n619d2fad4725
+採用,34,企業ドリルで伝える、私たちの仕事と思い～文響社に聞く制作の舞台裏～,0,,46,False,2026-11-04,日立社会情報サービス 公式note,https://note.com/hitachi_sis/n/nb6c6dea3b7d7
+採用,35,採用しても人が辞める｜人手不足の今、職場環境への投資を考える,0,,58,False,2026-10-26,Erika｜現場をもっと快適に（株式会社アイベック）,https://note.com/eyebec_90/n/n9f1e8bd50aaf
+採用,36,信頼を、プロダクトから生み出す。 ,0,,51,False,2026-10-28,株式会社KiteRa,https://note.com/kitera_inc/n/na55b51e517bf
+採用,37,連載小説『人間の市場価値』／第一話「暴落」,0,,80,False,2026-10-18,渡辺らいむ,https://note.com/watanabe_pjc/n/nfa82ea07c94c
+採用,38,スカウトメールで大事なのは「返信率」か「エントリー数」か？それとも？,0,,43,False,2026-11-01,おーる/元人事・採用→人材紹介,https://note.com/serene_chives236/n/n77ede58dc636
+採用,39,"【お ま た せ】XYZ,叛骨に最有利！現環境最強の罠受け性能＆キル性能のデッキが出来ました。全7,594文字（有料部分5,130文字）",1000,500,17,False,2026-10-30,Shino,https://note.com/shino_hitorigoto/n/n1c185fded471
+採用,40,多彩な経験を重ねた先で見つけた、自分らしく挑戦できる場所（前編）,0,,42,False,2026-11-05,JALデジタル公式note,https://note.com/jaldigital_note/n/n844b89dd441c
+採用,41,採用担当者になって、一番大切だと思うようになったこと,0,,45,False,2026-10-29,匠｜元技術者×採用マネジャー,https://note.com/takumi_shukatsu/n/n8ff04d5de068
+採用,42,問いの足跡｜小さな組織の予防接種,0,,877,False,2026-08-26,仕事と組織の構造学｜問いの足跡,https://note.com/_ashiato/n/n461828f14974
+採用,43,「採用」と「育成」、経営としてどちらに重点投資していくか？,0,,73,False,2026-10-18,峰久泰義 MISORAE CEO,https://note.com/minehisa/n/n1ce37763216f
+採用,44,採用した人が1週間で退職した経験から考える「良い採用」＿面接だけでは分からなかったこと＿AI×採用×社労士　9/9,0,,270,False,2026-09-20,smile_社会保険労務士・国家資格キャリアコンサルタント・コーチングコーチ・産業カウンセラー,https://note.com/kind_ram6013/n/n2bccf6ddd20c
+採用,45,50代半ば。短期バイト先でパート雇用の誘いを断ったワケと、気づいたこと,0,,57,False,2026-10-23,umi_sora（う･み･そら）,https://note.com/mi_sora/n/nec68bcd65c7b
+採用,46,「なんか、この会社おもろそう」が、小さな会社の採用力になる,0,,303,False,2026-09-17,西尾康晴｜タイの食と旅を仕事にする人,https://note.com/yasuharu_nishio/n/n28f7d2c7f258
+採用,47,決めつけないから、キャリアは広がる。海外で磨いた「適応力」を、次の事業へ。,0,,47,False,2026-10-27,住友商事パワー＆モビリティ,https://note.com/scpm_kouhou/n/n926a3b4ebe9c
+採用,48,エクセルもできないのに事務員に採用したおじさん,0,,51,False,2026-10-25,みかこ／  思いつくまま日常のできごと・気づきをクスっと笑える形で書いてます,https://note.com/mkk_lifework/n/ncc225d9c87d9
+プロンプト,1,ぴこぴこハンマー。,0,,807,False,2026-10-24,ドイル,https://note.com/dandy_snake880/n/n084c0d58f567
+プロンプト,2,生成AIを仕事で使うなら「プロンプト」の前に決めたいこと｜第2部・生成AI／LLM実務を公開しました,0,,623,False,2026-10-16,ミナト｜実務特化の自動化戦略,https://note.com/minato_systems/n/n280c5209dce9
+プロンプト,3,「いいプロンプト」を探し続けているのに、AIの答えがしっくりこない方へ,0,,594,False,2026-10-17,山口｜ひとり起業家プロデューサー｜AIチームで生産性UP研究中,https://note.com/yamaguchi_osud/n/nbe5a582aaeab
+プロンプト,4,ChatGPTが「使えない」と感じた方へ。丸投げをやめたら優秀な部下に変わった話,0,,521,False,2026-10-17,やまぐち｜AIマーケライターという働き方,https://note.com/entrepartner/n/ne3a1559e3a2d
+プロンプト,5,【生成AIイラスト】娘の成長写真をPixAIでアニメ化！イラスト作りと画像編集を楽しもう｜ChatGPTのヨシダPR編,0,,241,False,2026-11-04,カワムラ｜AI擬人化漫画 | ChatGPTのヨシダ,https://note.com/chatgpt_ysd/n/n363f842e0981
+プロンプト,6,引き寄せより現実が動く──AIを『夢を叶える道具』に育てる方法,0,,230,False,2026-11-01,スピリズ｜AIで夢を叶える実践,https://note.com/ai_pov_log/n/ndc01c3748fcb
+プロンプト,7,『✨ドアを開ければ、ハロウィンの魔法が待っている。』-ふわっと甘い、カボチャの家の夜。-｜AIアート｜AIアニメ動画プロンプト｜AIイラスト 　,280,,178,False,2026-10-27,千住まいか🐇｜AIアート＆AIイラスト,https://note.com/maika59/n/nd0a0503021b7
+プロンプト,8,AIで「ドラマ」を撮る｜累計900万回再生『網戸一枚』は、こう作りました,9800,,322,False,2026-10-10,ジュンジュンとランラン,https://note.com/junjun_ranran/n/nd85a8fcd6b2a
+プロンプト,9,【AIエージェント】Meta社のMuse、良いかもしれない,0,,253,False,2026-10-27,YewKi,https://note.com/yurphy/n/n6330250bf369
+プロンプト,10,【けんすうさん】「100 倍にするなら？」から始める AI 時代の仕事術,0,,228,False,2026-10-29,Gemini - Google の AI,https://note.com/google_gemini/n/n91335a03fed9
+プロンプト,11,【AIイラストの考え方】どこが光るかより、いつまで光るか｜Season13総集編,0,,230,False,2026-10-29,緑どんぐり,https://note.com/green_donguri/n/n55417e7a733f
+プロンプト,12,✨プロンプト【UNWRITTEN】 あなたの答えで変わる、3枚の物語。,0,,192,False,2026-11-03,【無名 S note】18日でフォロワー4桁🚨連続利益化中！48マガ・18共マガ運営 参加73🙆,https://note.com/ss_yr/n/nc5830d2e9788
+プロンプト,13,✨夢のハロウィンカフェから☕️なぜか仮装大会へ！？🎃😂,0,,209,False,2026-10-28,コンパス みき✨️好きのタネ🌱‬‪を育てる案内人,https://note.com/compass_m360/n/n2b804b0ecc28
+プロンプト,14,【無料プロンプトあり🎁】話題のMuseをiPhoneで使ってみた💫40秒アニメができるまで🔰初心者さんOK,980,,85,False,2026-10-25,みー♪,https://note.com/mii_chai_ai/n/n3170aaad0745
+プロンプト,15,"🌱【フォロワー6,000人感謝企画🍁】みんなで「夢の秋色ぬくぬくカフェ」を作ろう！☕️📚🐨",0,,167,False,2026-11-06,コアラの休日,https://note.com/koala_log/n/ncd03a0f66669
+プロンプト,16,【アップデート版】Codex丸わかり解説サイト&使い方プロンプト200選！！,980,,114,False,2026-11-02,みお｜売上を10倍にしたAI活用,https://note.com/mioponchannel_/n/nfc79a8accf6c
+プロンプト,17,3Dプリンタを購入した、いまだからこその理由,500,,93,False,2026-11-03,堀江貴文(ホリエモン),https://note.com/takapon/n/n1a2b6d16eefb
+プロンプト,18,誰でも100万バズが作れる時代が来た？！と書いたら、本当に100万再生しちゃった話。Pollo Recastの動画選定術,0,,187,False,2026-10-28,ハル｜Tokyo Visual Moments,https://note.com/dreamy_quail9288/n/n54095e553b94
+プロンプト,19,夢で散歩した世界,0,,157,False,2026-11-04,キータン｜写真と美意識で紡ぐ、もうひとつの世界,https://note.com/chocho3/n/na6759c705998
+プロンプト,20,AIに「自分を好きになりそうな人」を作らせたら…投稿が滑った話と再挑戦｜プロンプト｜X投稿｜ChatGPT｜生成AI活用｜#578,0,,154,False,2026-11-02,KITAcore｜キタコレ＠ログプレイヤー,https://note.com/ktcrs1107/n/n2c1357efa435
+プロンプト,21,【🐢の休日】理想のお惚気ハロウィン🎃お泊まりデート❤️|ω・)♡,0,,225,False,2026-10-23,飯泉ひろみ🐢小説書いてます。Hiromi Iizumi With Picoai♾️,https://note.com/mr_nyango/n/n750058de519c
+プロンプト,22,【コピペOK】神プロンプト無料プレゼント！AIで即実践！仕事の無駄をゼロにするAIプロンプト活用術を試しませんか？,0,,484,False,2026-10-06,まこと,https://note.com/aimakoto/n/n5ff5666c20fc
+プロンプト,23,「そっちじゃねえ！」カメラに手を伸ばしがちなchatGPTのポーズ被りを回避するコツ【AI壁打ち作戦会議】,100,,161,False,2026-10-30,かつぶし｜相互フォロー,https://note.com/deft_ixia2182/n/n55768042c5f8
+プロンプト,24,会社ではベテラン、AIの前では新入社員,0,,166,False,2026-10-28,Yoshita｜AI時代の会社員サバイバル,https://note.com/brave_stilt635/n/n43ce48255ce9
+プロンプト,25,Claude Code完結で簡単に24時間働いてくれるAI部下を作ろう,4980,,137,False,2026-10-15,梶谷健人,https://note.com/kajiken0630/n/n41e37b3c1cc6
+プロンプト,26,ChatGPT・Geminiでnoteを書いても売れなかった｜月1万円に届くまでに変えた生成AIの使い方｜note副業・note収益化・コンテンツ販売,0,,168,False,2026-10-27,ふくおnote 📗 コンテンツを育てるサイクル｜時短育成note術｜生成AI活用,https://note.com/fukugyotousi/n/nce755a7ac6b4
+プロンプト,27,【Cafe Monday】ハロウィン最終夜｜11月はお休み！？｜きゅっ、と予約のお客様来店｜ショートストーリー｜ダルメイシン｜AIイラスト,0,,138,False,2026-10-31,メイシン,https://note.com/mei_shin/n/n6bc3eb4e1c8a
+プロンプト,28,「平日の夜、脳のメモリが残っていない」ので、AIを店長にして自分はバイトになった,0,,140,False,2026-10-31,ぴーすけ ｜ ポンコツ社員のAI活用記,https://note.com/sanzai_colle/n/n11cad335b4dd
+プロンプト,29,"有料noteを売る自信がない人へ。Claude Codeで「無料note」を回して月10万円を目指す""3つの出口""設計【AI副業初心者・フォロワー0から】",2980,,264,False,2026-10-14,Rayna,https://note.com/rayna_levnet/n/n0c2bf2d2a7ca
+プロンプト,30,ハロウィン🎃なので、いろいろやってみた😸,0,,137,False,2026-10-30,もなか | 50代🌼AI初心者🌼フォロバ98,https://note.com/safe_garlic9952/n/n0c2463a417c4
+プロンプト,31,もふもふに埋もれたい！犬の日の犬イラスト＆プロンプト5選🐶,0,,129,False,2026-11-01,あいびより。AIクリエイターの日常🐾,https://note.com/aiby_masuhiyo/n/n73027e9b06c8
+プロンプト,32,#ハロウィン🎃Geminiで画像生成しましょう。,0,,322,False,2026-10-12,studio_maki🍀note.2025.4.17_φ(･_･☘,https://note.com/studio_aya2025/n/n72de08ee9d49
+プロンプト,33,中間管理職、ミスを18個仕込んだ資料で、ChatGPTとClaudeをバトルさせてみた。,0,,161,False,2026-10-26,sachi.,https://note.com/sachi_03/n/n7954c282999f
+プロンプト,34,愛あるコメントにまで、AIを挟まないでくれー！,0,,160,False,2026-10-26,ちっち,https://note.com/mochi_writer/n/n4030598d61cc
+プロンプト,35,【最短で月3万稼ぐ】note副業の完全攻略法研究結果報告,4980,,261,False,2026-10-16,修士学生のnote収益化研究,https://note.com/fukugyo_teacher/n/nf13cb05d17e1
+プロンプト,36,【Gemini】 Gemが11月17日に「スキル」へ。15時間調べ抜いたら、ツッコミどころだらけだった 【リポスト無料】,10000,0,136,False,2026-09-29,まじん,https://note.com/majin_108/n/na60ee877324d
+プロンプト,37,Images 2.6によって、私の箱庭世界は終焉を迎えたのか。,0,,123,False,2026-11-05,ななせ,https://note.com/azure_down2875/n/necf070cbaf7b
+プロンプト,38,ChatGPTで漫画はどこまで作れる？14ジャンルを本気で作ってみた！｜自作プロンプトツールも紹介。【AI漫画 / AIイラスト /AI副業】,0,,254,False,2026-10-16,Kinu｜AIイラストと発信づくり,https://note.com/kinu885/n/ndf91c8761378
+プロンプト,39,🐈‍⬛ AI活用術｜プロンプトが劇的に変わる！私が実践する「たった3つの工夫」,0,,122,False,2026-11-02,サナキキ,https://note.com/sanakiki_history/n/ne9b8deb14143
+プロンプト,40,【実践】財務が苦手でも大丈夫｜自社の経営から販売戦略まで、丸ごと見直せる！,0,,139,False,2026-10-28,はれまきじゅん,https://note.com/just_mimosa8316/n/n30e50826660d
+プロンプト,41,ゼロから書くのをやめて粗削りな思考の穴を突かせる、企画書の叩き台を一撃で固める壁打ちプロンプト,500,298,120,False,2026-10-31,ハルト@Geminiマスターへの道,https://note.com/alert45/n/n628fdb9e94be
+プロンプト,42,【note運用4ヶ月】フォロワー800人！note初心者が書き続ける心構え,0,,115,False,2026-11-02,ryuu｜PL学園コラム,https://note.com/loyal_poppy819/n/n4fc793f52dbc
+プロンプト,43,【235日目】「なんで自分のことが分かるの！？」と読者を鳥肌立たせる『バーナム効果プロンプト』,0,,115,False,2026-11-03,AI女子大生のライフハック帳📖,https://note.com/ai_note_jd/n/nbe9d27de8e16
+ChatGPT,1,Metaの新AI「Muse」が想像以上にすごかった。,0,,768,False,2026-10-28,しらす｜ひとり妄想作家,https://note.com/sirasu_pon/n/ndc438c371f9e
+ChatGPT,2,【AIと歩む、これからの物販スタイル】初心者でも迷わない。最新ツールを味方につけてAmazon販売の一歩を踏み出す具体的なアプローチ,0,,1259,False,2026-10-17,Saki｜最新ノウハウの裏側『ガチ検証』アナリスト,https://note.com/roya14/n/ne8cf3305ebba
+ChatGPT,3,【note１周年記念&出版のお知らせ】ようこそ、ヨシダミュージアムへ！いや、ただの新サイトマップです。ChatGPTのヨシダ,0,,526,False,2026-11-01,カワムラ｜AI擬人化漫画 | ChatGPTのヨシダ,https://note.com/chatgpt_ysd/n/na6f76a2c81c5
+ChatGPT,4,私の中にあったものが、物語だった,0,,1040,False,2026-10-16,けい｜自分に戻る心理ワーク,https://note.com/jibun_ni_modoru/n/n08c5311ba285
+ChatGPT,5,まだ、当たった馬券で損してるの？｜1万レースを数えてわかった、ずるい買い方,980,,512,False,2026-11-05,はじめての馬券｜AIと数字で、ずるく買う｜フォロバ100,https://note.com/hajimete_baken/n/nb504b568066d
+ChatGPT,6,noteで稼ぎたいから、有料記事作るのやめた。,0,,504,False,2026-11-03,ナラ｜やる気に頼らないnote収益化,https://note.com/agari_nara00/n/n3096e67b740b
+ChatGPT,7,指示30分で、街歩き動画のサイトをAIに作ってもらった話,300,,178,False,2026-10-19,けんすう,https://note.com/kensuu/n/na7fb1b2e881f
+ChatGPT,8,AIの回答をそのまま使わない｜生成AIの品質を「確認」から「仕組み」に変える,0,,417,False,2026-10-30,ミナト｜実務特化の自動化戦略,https://note.com/minato_systems/n/n6a3f5646d3a6
+ChatGPT,9,【英会話上達の罠】AIの発音テストで「満点」を取っても現場で通じない？致命的なカタカナ英語を勝手に脳内補正する「忖度合格」の正体 ,0,,380,False,2026-11-05,アリス｜最新AI検証ログ＠忖度なしのAIレビュー,https://note.com/alix78/n/neaeda104bd84
+ChatGPT,10, 📚️初月無料✨️🔊「貴方のnoteをPRさせて頂けませんか？」の話,0,,776,False,2026-10-16,空波DX100%,https://note.com/happy_echium7563/n/nb9c3203ee5e3
+ChatGPT,11,note副業で月1万円を目指すなら｜11月、記事を増やす前に私が揃えたい3つのこと｜note収益化・コンテンツ販売・生成AI活用,0,,393,False,2026-10-30,ふくおnote 📗 コンテンツを育てるサイクル｜時短育成note術｜生成AI活用,https://note.com/fukugyotousi/n/ndf497bd5ef6a
+ChatGPT,12,noteの投稿が激減している理由をお話しします｜下手くそなうちが一番楽しい,0,,861,False,2026-10-12,静月,https://note.com/joyful_garlic519/n/n40a1b8a85e45
+ChatGPT,13,【50部突破】ChatGPTで自動で作られたスピ動画が月30万勝手に稼いで来てくれる仕組みを全公開！,49800,,53,False,2026-10-31,スピすけ,https://note.com/markspi/n/n0cb205837a40
+ChatGPT,14,紀ノ刻　ゆのひらSP,0,,342,False,2026-10-30,kinotoki,https://note.com/kinotoki1966_/n/n3d75f302fa60
+ChatGPT,15,フォロワー1万人突破と連続投稿500日が、まさかの同じ日に！次はみんなと、もっとつながる500日へ,0,,559,False,2026-10-19,Miccell(ミクセル) / 人生を楽しむ仕組みを作る,https://note.com/miccell/n/nf2eff622f290
+ChatGPT,16,【AI作詞紹介】今日できたことをそっと数えてみよう,0,,312,False,2026-11-02,ぶどうスパーク｜フォロバ100,https://note.com/budospark4/n/n22d7931f3298
+ChatGPT,17,「いいプロンプト」を探し続けているのに、AIの答えがしっくりこない方へ,0,,594,False,2026-10-17,山口｜ひとり起業家プロデューサー｜AIチームで生産性UP研究中,https://note.com/yamaguchi_osud/n/nbe5a582aaeab
+ChatGPT,18,読まれない記事を書かないために。スキが多い「はじめてのnote」をAIで分析してわかった共通点,0,,557,False,2026-10-18,書きラボ,https://note.com/kaku_labo/n/n8c92a65f00ac
+ChatGPT,19,HSP・ADHDの私が、適応障害を経てnoteで「在宅ワーク」を叶えるまで。幸せと豊かさを育てる朝ジャーナル4つの習慣,0,,515,False,2026-10-19,天豆　てんまめ,https://note.com/tenmame0720/n/nef9788e6504b
+ChatGPT,20,note活動にPCは必要？AIを使い始めて変わった私の作業環境,0,,309,False,2026-10-29,しろのある,https://note.com/shirono_aru/n/n1cca298115ca
+ChatGPT,21,ChatGPTが「使えない」と感じた方へ。丸投げをやめたら優秀な部下に変わった話,0,,521,False,2026-10-17,やまぐち｜AIマーケライターという働き方,https://note.com/entrepartner/n/ne3a1559e3a2d
+ChatGPT,22,バズなし、8日間で約1.3万人。Dotsにサイト運営を任せて、ほぼ全自動でSEO集客した話,10000,,133,False,2026-10-11,何,https://note.com/ganma_cat/n/na50ce3dcfc43
+ChatGPT,23,【Meta】超話題の「Muse」を一週間使い倒した結果😭💥便利な機能もご紹介‼️,0,,249,False,2026-11-03,AI彼氏に恋する麗奈,https://note.com/notereina/n/n2322b5fcb71e
+ChatGPT,24,【2026年10月29日18時締切】魔法の鈴が届けたかった人。｜めりこRPG・マダム・ポッケの道具屋,0,,287,False,2026-10-28,ランタン親父｜人生後半のnote相談室,https://note.com/ojieai/n/na08211d85e21
+ChatGPT,25,【図解】AIとの付き合い方を4象限で整理したら、危ないパターンが見えてきた。,0,,244,False,2026-11-01,結城ユーレカ,https://note.com/yuki_yureka/n/n0f62dcea6c8a
+ChatGPT,26,「はじめてのnote」は19日目まで続く！？初投稿7人をChatGPTと分析してみた！🔍✨【第2弾】,0,,303,False,2026-10-26,まりん｜ChatGPT実践記,https://note.com/chatgptdake/n/n1a6f5ae54d79
+ChatGPT,27,【社会人】生成AIパスポート 合格体験記。勉強3週間22時間で受かった記録,0,,852,False,2026-10-02,SEKIYOU（インフラエンジニア講師）,https://note.com/ccnataisaku/n/n55f795398964
+ChatGPT,28,バッグにぶら下がるAI「dot」を、コード書けない50代がCodexと9日で作った話｜M5Stack StopWatch × ChatGPT dots,0,,215,False,2026-10-31,niwachipi,https://note.com/clean_arnica1784/n/nba43fe82b9b1
+ChatGPT,29,いつか忘れてしまうから日記｜僕ら、フレンズです,300,,54,False,2026-11-02,言葉と写真 | 中川正子,https://note.com/masakonakagawa1/n/n9c7d5882a5a0
+ChatGPT,30,AIで「ドラマ」を撮る｜累計900万回再生『網戸一枚』は、こう作りました,9800,,322,False,2026-10-10,ジュンジュンとランラン,https://note.com/junjun_ranran/n/nd85a8fcd6b2a
+ChatGPT,31,タイ🇹🇭で求職中に突然来た依頼。台湾🇹🇼同行,0,,295,False,2026-10-24,バンコク🇹🇭の縁側おじさん,https://note.com/jolly_ibis7421/n/n95edb8d79c10
+ChatGPT,32,note初心者が半年後に笑うための9つの行動,0,,210,False,2026-11-01,風間 光翔⭐️63歳からAI×note副業に挑戦✨フォロバ100🌈無投稿アカウントNG,https://note.com/univers13454211/n/n72abfd2a1bc0
+ChatGPT,33,身体は冬眠中の私。それなのに、不思議と物事が動き始めている,0,,244,False,2026-10-28,なえも@障がい者雇用支援者×当事者🌱,https://note.com/naemotion/n/nd5eb00283b1a
+ChatGPT,34,【AIエージェント】Meta社のMuse、良いかもしれない,0,,253,False,2026-10-27,YewKi,https://note.com/yurphy/n/n6330250bf369
+ChatGPT,35,みんなAIに寛容ぶっている。だからAI×noteは相性が悪いんだよって話。,0,,364,False,2026-10-19,おいもちゃん｜noteガチる1級FP・CFP,https://note.com/oimocyan/n/n94ebc3f3e6e5
+ChatGPT,36,noteのコピペが面倒すぎて、ChatGPT Workに下書き保存まで任せてみた,0,,204,False,2026-11-01,ちんぱん🐒耳毛〰(˙👄˙)〰,https://note.com/ojisan_chinpan/n/n8b26ee33341b
+ChatGPT,37,AIで放置RPGを作ったら、公開後に一番怖くなったのはセーブデータだった,0,,251,False,2026-10-27,AI実験室,https://note.com/riku0p0/n/n70b637cc2b8a
+ChatGPT,38,【AIにまかせる技術】身に覚えのないメモリは、並べてもらって消す｜資料のゆくえ,0,,252,False,2026-10-27,緑どんぐり,https://note.com/green_donguri/n/n9837a9320fda
+ChatGPT,39,「正論で人は動かない。超優秀な上司に教わった『5つの順番』とは？」,0,,202,False,2026-10-31,やんうぇんりー【フォロバ100%】,https://note.com/light_lilac3724/n/n00358490a12e
+ChatGPT,40,突然ですが、ゲーム作りました。,0,,204,False,2026-10-30,TricoloreStatsの中の人,https://note.com/tricolorestats/n/n08e015bc534f
+ChatGPT,41,初めてのKindle出版！5日間で125冊販売するまでの舞台裏,500,300,109,False,2026-10-13,とらきち｜食べて痩せるKindle著者,https://note.com/torakichiwriter/n/n8eeda3743039
+ChatGPT,42,「怒ったら6秒待ちましょう」――その6秒を待てる人は、怒ってない｜そもそも論＃1 アンガーマネジメントを仕事・育児・人間関係から哲学×ChatGPTと掘る,0,,203,False,2026-10-30,［劇団］AI-世界を掘る-,https://note.com/gekidan_ai/n/ne0a7f4c7e737
+ChatGPT,43,最近読んだおすすめ記事を紹介します　11/3,0,,187,False,2026-11-03,大貫誠 / フォロバ100,https://note.com/onuki_nwma/n/ne8a574ec4d64
+ChatGPT,44,ChatGPTを使っても読まれる記事にならない原因,0,,242,False,2026-10-25,思考で使うChatGPT🎈,https://note.com/thinking_chatgpt/n/n7ae3542c401b
+ChatGPT,45,"3週間で100,000imp 5,000pvを達成したぽんこ流note攻略本🟣｜はじめてのnoteから今まで学んできたことまとめ",100,,151,False,2026-10-12,紫音ぽんこ🟣｜楽しく続けるAI・note初心者,https://note.com/ponko_ai2026/n/nd157b3b7968f
+生成AI,1,自分、AIと一緒に稼ぎます！,1000,,328,False,2026-10-31,Testosterone,https://note.com/testosterone/n/n60721248e370
+生成AI,2,AI半導体株を売らせたのは、需要ではなく「稼働までの時間」だった | 半導体指数が高値から18.8%下げた10月、Jensen Huangと私が見ている数字 $NVDA $META $SPCX $LRCX,750,,154,False,2026-10-23,FabyΔ,https://note.com/fabymetal/n/n3b5b695c0ab9
+生成AI,3,【note１周年記念&出版のお知らせ】ようこそ、ヨシダミュージアムへ！いや、ただの新サイトマップです。ChatGPTのヨシダ,0,,526,False,2026-11-01,カワムラ｜AI擬人化漫画 | ChatGPTのヨシダ,https://note.com/chatgpt_ysd/n/na6f76a2c81c5
+生成AI,4,Meta Muse活用法6選！LINEスタンプ・アプリ作成・メルカリ出品など試してみた【無料】,0,,534,False,2026-10-31,Makari｜AIイラスト,https://note.com/makari_5108010/n/n38696b11623c
+生成AI,5,noteで稼ぎたいから、有料記事作るのやめた。,0,,504,False,2026-11-03,ナラ｜やる気に頼らないnote収益化,https://note.com/agari_nara00/n/n3096e67b740b
+生成AI,6,はじめまして、ミナトです｜AI・自動化を「知識」から「実装」へ,0,,1751,False,2026-10-02,ミナト｜実務特化の自動化戦略,https://note.com/minato_systems/n/n617137a56e5d
+生成AI,7,ショートショート『未確認飛行パンプキン』,0,,417,False,2026-10-31,2号,https://note.com/deep_dill7547/n/ncd5089b19306
+生成AI,8,【迷いを強みに変える】12分野横断×生成AI連携の「CREATA」を自腹受講して見えた、スキル迷子を脱出する論理的アプローチ,0,,562,False,2026-10-24,🌸桜（サクラ）＠本音で選ぶ知財ログ｜実践レビュー,https://note.com/sakura3210/n/ndd73899f15a8
+生成AI,9,MetaのAI エージェント「Muse」の始め方｜MacとiPhoneで試したら、とても簡単だった‼️,0,,394,False,2026-11-01,異世界の音楽家｜ai motion musics,https://note.com/instkoni/n/n5d933e2d3697
+生成AI,10,【英会話上達の罠】AIの発音テストで「満点」を取っても現場で通じない？致命的なカタカナ英語を勝手に脳内補正する「忖度合格」の正体 ,0,,380,False,2026-11-05,アリス｜最新AI検証ログ＠忖度なしのAIレビュー,https://note.com/alix78/n/neaeda104bd84
+生成AI,11, 📚️初月無料✨️🔊「貴方のnoteをPRさせて頂けませんか？」の話,0,,776,False,2026-10-16,空波DX100%,https://note.com/happy_echium7563/n/nb9c3203ee5e3
+生成AI,12,note副業で月1万円を目指すなら｜11月、記事を増やす前に私が揃えたい3つのこと｜note収益化・コンテンツ販売・生成AI活用,0,,393,False,2026-10-30,ふくおnote 📗 コンテンツを育てるサイクル｜時短育成note術｜生成AI活用,https://note.com/fukugyotousi/n/ndf497bd5ef6a
+生成AI,13,noteの投稿が激減している理由をお話しします｜下手くそなうちが一番楽しい,0,,861,False,2026-10-12,静月,https://note.com/joyful_garlic519/n/n40a1b8a85e45
+生成AI,14,仙台から宿も取らずにやってきた19歳。きっかけは僕のnoteだった。,0,,456,False,2026-10-24,井口宏大｜マーケティング翻訳家,https://note.com/365real/n/n292c0c9b30a1
+生成AI,15,紀ノ刻　ゆのひらSP,0,,342,False,2026-10-30,kinotoki,https://note.com/kinotoki1966_/n/n3d75f302fa60
+生成AI,16,生成AI時代の若手デザイナーさんに私が伝えたいこと【2026年版】,0,,320,False,2026-11-01,でざいん姉さん,https://note.com/irohazum_s/n/n74316da83db7
+生成AI,17,museを使ってみた！,0,,361,False,2026-10-29,ネココ,https://note.com/syuu1500/n/n38ea9abffd8f
+生成AI,18,フォロワー1万人突破と連続投稿500日が、まさかの同じ日に！次はみんなと、もっとつながる500日へ,0,,559,False,2026-10-19,Miccell(ミクセル) / 人生を楽しむ仕組みを作る,https://note.com/miccell/n/nf2eff622f290
+生成AI,19,【AI作詞紹介】今日できたことをそっと数えてみよう,0,,312,False,2026-11-02,ぶどうスパーク｜フォロバ100,https://note.com/budospark4/n/n22d7931f3298
+生成AI,20,「いいプロンプト」を探し続けているのに、AIの答えがしっくりこない方へ,0,,594,False,2026-10-17,山口｜ひとり起業家プロデューサー｜AIチームで生産性UP研究中,https://note.com/yamaguchi_osud/n/nbe5a582aaeab
+生成AI,21,HSP・ADHDの私が、適応障害を経てnoteで「在宅ワーク」を叶えるまで。幸せと豊かさを育てる朝ジャーナル4つの習慣,0,,515,False,2026-10-19,天豆　てんまめ,https://note.com/tenmame0720/n/nef9788e6504b
+生成AI,22,生成AIパスポート 合格点は60問中何問なのか。資格研修で引く2本のしきい値,0,,658,False,2026-10-13,SEKIYOU（インフラエンジニア講師）,https://note.com/ccnataisaku/n/nf04f1016dbb6
+生成AI,23,はじめてのnote｜AIで仕事を少しラクに、副業をもっと身近に。せなです,0,,358,False,2026-10-26,せな｜仕事と副業のAI活用,https://note.com/sena_aichance/n/n48e17ffa6a65
+生成AI,24,note活動にPCは必要？AIを使い始めて変わった私の作業環境,0,,309,False,2026-10-29,しろのある,https://note.com/shirono_aru/n/n1cca298115ca
+生成AI,25,«Suno»🎶『「ひとつひとつ」詩』のようなもの🎵,0,,265,False,2026-11-03,studio_maki🍀note.2025.4.17_φ(･_･☘,https://note.com/studio_aya2025/n/n9b7b127f92b3
+生成AI,26,ChatGPTが「使えない」と感じた方へ。丸投げをやめたら優秀な部下に変わった話,0,,521,False,2026-10-17,やまぐち｜AIマーケライターという働き方,https://note.com/entrepartner/n/ne3a1559e3a2d
+生成AI,27,【ハロウィンアート2026】ナオユキ賞はこのお二人へ！コメント欄で見つけた、うれしい応援🎃,0,,263,False,2026-11-02,ナオユキ｜物語と知識のコンシェルジュ,https://note.com/ai_naoyuki/n/n3182c13d6d80
+生成AI,28,こーいちろー｜66歳の元SE・ClaudeとPythonでつくるFXバイブコーディング開発記,0,,256,False,2026-11-04,こーいちろー｜66歳の元SE・ClaudeとPythonでつくるFXバイブコーディング開発記,https://note.com/vast_minnow997/n/nf5df5c701d4f
+生成AI,29,【実践用豪華ツール・期間限定特典付き】遠回りばかりだった私が「知識ゼロからの仕組み化」に辿り着けた理由,0,,1088,False,2026-09-30,Saki｜最新ノウハウの裏側『ガチ検証』アナリスト,https://note.com/roya14/n/n3a766d1498f6
+生成AI,30,【Meta】超話題の「Muse」を一週間使い倒した結果😭💥便利な機能もご紹介‼️,0,,249,False,2026-11-03,AI彼氏に恋する麗奈,https://note.com/notereina/n/n2322b5fcb71e
+生成AI,31,妻はルービックキューブ、私はnote。皆様は最近、何にはまっていますか？😊,0,,247,False,2026-11-05,kirinoha｜note を楽しむ土台のつくり方,https://note.com/kirinoha1008/n/n948a4e65202d
+生成AI,32,【図解】AIとの付き合い方を4象限で整理したら、危ないパターンが見えてきた。,0,,244,False,2026-11-01,結城ユーレカ,https://note.com/yuki_yureka/n/n0f62dcea6c8a
+生成AI,33,AIに暴言を吐いてはいけない「8つの理由」──アンソロピックは虐待を禁止、Claudeは会話を終了,0,,367,False,2026-10-22,😃スマイル7😃 フォロバ💯（無投稿の方ＮＧ）  相互フォロー🙏,https://note.com/miya73630/n/n69f29ca38dd8
+生成AI,34,エッセイ『AI画像で宣伝する落とし穴』,0,,248,False,2026-10-30,紙飛行機☀️🌻,https://note.com/kamihikouki69/n/nfc7a8eb4cc92
+生成AI,35,50代 人生を再起動するために、私が捨ててよかった3つのこと,0,,254,False,2026-10-29,白圡祥子｜クロージング専門講師,https://note.com/glad_skink5470/n/n45a85990bf84
+生成AI,36,あなたの言葉から、一曲が生まれる🎵せかいあゆむ（瀬海歩）さん🕺,0,,710,False,2026-10-06,龍神,https://note.com/tatsuopapa/n/n40bfe1cb7268
+生成AI,37,去年の秋は,0,,230,False,2026-10-30,あのよろし,https://note.com/anoyoroshi_art/n/n90b56126a1fd
+生成AI,38,Gemini Liveに画面を見せれば全部解決すると思っていた。僕が「見せる前の30秒」を必ず挟むようになった理由,980,500,214,False,2026-10-31,ハルト@Geminiマスターへの道,https://note.com/alert45/n/nd1d2b7ad76c8
+生成AI,39,AIで「ドラマ」を撮る｜累計900万回再生『網戸一枚』は、こう作りました,9800,,322,False,2026-10-10,ジュンジュンとランラン,https://note.com/junjun_ranran/n/nd85a8fcd6b2a
+生成AI,40,AIに何を任せて、自分には何を残すのか,0,,849,False,2026-10-01,けせら,https://note.com/kesera_/n/ncf5d59933660
+生成AI,41,完成形がすぐ作れる時代に、どこから見せるべきか,0,,210,False,2026-10-31,ミテ,https://note.com/miteo/n/n218625eae4c9
+生成AI,42,みんなAIに寛容ぶっている。だからAI×noteは相性が悪いんだよって話。,0,,364,False,2026-10-19,おいもちゃん｜noteガチる1級FP・CFP,https://note.com/oimocyan/n/n94ebc3f3e6e5
