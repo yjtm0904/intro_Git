@@ -32,6 +32,14 @@ import statistics
 import sys
 from datetime import datetime, timedelta, timezone
 
+# --- 週間上限（2026-11-14 オーナー依頼「週間上限に達さないようにもしたい」） ---
+# 週の区切り: 週間上限のリセット後に作業を再開した時刻を起点に7日間とする（推定）。
+# オーナーが実際のリセット日時を確認したら、WEEK_START をその時刻に置き換える。
+WEEK_START = "2026-11-13T12:20:00+00:00"
+# 週の容量の推定: 前の週に週間上限へ達した時点（オーナーの申告：2026-11-09 10:00 UTC ごろ）までの、
+# このプロジェクトの7日間の使用量。オーナーが他で使った分があれば実際の容量はこれより大きい（＝控えめな推定）。
+WEEK_CALIB_AT = "2026-11-09T10:00:00+00:00"
+PROJECT_WEEK_SHARE = 0.70  # このプロジェクトが使ってよいのは週間容量の70%まで
 PROJECT_LOGS = os.path.expanduser("~/.claude/projects/-home-user-intro-Git")
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))  # note-business/
 WINDOW = timedelta(hours=5)
@@ -120,6 +128,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", type=float, help="現在の使用率がこの%以上なら exit 1")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--check-week", type=float, help="今週の使用率（週間容量に対する%）がこの値以上なら exit 1")
     a = ap.parse_args()
     events, limits = collect()
     if not events:
@@ -167,8 +176,25 @@ def main():
         print(f"{cur['start']:%m/%d %H:%M}〜{cur['end']:%H:%M} UTC: 使用率 {pct:.0f}%（{used:,.0f} / 推定容量 {cap:,.0f}、{metric}）。リセットまで約{int(left.total_seconds() // 60)}分")
     else:
         print("現在の枠での使用はまだありません（0%）")
+    # 週間の使用率
+    wk_start = parse_ts(WEEK_START)
+    while now >= wk_start + timedelta(days=7):
+        nxt = next((t for t, _ in events if t >= wk_start + timedelta(days=7)), None)
+        wk_start = floor10(nxt) if nxt else wk_start + timedelta(days=7)
+    calib = parse_ts(WEEK_CALIB_AT)
+    wk_cap = sum(e[1][metric] for e in events if calib - timedelta(days=7) < e[0] <= calib)
+    wk_used = sum(e[1][metric] for e in events if e[0] >= wk_start)
+    wk_pct = wk_used / wk_cap * 100 if wk_cap else 0.0
+    budget = wk_cap * PROJECT_WEEK_SHARE
+    days_left = max((wk_start + timedelta(days=7) - now).total_seconds() / 86400, 0.1)
+    per_day = max(budget - wk_used, 0) / days_left
+    print(f"今週（{wk_start:%m/%d %H:%M}〜{wk_start + timedelta(days=7):%m/%d %H:%M} UTC、推定）: 週間容量の{wk_pct:.0f}%を使用"
+          f"（このプロジェクトの上限は{PROJECT_WEEK_SHARE:.0%}）。残りの予算は1日あたり5時間枠の約{per_day / cap * 100 if cap else 0:.0f}%分")
     if a.check is not None and pct >= a.check:
         print(f"STOP: 使用率が{a.check:.0f}%以上です。作業を保存して停止し、枠のリセット（{cur['end']:%H:%M} UTC）後に再開してください。")
+        sys.exit(1)
+    if a.check_week is not None and wk_pct >= a.check_week:
+        print(f"STOP: 今週の使用率が{a.check_week:.0f}%以上です。週の区切り（{wk_start + timedelta(days=7):%m/%d %H:%M} UTC、推定）まで作業を止めてください。")
         sys.exit(1)
 
 
