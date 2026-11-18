@@ -33,12 +33,19 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 # --- 週間上限（2026-11-14 オーナー依頼「週間上限に達さないようにもしたい」） ---
-# 週の区切り: 週間上限のリセット後に作業を再開した時刻を起点に7日間とする（推定）。
-# オーナーが実際のリセット日時を確認したら、WEEK_START をその時刻に置き換える。
-WEEK_START = "2026-11-13T12:20:00+00:00"
-# 週の容量の推定: 前の週に週間上限へ達した時点（オーナーの申告：2026-11-09 10:00 UTC ごろ）までの、
-# このプロジェクトの7日間の使用量。オーナーが他で使った分があれば実際の容量はこれより大きい（＝控えめな推定）。
-WEEK_CALIB_AT = "2026-11-09T10:00:00+00:00"
+# 週の区切り: オーナーの確認（2026-11-18）で「毎週金曜16:00リセット」。日本時間と解釈し、金曜07:00 UTC。
+WEEK_START = "2026-11-13T07:00:00+00:00"
+# --- オーナーが読んだ公式の使用率（基準点）。2026-11-18 追加 ---
+# 理由: 新しいセッションには前のセッションの作業記録がなく、上限到達の記録から容量を推定できない。
+# そこで「基準点の時刻に公式画面で何%だったか」から容量を逆算し、基準点以降の増分を足して使用率を出す。
+# オーナーが新しい数値をくれたら、ANCHORS に1行足す（最新の行を使う）。
+ANCHORS = [
+    # (時刻UTC, 5時間枠の%, 週間の%)
+    ("2026-11-18T05:06:00+00:00", 13, 46),
+]
+# 週の容量を5時間枠の容量の何倍とみなすか。実際の比は未知。小さめ＝使用率を高めに出す（安全側）。
+# 週の中で2回目の基準点が得られたら、その差から計算し直す。
+WEEK_PER_5H = 8
 PROJECT_WEEK_SHARE = 0.70  # このプロジェクトが使ってよいのは週間容量の70%まで
 PROJECT_LOGS = os.path.expanduser("~/.claude/projects/-home-user-intro-Git")
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))  # note-business/
@@ -158,6 +165,15 @@ def main():
     cap = statistics.median(samples[metric]) if samples[metric] else None
     now = datetime.now(timezone.utc)
     cur = wins[-1] if now < wins[-1]["end"] else None
+    # 基準点（オーナーが読んだ公式の%）から容量を逆算する。上限到達の記録がないときに使う。
+    anc_t, anc_5h, anc_wk = parse_ts(ANCHORS[-1][0]), ANCHORS[-1][1], ANCHORS[-1][2]
+    if cap is None:
+        metric = "cost"
+        aw = next((w for w in wins if w["start"] <= anc_t < w["end"]), None)
+        aused = sum(e[1][metric] for e in aw["events"] if e[0] <= anc_t) if aw else 0
+        cap = aused / (anc_5h / 100) if aused and anc_5h else None
+        if cap is None:
+            sys.exit("容量を推定できません。オーナーに公式画面の使用率を聞き、ANCHORS に足してください")
     used = sum(e[1][metric] for e in cur["events"]) if cur else 0
     pct = (used / cap * 100) if (cap and cur) else 0.0
 
@@ -179,22 +195,23 @@ def main():
     # 週間の使用率
     wk_start = parse_ts(WEEK_START)
     while now >= wk_start + timedelta(days=7):
-        nxt = next((t for t, _ in events if t >= wk_start + timedelta(days=7)), None)
-        wk_start = floor10(nxt) if nxt else wk_start + timedelta(days=7)
-    calib = parse_ts(WEEK_CALIB_AT)
-    wk_cap = sum(e[1][metric] for e in events if calib - timedelta(days=7) < e[0] <= calib)
-    wk_used = sum(e[1][metric] for e in events if e[0] >= wk_start)
-    wk_pct = wk_used / wk_cap * 100 if wk_cap else 0.0
+        wk_start += timedelta(days=7)
+    wk_cap = cap * WEEK_PER_5H
+    if wk_start <= anc_t:  # 基準点が今週の中にある：基準点の%＋その後の増分
+        wk_used = anc_wk / 100 * wk_cap + sum(e[1][metric] for e in events if e[0] > anc_t)
+    else:
+        wk_used = sum(e[1][metric] for e in events if e[0] >= wk_start)
+    wk_pct = wk_used / wk_cap * 100
     budget = wk_cap * PROJECT_WEEK_SHARE
     days_left = max((wk_start + timedelta(days=7) - now).total_seconds() / 86400, 0.1)
     per_day = max(budget - wk_used, 0) / days_left
-    print(f"今週（{wk_start:%m/%d %H:%M}〜{wk_start + timedelta(days=7):%m/%d %H:%M} UTC、推定）: 週間容量の{wk_pct:.0f}%を使用"
+    print(f"今週（{wk_start:%m/%d %H:%M}〜{wk_start + timedelta(days=7):%m/%d %H:%M} UTC）: 週間容量の{wk_pct:.0f}%を使用"
           f"（このプロジェクトの上限は{PROJECT_WEEK_SHARE:.0%}）。残りの予算は1日あたり5時間枠の約{per_day / cap * 100 if cap else 0:.0f}%分")
     if a.check is not None and pct >= a.check:
         print(f"STOP: 使用率が{a.check:.0f}%以上です。作業を保存して停止し、枠のリセット（{cur['end']:%H:%M} UTC）後に再開してください。")
         sys.exit(1)
     if a.check_week is not None and wk_pct >= a.check_week:
-        print(f"STOP: 今週の使用率が{a.check_week:.0f}%以上です。週の区切り（{wk_start + timedelta(days=7):%m/%d %H:%M} UTC、推定）まで作業を止めてください。")
+        print(f"STOP: 今週の使用率が{a.check_week:.0f}%以上です。週の区切り（{wk_start + timedelta(days=7):%m/%d %H:%M} UTC）まで作業を止めてください。")
         sys.exit(1)
 
 
