@@ -1,0 +1,2 @@
+O2 formula: =filter(A2:A21;G2:G21="未提出") | result: '#NAME?' | error code: 525
+G2 in saved xlsx: =IF(COUNTBLANK(B2:D2)>0;"未提出";IF(E2="あり";"差し戻し";IF(E2="なし";"完了";"確認待ち"))) -> 完了

@@ -1,0 +1,11 @@
+顧客コード,会社名,部署,担当者,電話番号,メールアドレス,前月請求額
+C001,株式会社〔取引先A〕,経理部,〔担当A〕 太郎,XX-XXXX-XXXX,〔メールアドレス〕,XXXXXXX
+C002,〔取引先B〕,総務部,〔担当B〕,XX-XXXX-XXXX,〔メールアドレス〕,XXXXXX
+C003,〔取引先C〕株式会社,購買部,〔担当C〕 美咲,XXX-XXX-XXXX,〔メールアドレス〕,XXXXXX
+C004,〔取引先D〕,経理課,〔担当D〕,XX-XXXX-XXXX,〔メールアドレス〕,XXXXXXX
+C005,〔取引先E〕,管理部,〔担当E〕,XX-XXXX-XXXX,〔メールアドレス〕,XXXXXX
+C006,〔取引先F〕,経理部,〔担当F〕,XXX-XXX-XXXX,〔メールアドレス〕,XXXXXX
+C007,〔取引先G〕,総務課,〔担当G〕,XX-XXXX-XXXX,〔メールアドレス〕,XXXXX
+C008,〔取引先H〕,購買課,〔担当H〕,XXX-XXX-XXXX,〔メールアドレス〕,XXXXXXX
+C009,〔取引先I〕,経理部,〔担当I〕,XX-XXXX-XXXX,〔メールアドレス〕,XXXXXX
+C010,〔取引先J〕,総務部,〔担当J〕,XXX-XXX-XXXX,〔メールアドレス〕,XXXXX

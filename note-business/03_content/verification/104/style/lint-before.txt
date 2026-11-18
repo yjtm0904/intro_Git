@@ -1,0 +1,43 @@
+# 工程1（style-lint）直す前：2026-11-13T22:45Z
+# python3 -I -B 05_operations/tools/style-lint/lint.py 03_content/articles/104-ai-meeting-minutes.md
+== 03_content/articles/104-ai-meeting-minutes.md
+   対象：L14〜255（除外：メタ情報 L1〜12、コードブロック 9か所、HTMLコメント 1か所、末尾の定型文 L257〜262）
+-- 行ごとの検出：warn 2 / info 7
+  L16   warn heading-label-conclusion: ## 結論：AIに任せるのは清書と整理、確かめるのは人
+         → ラベルを外し、見出しそのものを結論の文にする（例：「## 未提出者は関数で出し、催促は4段階で送り分ける」）。
+  L37   info scope-negation: 録音や文字起こしの可否は、勤務先のルールと参加者への説明で決めます。この記事では、法律上…
+  L41   info heading-paren: ### AIに入れない情報（社外秘・個人の評価・未発表の数字）
+  L47   info label-colon-line: 置き換えの例：「山田課長（営業部）が来週中にまとめる」→「C（営業）が来週中にまとめる」…
+  L50   info heading-paren: ## 議事録の型（そのまま使える見出し）
+  L153  info output-varies: 出力例はClaudeで生成。AIの出力は毎回少しずつ変わります。Claudeで検証しまし…
+  L153  info unverified-note: 出力例はClaudeで生成。AIの出力は毎回少しずつ変わります。Claudeで検証しまし…
+  L251  warn heading-label-conclusion: ## まとめ：メール・報告・依頼の頼み方は20場面のテンプレ集へ
+         → ラベルを外し、見出しそのものを結論の文にする（例：「## 未提出者は関数で出し、催促は4段階で送り分ける」）。
+  L251  info heading-matome: ## まとめ：メール・報告・依頼の頼み方は20場面のテンプレ集へ
+   warn の内訳：heading-label-conclusion 2
+   info の内訳：heading-paren 2、heading-matome 1、label-colon-line 1、output-varies 1、scope-negation 1、unverified-note 1
+-- 計測値
+   本文の字数：2,575字（空白・見出しや箇条書きの記号・太字の記号・URLを除く）
+   丸かっこ：23個 ＝ 8.9 / 1,000字（除外：曜日 0・関数の引数 0。目安 S5：4以下）
+   見出しの丸かっこ：2（L41、L50）（S10：2まで）
+   80字超の文：0（URLは数えない。S9）
+   「結論：」「まとめ：」のラベル見出し：2（L16、L251）（S2：0）
+     参考：ほかの「〇〇：」見出し 3（L68、L155、L201）
+   同じ文末が4文以上続く箇所：1（S14：3文まで）
+     L253〜255「ます」4文：…れる形になります／…ちらにも使えます／…言メモが続きます／…に収録しています
+-- 点数の推定（style-guide §5 の機械の目安だけ）：3
+   warn 2件 → 3以下／丸かっこ 8.9/1,000字 → 3以下／80字超の文 0 → 5以下
+   人の目安（1文目が場面か、見出しは結論の文か、同じ注意は1回か、判断の足跡が前半にあるか、検証ログにない体験・数字がないか）は別に確かめる
+# 終了コード 1
+
+# compliance-lint（通常）
+
+== 03_content/articles/104-ai-meeting-minutes.md: ERROR 0 / WARN 2
+  WARN  L48 [未記入] 確認待ち・未記入の印が残っている（公開前に解消する）
+        > 「生成AIに入力してはいけない情報と、マスキングのやり方」（【オーナー確認待ち：106の記事URL】）
+  WARN  L258 [未記入] 確認待ち・未記入の印が残っている（公開前に解消する）
+        > この記事は、生成AIで下書きと出力例を作成し、内容と動作を筆者が確認・編集して公開しています（最終確認日：【オーナー確認待ち：公開前に確認し…
+# 終了コード 0
+
+# 字数（メタ情報・HTMLコメント・空白を除く本文。6,000字以内）
+104-ai-meeting-minutes.md 本文（メタ情報・HTMLコメント除く）改行除く: 5803 / 空白除く: 5663

@@ -1,0 +1,9 @@
+置換表: replace-table-v2.csv（33語）／形の置き換え: あり／人の修正: 6件／消した列: ['住所', '振込名義']／順番: long
+
+[doc1-invoice-email.txt] 残り 0か所
+
+[doc2-customer-list.csv] 残り 0か所
+
+[doc3-minutes-excerpt.txt] 残り 0か所
+
+合計: 残り 0か所

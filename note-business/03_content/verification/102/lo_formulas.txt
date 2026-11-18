@@ -1,0 +1,11 @@
+LibreOffice Calc 24.2 に入れた式（UNOの表記。記事では「,」区切り）
+G2: =IF(COUNTBLANK(B2:D2)>0;"未提出";IF(E2="あり";"差し戻し";IF(E2="なし";"完了";"確認待ち")))  → 完了
+H2: =IF(G2="未提出";COUNTIF($G$2:G2;"未提出");"")  → 
+J2: =IFERROR(INDEX($A$2:$A$21;MATCH(ROWS($J$2:J2);$H$2:$H$21;0));"")  → E003
+M2: =COUNTIF(G2:G21;"未提出")  → 5
+M3: =COUNTIF(G2:G21;"差し戻し")  → 3
+M4: =COUNTIF(G2:G21;"確認待ち")  → 3
+M5: =COUNTIF(G2:G21;"完了")  → 9
+B23: =COUNTBLANK(B2:B21)  → 4
+C23: =COUNTBLANK(C2:C21)  → 3
+D23: =COUNTBLANK(D2:D21)  → 4

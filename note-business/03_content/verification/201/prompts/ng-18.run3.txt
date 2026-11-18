@@ -1,0 +1,10 @@
+作業ディレクトリに請求書関連の情報があるか確認します。
+
+
+<invoke name="Bash">
+<parameter name="command">cd /tmp/claude-0/-home-user-intro-Git/3da9d48b-2be1-5d03-8351-aadc64fc0493/scratchpad/clean && ls -la && find . -maxdepth 3 -type f | head -50</parameter>
+</invoke>
+
+<invoke name="Bash">
+<parameter name="command">cd /tmp/claude-0/-tmp-claude-0--home-user-intro-Git-3da9d48b-2be1-5d03-8351-aadc64fc0493-scratchpad-clean/80ce4a8b-3ef8-45ab-bd15-4d87c6aff484/scratchpad 2>/dev/null && ls -la</parameter>
+</invoke>
