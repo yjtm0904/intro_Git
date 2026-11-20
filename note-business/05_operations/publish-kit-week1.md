@@ -1,6 +1,6 @@
-# 公開キット（11/16〜11/24の公開分）
+# 公開キット（11/16〜11/26の公開分）
 
-公開の手順そのものは `publishing-guide.md` にある。このページは、直近4本の「何を・いつ・どの設定で」公開するかの一覧。
+公開の手順そのものは `publishing-guide.md` にある。このページは、直近6本の「何を・いつ・どの設定で」公開するかの一覧。
 いずれも文体の改善（AIっぽさの採点の機械の目安で5）まで済んでいる。
 
 ## 公開前に1回だけ（まだなら）
@@ -43,6 +43,22 @@
 - noteの設定: 返金申請は「許可しない」。購入者限定コメントを有効にする
 - 公開前の確認: `03_content/verification/203/owner-check.md`（101・102・106の公開URLへのリンク差し替えを含む）
 - 有料販売の開始にあたり、勤務先の規則が「開始前の届出」を求める場合は、この日までに届け出る（`owner-decisions.md` A-2）
+
+### 11/25（水）104 議事録をAIで作る手順（無料）
+- 原稿: `03_content/articles/104-ai-meeting-minutes.md`
+- 見出し画像: `03_content/images/104.png`（指定は `03_content/marketing/header-specs-week2.json`）
+- タイトル: 議事録をAIで作る手順と、社内で使う前の確認点｜メモから作るプロンプト3つ
+- ハッシュタグ: #議事録 #生成AI #ChatGPT #Claude #業務効率化
+- 公開前の確認: `03_content/verification/104/owner-check.md`（冒頭の音読を含む）
+- 文体の改善: 2026-11-20に済み（機械の目安3→5。記録は `04_review/style-pilot-102.md` §11）
+
+### 11/26（木）108 請求書の送付・入金確認メール（無料）
+- 原稿: `03_content/articles/108-invoice-payment-emails.md`
+- 見出し画像: `03_content/images/108.png`（指定は `03_content/marketing/header-specs-week2.json`）
+- タイトル: 請求書の送付・入金確認メール文例6つ｜催促の前に確かめることとAIプロンプト
+- ハッシュタグ: #ビジネスメール #請求書 #経理 #生成AI #テンプレート
+- 公開前の確認: `03_content/verification/108/owner-check.md`
+- 文体の改善: 記録は `04_review/style-pilot-102.md` §12
 
 ## SNS（X）の投稿
 
